@@ -1,5 +1,7 @@
+import ContactsBody from "./ContactsBody";
+
 const ContactSection: React.FC = () => {
-  return <div>Contacts Section</div>;
+  return <ContactsBody />;
 };
 
 export default ContactSection;
