@@ -8,9 +8,9 @@ export async function POST(request: Request) {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
   const response = await resend.emails.send({
-    from: "onboarding@resend.dev",
+    from: `no-reply@${baseUrl}`,
     to: "vsevolod.synytskyi@gmail.com",
-    subject: "Hello World",
-    html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+    subject: `Message from ${baseUrl}`,
+    html: `${message}`,
   });
 }
