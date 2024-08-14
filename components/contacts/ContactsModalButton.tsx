@@ -32,6 +32,7 @@ const ContactsModalButtonTrigger: React.FC = forwardRef<HTMLButtonElement>(
     );
   }
 );
+ContactsModalButtonTrigger.displayName = "ContactsModalButtonTrigger";
 
 const ContactsModalButton: React.FC = () => {
   const [open, setOpen] = React.useState(false);
