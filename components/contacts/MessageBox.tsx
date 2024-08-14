@@ -13,6 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Send } from "lucide-react";
+import { useState } from "react";
 import { toast } from "sonner";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
@@ -28,6 +29,8 @@ const formSchema = z.object({
 });
 
 const MessageBox: React.FC = () => {
+  const [loading, setLoading] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,10 +38,31 @@ const MessageBox: React.FC = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    toast.success("Повідомлення відправлено", {
-      description: values.message,
-    });
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        toast.success("Повідомлення відправлено", {
+          description: values.message,
+        });
+        form.reset();
+      } else {
+        toast.error("Помилка при відправленні повідомлення");
+      }
+    } catch (error) {
+      toast.error("Сталася помилка");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -65,7 +89,7 @@ const MessageBox: React.FC = () => {
           />
           <Button
             type="submit"
-            disabled={!form.formState.isValid}
+            disabled={!form.formState.isValid || loading}
             className="w-full"
           >
             <Send className="w-4 h-4 mr-2" /> Відправити
