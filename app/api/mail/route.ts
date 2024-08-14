@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 export async function POST(request: Request) {
   const { message } = await request.json();
@@ -7,20 +8,12 @@ export async function POST(request: Request) {
   const baseUrl = `${url.protocol}//${url.host}`;
 
   try {
-    const response = await fetch("https://api.resend.io/v1/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: `no-reply@${url.host}`,
-        to: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
-        subject: `New message from ${baseUrl}`,
-        html: `      
-          <p>${message}</p>        
-        `,
-      }),
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const response = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "vsevolod.synytskyi@gmail.com",
+      subject: "Hello World",
+      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
     });
 
     if (response.ok) {
