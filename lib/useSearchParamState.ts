@@ -1,7 +1,11 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
-const useSearchParamState = (searchParamName: string) => {
+const useSearchParamState: (
+  searchParamsName: string
+) => [string | null, (searcParamsValue: string) => void] = (
+  searchParamName
+) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -19,9 +23,7 @@ const useSearchParamState = (searchParamName: string) => {
     [searchParams]
   );
 
-  const setSearchParam: (searchParamValue: string) => void = (
-    searchParamValue
-  ) => {
+  const setSearchParam = (searchParamValue: string) => {
     router.push(
       `${pathname}?${createQueryString(searchParamName, searchParamValue)}`,
       { scroll: false }
