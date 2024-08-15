@@ -1,4 +1,14 @@
+"use client";
 import useSearchParamState from "@/lib/useSearchParamState";
+import { AnimatePresence, motion } from "framer-motion";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
+
+const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
+`;
+
+export function TextGenerateEffectDemo() {
+  return <TextGenerateEffect words={words} />;
+}
 
 const HomeBodyTitle: React.FC = () => {
   const [contentType] = useSearchParamState("content_type");
@@ -6,7 +16,7 @@ const HomeBodyTitle: React.FC = () => {
 
   let titleText = `Хто я`;
 
-  switch (contentType) {
+  switch (readTime) {
     case "0":
       titleText = "Моє CV";
       break;
@@ -17,7 +27,7 @@ const HomeBodyTitle: React.FC = () => {
       titleText = "Мій Професійний Досвід";
       break;
     case "3":
-      titleText = "Про Кар'єру, Власні Проекти і навчання";
+      titleText = "Про Кар'єру, Власні Проекти і Навчання";
       break;
     default:
       titleText = "Про мене";
@@ -54,9 +64,20 @@ const HomeBodyTitle: React.FC = () => {
   */
 
   return (
-    <p className="mb-20 text-xl font-semibold tracking-tight scroll-m-20 lg:text-xl">
-      {titleText}
-    </p>
+    <div className="relative w-full h-28">
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key={titleText}
+        >
+          <p className="absolute top-0 text-xl font-semibold tracking-tight scroll-m-20 lg:text-xl">
+            <TextGenerateEffect words={titleText} />
+          </p>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 
