@@ -15,7 +15,7 @@ const ContentBlock: React.FC<ContentBlockProps> = (props) => {
   return (
     <>
       <h3>{props.title}</h3>
-      <p className="italic text-muted-foreground">
+      <p className="text-sm italic text-muted-foreground">
         {props.dates
           ?.map((date) => date.locale("uk").format("MMMM YYYY"))
           .join(" - ")}

@@ -17,13 +17,14 @@ const HomeBodyContent: React.FC = () => {
                 </LinkPreview>
               </>
             ),
-            dates: [dayjs("Jan 2021"), dayjs(`Mar 2024`)],
+            dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
             children: (
               <>
-                <p>Jan 2022 - Mar 2024</p>
                 <p>
                   SiteForm — це сервіс для управління будівельними проектами для
-                  американських забудовників...
+                  американських забудовників. Команда маленька, і часто кожен
+                  відповідав за все. Найбільше я займався продуктовим дизайном і
+                  фронтенд-розробкою веб-застосунку.
                 </p>
                 <ul>
                   <li>
@@ -35,7 +36,10 @@ const HomeBodyContent: React.FC = () => {
                       https://www.siteform.io/
                     </LinkPreview>
                   </li>
-                  <li>Дизайн інтерфейсу і розробка веб-застосунку...</li>
+                  <li>
+                    Дизайн інтерфейсу і розробка веб-застосунку (React,
+                    Typescript, Tailwind, Graphql, Framer Motion)
+                  </li>
                   <li>Аналіз поведінки юзерів через Hotjar</li>
                 </ul>
               </>
@@ -47,12 +51,13 @@ const HomeBodyContent: React.FC = () => {
                 Ryze Digital
               </LinkPreview>
             ),
+            dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
             children: (
               <>
-                <p>Jul 2021 - Dec 2022</p>
                 <p>
                   З командою розробників, створювали корпоративні сайти для
-                  замовників агенції...
+                  замовників агенції. Комунікував з іноземними дизайнерами і
+                  менеджерами.
                 </p>
                 <ul>
                   <li>Розробка Лендінгів на Wordpress</li>
@@ -67,9 +72,9 @@ const HomeBodyContent: React.FC = () => {
                 <LinkPreview href="https://it-artel.ua/">iT Artel</LinkPreview>
               </>
             ),
+            dates: [dayjs("Apr 2021"), dayjs("May 2021")],
             children: (
               <>
-                <p>Apr 2021 - May 2021</p>
                 <p>
                   Дизайн корпоративного сайту компанії і проектів замовників.
                 </p>
@@ -88,10 +93,22 @@ const HomeBodyContent: React.FC = () => {
                 Коворкінг
               </LinkPreview>
             ),
+            dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
             children: (
               <>
-                <p>Jan 2023 - Aug 2023</p>
-                <p>Коли почались зимові відключення 2022-го року...</p>
+                <p>
+                  Коли почались зимові відключення 2022-го року, я і ще троє
+                  однодумців відкрили коворкінг. Це була авантюра недосвідчених
+                  непідприємців, досвід якої ціную більше, ніж втрачені кошти. В
+                  піковий час у нас було 44 заброньованих місця. Одна айті
+                  компанія орендувала одразу 25 місць для своїх співробітників.
+                  Влітку 2022 ми закрились через низьку рентабельність.
+                </p>
+                <p>
+                  Пізніше, рефлексуючи над цим досвідом, я пройшов курси
+                  Прожектора з продуктового дизайну і маркетингу, і асинхронну
+                  стартап-школу від YC.
+                </p>
                 <ul>
                   <li>Операційна діяльність коворкінгу</li>
                   <li>
@@ -105,10 +122,20 @@ const HomeBodyContent: React.FC = () => {
           },
           {
             title: "Волонтерство",
+            dates: [dayjs("Mar 2022")],
             children: (
               <>
-                <p>Mar 2022</p>
-                <p>В березні 2022 я опинився у Львові...</p>
+                <p>
+                  В березні 2022 я опинився у Львові. Багато ВПО прибувало на
+                  Львівський залізничний вокзал у комендантську годину. Люди, що
+                  їхали потягом 20 годин, мусили ночувати на вокзалі. Щоб
+                  вирішити цю проблему, ми створили телеграм-бота, який
+                  зв'язував водіїв-волонтерів і потенційних пасажирів. Я
+                  займався координацією водіїв: отримував дозволи на їзду в
+                  комендантську годину, допомагав юзерам з вирішенням нетипових
+                  проблем, поширював бота серед волонтерів. Волонтери зустрічали
+                  людей з потягу і допомагали їм викликати водія.
+                </p>
                 <p>
                   Завдяки нашій ініціативі близько 1,500 людей було розвезено до
                   місця ночівлі.
@@ -122,19 +149,77 @@ const HomeBodyContent: React.FC = () => {
       <ContentSection
         title="Навчання"
         contentBlocks={[
-          { title: "Product Marketing at Projector", children: null },
-          { title: "Product Design at Projector", children: null },
-          { title: "Berkeley Summer", children: null },
-          { title: "Advanced React", children: null },
+          {
+            title: (
+              <LinkPreview href="https://prjctr.com/certificate/01HGTS85E8SQGM65KTR6TA0RBB">
+                Product Marketing at Projector
+              </LinkPreview>
+            ),
+            dates: [dayjs("Dec 2023"), dayjs("Mar 2024")],
+            children: null,
+          },
+          {
+            title: (
+              <LinkPreview href="https://prjctr.com/certificate/01H7Z72TNCJ9E5R1ZTARNC37ZS">
+                Product Design at Projector
+              </LinkPreview>
+            ),
+            dates: [dayjs("Jun 2023"), dayjs("Oct 2023")],
+            children: null,
+          },
+          {
+            title: (
+              <LinkPreview href="https://promprylad.ua/en/berkeley-summer-at-promprylad/">
+                Berkeley Summer
+              </LinkPreview>
+            ),
+            dates: [dayjs("Jul 2023"), dayjs("Sep 2023")],
+            children: null,
+          },
+          {
+            title: (
+              <LinkPreview href="https://v1.scrimba.com/certificate/ubRLwvfa/greact">
+                Advanced React
+              </LinkPreview>
+            ),
+            children: null,
+            dates: [dayjs("Jul 2020")],
+          },
         ]}
       />
 
       <ContentSection
         title="Статті"
         contentBlocks={[
-          { title: "dev.to", children: null },
-          { title: "telegraph", children: null },
-          { title: "dou", children: null },
+          {
+            title: <>DEV.TO</>,
+            dates: [dayjs("Oct 2022")],
+            children: (
+              <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
+                "Leading a UI design team as a developer"
+              </LinkPreview>
+            ),
+          },
+          {
+            title: <>Telegraph</>,
+            dates: [dayjs("Oct 2022")],
+            children: (
+              <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
+                Коли розробник керує дизайнерами.
+                <br /> Як налагодити взаємодію в команді
+              </LinkPreview>
+            ),
+          },
+          {
+            title: <>DOU</>,
+            dates: [dayjs("June 2022")],
+            children: (
+              <LinkPreview href="https://dou.ua/forums/topic/38459/">
+                Розповідаю про перший досвід розвитку волонтерського продукту
+                під час війни
+              </LinkPreview>
+            ),
+          },
         ]}
       />
     </div>

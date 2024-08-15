@@ -14,17 +14,16 @@ const ContactsBody: React.FC = () => {
     <div>
       <div className="flex flex-col w-full gap-2">
         <MessageBox />
-
         <Separator />
         <div className="grid grid-cols-2 gap-4">
           <Button className="flex-1" variant={"secondary"} asChild>
             <Link href={linkedInUrl}>
-              <LinkedinIcon className="mr-2 w-4 h-4" /> LinkedIn
+              <LinkedinIcon className="w-4 h-4 mr-2" /> LinkedIn
             </Link>
           </Button>
           <Button className="flex-1" variant={"secondary"} asChild>
             <Link href={telegramUrl}>
-              <SendIcon className="mr-2 w-4 h-4" /> Telegram
+              <SendIcon className="w-4 h-4 mr-2" /> Telegram
             </Link>
           </Button>
         </div>
