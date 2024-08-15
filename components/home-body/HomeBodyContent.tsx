@@ -1,10 +1,10 @@
 const HomeBodyContent: React.FC = () => {
   return (
     <div>
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors mt-0">
+      <h2 className="pb-2 mt-0 mt-10 text-3xl font-semibold tracking-tight transition-colors border-b scroll-m-20">
         Кар’єра
       </h2>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Product Designer &amp; Frontend Developer at SiteForm
       </h3>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
@@ -28,7 +28,7 @@ const HomeBodyContent: React.FC = () => {
           Дизайн і розробка лендігу на Webflow -{" "}
           <a
             href="https://www.siteform.io/"
-            className="font-medium text-primary underline underline-offset-4"
+            className="font-medium underline text-primary underline-offset-4"
           >
             https://www.siteform.io/
           </a>
@@ -43,7 +43,7 @@ const HomeBodyContent: React.FC = () => {
       <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
         <li>Аналіз поведінки юзерів через Hotjar</li>
       </ul>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Ryze Digital
       </h3>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
@@ -56,7 +56,7 @@ const HomeBodyContent: React.FC = () => {
       <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
         <li>Розробка Лендінгів на Wordpress</li>
       </ul>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Graphic Designer at iT Artel
       </h3>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
@@ -65,10 +65,10 @@ const HomeBodyContent: React.FC = () => {
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         Дизайн корпоративного сайту компанії і проектів замовників.
       </p>
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-        Власні ініцативи
+      <h2 className="pb-2 mt-10 text-3xl font-semibold tracking-tight transition-colors border-b scroll-m-20 first:mt-0">
+        Власні ініціативи
       </h2>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Коворкінг
       </h3>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
@@ -92,7 +92,7 @@ const HomeBodyContent: React.FC = () => {
       <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
         <li>Розробка сайту</li>
       </ul>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Волонтерство
       </h3>
       <p className="leading-7 [&:not(:first-child)]:mt-6">Mar 2022</p>
@@ -100,8 +100,8 @@ const HomeBodyContent: React.FC = () => {
         В березні 2022 я опинився у Львові. Багато ВПО прибувало на Львівський
         залізничний вокзал у комендантську годину. Люди, що їхали потягом 20
         годин, мусили ночувати на вокзалі. Щоб вирішити цю проблему, ми створили
-        телеграм-бота, який зв'язував водіїв-волонтерів і потенційних пасажирів.
-        Я займався координацією водіїв: отримував дозволи на їзду в
+        телеграм-бота, який зв&apos;язував водіїв-волонтерів і потенційних
+        пасажирів. Я займався координацією водіїв: отримував дозволи на їзду в
         комендантську годину, допомагав юзерам з вирішенням нетипових проблем,
         поширював бота серед волонтерів. Волонтери зустрічали людей з потягу і
         допомагали їм викликати водія.
@@ -110,22 +110,22 @@ const HomeBodyContent: React.FC = () => {
         Завдяки нашій ініціативі близько 1,500 людей було розвезено до місця
         ночівлі.
       </p>
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+      <h2 className="pb-2 mt-10 text-3xl font-semibold tracking-tight transition-colors border-b scroll-m-20 first:mt-0">
         Навчання
       </h2>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Product Marketing at Projector
       </h3>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Product Design at Projector
       </h3>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Berkeley Summer
       </h3>
-      <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mt-8 text-2xl font-semibold tracking-tight scroll-m-20">
         Advanced React
       </h3>
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+      <h2 className="pb-2 mt-10 text-3xl font-semibold tracking-tight transition-colors border-b scroll-m-20 first:mt-0">
         Статті
       </h2>
       <p className="leading-7 [&:not(:first-child)]:mt-6">dev.to</p>
