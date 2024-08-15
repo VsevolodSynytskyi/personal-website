@@ -3,8 +3,7 @@ import { Resend } from "resend";
 export async function POST(request: Request, response: Response) {
   const { message } = await request.json();
 
-  const url = new URL(request.url);
-  const baseUrl = `${url.protocol}//${url.host}`;
+  const url = new URL(request.url).host;
 
   const resend = new Resend(process.env.RESEND_API_KEY);
   const fromEmail = process.env.NO_REPLY_EMAIL;
@@ -14,9 +13,9 @@ export async function POST(request: Request, response: Response) {
   }
 
   const { data, error } = await resend.emails.send({
-    from: fromEmail,
+    from: `${url} <${fromEmail}>`,
     to: "vsevolod.synytskyi@gmail.com",
-    subject: `Message from ${baseUrl}`,
+    subject: `New Message`,
     html: `<p>${message}</p>`,
   });
 
