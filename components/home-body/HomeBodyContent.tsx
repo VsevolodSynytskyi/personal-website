@@ -377,7 +377,9 @@ const HomeBodyContent: React.FC = () => {
             ),
             contentByLength: [
               ,
-              <p>Поглиблений курс для розробки на React JS.</p>,
+              <>
+                <p>Поглиблений курс для розробки на React JS.</p>
+              </>,
             ],
             dates: [dayjs("Jul 2020")],
           },
