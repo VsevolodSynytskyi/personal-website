@@ -47,9 +47,12 @@ const HomeBodyContent: React.FC = () => {
           },
           {
             title: (
-              <LinkPreview href="https://www.ryze-digital.de/">
-                Ryze Digital
-              </LinkPreview>
+              <>
+                Frontend Developer at{" "}
+                <LinkPreview href="https://www.ryze-digital.de/">
+                  Ryze Digital
+                </LinkPreview>
+              </>
             ),
             dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
             children: (
@@ -156,7 +159,13 @@ const HomeBodyContent: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Dec 2023"), dayjs("Mar 2024")],
-            children: null,
+            children: (
+              <p>
+                Працюючи на стартапі, мені часто доводилось брати на себе
+                додаткові обов`язки, наприклад маркетингові. Тоді я і вирішив
+                поглибити свої знання в цій сфері.
+              </p>
+            ),
           },
           {
             title: (
@@ -165,7 +174,12 @@ const HomeBodyContent: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Jun 2023"), dayjs("Oct 2023")],
-            children: null,
+            children: (
+              <p>
+                На цьому курсі я закрив теоретичні прогалини в своєму досвіді
+                продуктового дизайну.
+              </p>
+            ),
           },
           {
             title: (
@@ -174,7 +188,14 @@ const HomeBodyContent: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Jul 2023"), dayjs("Sep 2023")],
-            children: null,
+            children: (
+              <p>
+                Після досвіду управління коворкінгу, я долучився до програми
+                Berkeley Summer at Promprylad. Експерти із Кремнієвої долини
+                допомогли мені покращити навички у прототипуванні продуктів,
+                бізнес-аналізі та презентуванні ідей.
+              </p>
+            ),
           },
           {
             title: (
@@ -182,7 +203,7 @@ const HomeBodyContent: React.FC = () => {
                 Advanced React
               </LinkPreview>
             ),
-            children: null,
+            children: <p>Поглиблений курс для розробки на React JS.</p>,
             dates: [dayjs("Jul 2020")],
           },
         ]}
@@ -195,29 +216,35 @@ const HomeBodyContent: React.FC = () => {
             title: <>DEV.TO</>,
             dates: [dayjs("Oct 2022")],
             children: (
-              <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
-                "Leading a UI design team as a developer"
-              </LinkPreview>
+              <p>
+                <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
+                  "Leading a UI design team as a developer"
+                </LinkPreview>
+              </p>
             ),
           },
           {
             title: <>Telegraph</>,
             dates: [dayjs("Oct 2022")],
             children: (
-              <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
-                Коли розробник керує дизайнерами.
-                <br /> Як налагодити взаємодію в команді
-              </LinkPreview>
+              <p>
+                <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
+                  Коли розробник керує дизайнерами.
+                  <br /> Як налагодити взаємодію в команді
+                </LinkPreview>
+              </p>
             ),
           },
           {
             title: <>DOU</>,
             dates: [dayjs("June 2022")],
             children: (
-              <LinkPreview href="https://dou.ua/forums/topic/38459/">
-                Розповідаю про перший досвід розвитку волонтерського продукту
-                під час війни
-              </LinkPreview>
+              <p>
+                <LinkPreview href="https://dou.ua/forums/topic/38459/">
+                  Розповідаю про перший досвід розвитку волонтерського продукту
+                  під час війни
+                </LinkPreview>
+              </p>
             ),
           },
         ]}

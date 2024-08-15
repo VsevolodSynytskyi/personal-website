@@ -4,7 +4,7 @@ import PageContentConstructor from "./PageContentConstructor";
 
 const introText = `Привіт!
 Я Сєва (або Всеволод)
-Тут ви можете детальніше познайомитись зі мною.`;
+Тут ви можете ближче познайомитись зі мною.`;
 
 const HomeIntro = () => {
   return (
