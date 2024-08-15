@@ -1,7 +1,7 @@
 "use client";
 
 import ContactSection from "../components/contacts/ContactsSection";
-import HomeBody from "../components/HomeBody";
+import HomeBody from "../components/home-body/HomeBody";
 import HomeIntro from "../components/intro/HomeIntro";
 
 export default function Home() {
