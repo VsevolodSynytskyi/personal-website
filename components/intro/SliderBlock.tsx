@@ -11,8 +11,10 @@ interface SliderBlockProps {
   onValueChange?: (newValue: number) => void;
 }
 
+const STEP_SIZE = 1;
+const MIN_STEP = 0;
+
 const SliderBlock: React.FC<SliderBlockProps> = (props) => {
-  const stepSize = 1 / Math.max(props.stepsNumber - 1, 1);
   const value = props.value;
 
   return (
@@ -32,13 +34,14 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
               ? props.tooltipTextTransform(value)
               : undefined
           }
-          value={typeof props.value === "number" ? [props.value] : undefined}
+          value={typeof props.value === "number" ? [props.value] : [MIN_STEP]}
           onValueChange={([newValue]) => {
             props.onValueChange && props.onValueChange(newValue);
           }}
-          min={0}
-          max={1}
-          step={stepSize}
+          defaultValue={[MIN_STEP]}
+          min={MIN_STEP}
+          max={props.stepsNumber - 1}
+          step={STEP_SIZE}
         />
       </div>
     </div>
