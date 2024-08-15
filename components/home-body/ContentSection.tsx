@@ -9,8 +9,8 @@ const ContentSection: React.FC<ContentSectionProps> = (props) => {
   return (
     <>
       <h2 className="sticky top-0 bg-background">{props.title}</h2>
-      {(props.contentBlocks || []).map((contentBlockProps) => (
-        <ContentBlock {...contentBlockProps} />
+      {(props.contentBlocks || []).map((contentBlockProps, i) => (
+        <ContentBlock key={i} {...contentBlockProps} />
       ))}
     </>
   );
