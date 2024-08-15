@@ -1,11 +1,14 @@
+import { Suspense } from "react";
 import HomeBodyContent from "./HomeBodyContent";
 import HomeBodyTitle from "./HomeBodyTitle";
 
 export function HomeBody() {
   return (
     <div>
-      <HomeBodyTitle />
-      <HomeBodyContent />
+      <Suspense>
+        <HomeBodyTitle />
+        <HomeBodyContent />
+      </Suspense>
     </div>
   );
 }

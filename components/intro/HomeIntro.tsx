@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ContactsModalButton from "../contacts/ContactsModalButton";
 import PageContentConstructor from "./PageContentConstructor";
 
@@ -12,7 +13,9 @@ const HomeIntro = () => {
       <div className="flex flex-col justify-end">
         <div className="flex flex-col gap-16">
           <div className="whitespace-pre-line">{introText}</div>
-          <PageContentConstructor />
+          <Suspense>
+            <PageContentConstructor />
+          </Suspense>
         </div>
       </div>
     </div>
