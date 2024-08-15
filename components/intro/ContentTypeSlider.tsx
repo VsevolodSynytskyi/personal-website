@@ -25,8 +25,8 @@ const ContentTypeSlider: React.FC = () => {
     }
   };
 
-  const contentTypeValue = Number(contentType);
-  console.log(contentType);
+  const contentTypeValue =
+    typeof contentType === "string" ? parseInt(contentType) : undefined;
 
   return (
     <SliderBlock

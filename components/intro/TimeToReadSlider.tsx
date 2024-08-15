@@ -24,13 +24,16 @@ const TimeToReadSlider: React.FC = () => {
     }
   };
 
+  const value =
+    typeof sliderValue === "string" ? parseInt(sliderValue) : undefined;
+
   return (
     <SliderBlock
       stepsNumber={4}
       title={stepTitle}
       minText={minText}
       maxText={maxText}
-      value={Number(sliderValue)}
+      value={value}
       onValueChange={(newValue) => {
         setSliderValue(newValue + "");
       }}
