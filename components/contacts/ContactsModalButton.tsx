@@ -1,14 +1,14 @@
 import { XIcon } from "lucide-react";
 import React, { forwardRef } from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/aceternity-ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/components/aceternity-ui/dialog";
 import {
   Drawer,
   DrawerClose,
@@ -17,7 +17,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
+} from "@/components/aceternity-ui/drawer";
 import { useMediaQuery } from "usehooks-ts";
 import Contacts from "./ContactsBody";
 

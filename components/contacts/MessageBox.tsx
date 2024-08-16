@@ -11,12 +11,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@/components/aceternity-ui/form";
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
+import { Button } from "../aceternity-ui/button";
+import { Textarea } from "../aceternity-ui/textarea";
 
 const labelText = `Поле, щоб привітатись.`;
 const messagePlaceholder = `Повідомлення.`;

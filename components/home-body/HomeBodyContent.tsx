@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { LinkPreview } from "../ui/link-preview";
+import { LinkPreview } from "../aceternity-ui/link-preview";
 import ContentSection from "./ContentSection";
 
 const HomeBodyContent: React.FC = () => {

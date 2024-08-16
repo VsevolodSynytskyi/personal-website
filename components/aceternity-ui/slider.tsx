@@ -9,7 +9,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/aceternity-ui/tooltip";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 

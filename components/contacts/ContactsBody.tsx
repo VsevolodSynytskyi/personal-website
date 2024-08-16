@@ -1,7 +1,7 @@
 import { LinkedinIcon, SendIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
+import { Button } from "../aceternity-ui/button";
+import { Separator } from "../aceternity-ui/separator";
 import EmailLink from "./EmailLink";
 import MessageBox from "./MessageBox";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Slider } from "../ui/slider";
+import { Slider } from "../aceternity-ui/slider";
 
 interface SliderBlockProps {
   title?: string;
