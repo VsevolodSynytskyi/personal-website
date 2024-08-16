@@ -1,6 +1,7 @@
 "use client";
 
 import * as SliderPrimitive from "@radix-ui/react-slider";
+import { motion } from "framer-motion";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
@@ -59,16 +60,21 @@ const Slider = React.forwardRef<
               setTooltipOpen(true);
             }}
           >
-            <SliderPrimitive.Track className="relative cursor-pointer h-px w-full grow overflow-hidden rounded-full bg-transparent">
+            <SliderPrimitive.Track className="relative w-full h-6 overflow-hidden bg-transparent rounded-full cursor-pointer grow">
               {/* <SliderPrimitive.Range className="absolute h-full bg-white" /> */}
-              <div className="absolute w-full h-full flex flex-row items-center gap-1">
+              <div className="absolute flex flex-row items-center w-full h-full gap-1">
                 {Array.from({ length: numberOfSteps }, (_, index) => (
-                  <div className="bg-primary h-px flex-1" key={index}></div>
+                  <div className="flex-1 h-px bg-primary" key={index}></div>
                 ))}
               </div>
             </SliderPrimitive.Track>
 
-            <SliderPrimitive.Thumb className="block cursor-pointer relative h-6 w-6 rounded-full border-[1px] shadow-md border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
+            <SliderPrimitive.Thumb asChild>
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="block cursor-pointer relative h-6 w-6 rounded-full border-[1px] shadow-md border-primary bg-background ring-offset-background hover:outline-none focus-visible:outline-none hover:ring-1 hover:ring-ring hover:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transition-none "
+              ></motion.div>
+            </SliderPrimitive.Thumb>
           </SliderPrimitive.Root>
         </TooltipTrigger>
         <TooltipContent className="mb-4">

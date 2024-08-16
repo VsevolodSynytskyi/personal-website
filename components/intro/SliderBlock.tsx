@@ -22,7 +22,7 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
       <div className="text-sm text-muted-foreground">{props.title}</div>
       <div className="flex flex-col gap-2">
         {(props.minText || props.maxText) && (
-          <div className="flex text-sm flex-row justify-between">
+          <div className="flex flex-row justify-between text-sm">
             <div>{props.minText}</div>
             <div>{props.maxText}</div>
           </div>
