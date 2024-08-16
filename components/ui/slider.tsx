@@ -45,8 +45,7 @@ const Slider = React.forwardRef<
               setTooltipOpen(true);
             }}
           >
-            <SliderPrimitive.Track className="relative w-full h-6 overflow-hidden bg-transparent rounded-full cursor-pointer grow">
-              {/* <SliderPrimitive.Range className="absolute h-full bg-white" /> */}
+            <SliderPrimitive.Track className="relative w-full h-10 -my-2 overflow-hidden bg-transparent rounded-full cursor-pointer outline-teal-50 grow">
               <div className="absolute flex flex-row items-center w-full h-full gap-1">
                 {Array.from({ length: numberOfSteps }, (_, index) => (
                   <div className="flex-1 h-px bg-primary" key={index}></div>

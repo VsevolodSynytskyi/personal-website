@@ -1,5 +1,4 @@
 import React from "react";
-import SliderTest from "../SliderTest";
 import { Slider } from "../ui/slider";
 
 interface SliderBlockProps {
@@ -44,7 +43,6 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
           max={props.stepsNumber - 1}
           step={STEP_SIZE}
         />
-        <SliderTest />
       </div>
     </div>
   );
