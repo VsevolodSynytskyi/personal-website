@@ -4,7 +4,6 @@ import * as SliderPrimitive from "@radix-ui/react-slider";
 import { motion } from "framer-motion";
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
@@ -13,20 +12,6 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-function TooltipDemo() {
-  return (
-    <TooltipProvider delayDuration={0}>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button variant="outline">Hover</Button>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>Add to library</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  );
-}
 
 type CustomSliderType = React.ComponentPropsWithoutRef<
   typeof SliderPrimitive.Root
@@ -68,7 +53,6 @@ const Slider = React.forwardRef<
                 ))}
               </div>
             </SliderPrimitive.Track>
-
             <SliderPrimitive.Thumb asChild>
               <motion.div
                 whileHover={{ scale: 1.2 }}
