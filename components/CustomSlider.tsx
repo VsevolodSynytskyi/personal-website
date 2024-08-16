@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
+// TODO (mobile)
+// 1. define if is dragging
+// 2. if dragging, then leave as it is
+// 3. when drag ends, snap to closes positions
+// 4. while dragging, show a tooltip/popover/card...
+
+// TODO (desktop)
+// 1. when hovered, show the same tooltip/popover/card
+
 interface CustomSliderProps {
   min?: number;
   max?: number;
@@ -14,19 +23,33 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   if (typeof props.max === "number" && typeof props.step === "number") {
     numberOfSteps = (props.max - minValue) / props.step;
   }
+
   return (
-    <div className="w-full relative h-6 bg-gradient-to-b from-[#9c1aff] to-[#7700ff] p-0 m-0 flex justify-center items-center">
+    <div className="relative flex items-center justify-center w-full h-8">
       <div className="absolute flex flex-row items-center w-full h-full gap-1">
         {Array.from({ length: numberOfSteps }, (_, index) => (
           <div className="flex-1 h-px bg-primary" key={index}></div>
         ))}
       </div>
       <motion.div className="absolute w-full h-full" ref={constraintsRef} />
+
       <motion.div
-        className="bg-white border border-primary rounded-[30px] w-6 h-6 shadow-md absolute top-0 left-0"
+        className="absolute top-0 left-0 w-8 h-8 bg-white border rounded-full shadow-md cursor-pointer border-primary"
         drag
+        dragElastic={0.1}
         dragConstraints={constraintsRef}
-      />
+        whileDrag={{
+          scale: 1.2,
+        }}
+        whileHover={{
+          scale: 1.2,
+        }}
+        dragMomentum={false}
+        // dragSnapToOrigin={true}
+        onDragEnd={(e) => {
+          console.log(e);
+        }}
+      ></motion.div>
     </div>
   );
 };
