@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "sonner";
 import { Slider } from "../aceternity-ui/slider";
 import CustomSlider from "../CustomSlider";
 
@@ -17,6 +18,10 @@ const MIN_STEP = 0;
 
 const SliderBlock: React.FC<SliderBlockProps> = (props) => {
   const value = props.value;
+
+  const onStepCommit = (commitedStep: number) => {
+    toast(commitedStep);
+  };
 
   return (
     <div className="flex flex-col gap-2">
@@ -45,7 +50,12 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
           step={STEP_SIZE}
         />
       </div>
-      <CustomSlider min={MIN_STEP} max={3} step={STEP_SIZE} />
+      <CustomSlider
+        onStepCommit={onStepCommit}
+        min={MIN_STEP}
+        max={3}
+        step={STEP_SIZE}
+      />
     </div>
   );
 };
