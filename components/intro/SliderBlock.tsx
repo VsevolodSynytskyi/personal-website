@@ -1,5 +1,6 @@
 import React from "react";
 import { Slider } from "../aceternity-ui/slider";
+import CustomSlider from "../CustomSlider";
 
 interface SliderBlockProps {
   title?: string;
@@ -44,6 +45,7 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
           step={STEP_SIZE}
         />
       </div>
+      <CustomSlider min={MIN_STEP} max={3} step={STEP_SIZE} />
     </div>
   );
 };
