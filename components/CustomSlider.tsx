@@ -1,90 +1,104 @@
-import { motion, useMotionValue } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion, useSpring } from "framer-motion";
 import useMeasure from "react-use-measure";
 
 interface CustomSliderProps {
   min?: number;
   max?: number;
   step?: number;
-
   onStepCommit?: (newStep: number) => void;
 }
 
 const CustomSlider: React.FC<CustomSliderProps> = (props) => {
-  const constraintsRef = useRef(null);
   const [wrapperRef, wrapperBounds] = useMeasure();
-  const [draggableElRef, draggableElBounds] = useMeasure();
-  const [isDragging, setIsDragging] = useState(false);
-  const [percentPosition, setPercentPosition] = useState<null | number>(null);
+  const [pointerElRef, draggableElBounds] = useMeasure();
 
-  const minValue = typeof props.min === "number" ? props.min : 0;
-  const maxValue = typeof props.max === "number" ? props.max : 100;
-  const stepValue = typeof props.step === "number" ? props.step : 1;
+  // values
 
-  const numberOfSteps = (maxValue - minValue) / stepValue;
-  const stepWidth = 100 / numberOfSteps; // Assuming width is 100% of the container
+  const minValue = props.min || 0;
+  const maxValue = props.max || 1000;
+  const valueRange = maxValue - minValue;
+  const numberOfSteps = maxValue - minValue;
+  const stepWidth = wrapperBounds.width / numberOfSteps;
 
-  const x = useMotionValue(percentPosition);
+  const maxPosition = wrapperBounds.width - draggableElBounds.width / 2;
+  const minPositon = draggableElBounds.width / 2;
+  const positionRange = maxPosition - minPositon;
 
-  const handleDragStart = () => {
-    setIsDragging(true);
-    setPercentPosition(null);
+  // Animation
+
+  const pointerX = useSpring(16, { stiffness: 500, damping: 20 });
+  //
+
+  // Calculations
+  const getRelativePointerPosition = (clientX: number) => {
+    return getConstrainedValue(clientX - wrapperBounds.left);
   };
 
-  const handleDragEnd = (clientX: number) => {
-    setIsDragging(false);
-    const relativeX = clientX - wrapperBounds.left;
-    const realPercentPosition = Math.max(
-      0,
-      Math.min(100, (relativeX / wrapperBounds.width) * 100)
-    );
-    const stepIndex = Math.round(realPercentPosition / stepWidth);
+  const getConstrainedValue = (value: number) => {
+    return Math.max(Math.min(value, maxPosition), minPositon);
+  };
+
+  const getSnappedPointerPosition = (originalPosition: number) => {
+    const stepIndex = Math.round(originalPosition / stepWidth);
     const snapedPercentPosition = stepIndex * stepWidth;
-    setPercentPosition(snapedPercentPosition);
-    props.onStepCommit?.(stepIndex);
+
+    return getConstrainedValue(snapedPercentPosition);
+  };
+
+  // Event handlers
+  const handlePointerMove = (e: PointerEvent) => {
+    pointerX.set(getRelativePointerPosition(e.clientX));
+  };
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    pointerX.set(getRelativePointerPosition(e.clientX));
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerup", handlePointerUp);
+  };
+
+  const handlePointerUp = (e: PointerEvent) => {
+    // Snap to position
+    const snappedPosition = getSnappedPointerPosition(pointerX.get());
+    pointerX.set(snappedPosition);
+
+    // Commit value
+    if (props.onStepCommit) {
+      let valueToCommit = minValue;
+      if (snappedPosition <= minPositon) {
+        valueToCommit = minValue;
+      } else if (snappedPosition >= maxPosition) {
+        valueToCommit = maxValue;
+      } else {
+        valueToCommit = (snappedPosition / wrapperBounds.width) * valueRange;
+      }
+      props.onStepCommit(valueToCommit);
+    }
+
+    // Clean up listeners
+    window.removeEventListener("pointermove", handlePointerMove);
+    window.removeEventListener("pointerup", handlePointerUp);
   };
 
   return (
-    <>
-      <div>
-        <div>{`is Dragging:${isDragging}`}</div>
-        <div>{`percentPosition is ${percentPosition}`}</div>
+    <div
+      ref={wrapperRef}
+      className="relative flex items-center justify-center w-full h-8 cursor-pointer touch-none"
+      onPointerDown={handlePointerDown}
+    >
+      {/* Horizontal lines */}
+      <div className="absolute flex flex-row items-center w-full h-full gap-1 pointer-events-none">
+        {Array.from({ length: numberOfSteps }, (_, index) => (
+          <div className="flex-1 h-px bg-primary" key={index}></div>
+        ))}
       </div>
-      <div
-        ref={wrapperRef}
-        className="relative flex items-center justify-center w-full h-8 touch-none"
-      >
-        <div className="absolute flex flex-row items-center w-full h-full gap-1">
-          {Array.from({ length: numberOfSteps }, (_, index) => (
-            <div className="flex-1 h-px bg-primary" key={index}></div>
-          ))}
-        </div>
-        <motion.div className="absolute w-full h-full" ref={constraintsRef} />
 
-        <motion.div
-          ref={draggableElRef}
-          className="absolute top-0 left-0 w-8 h-8 bg-white border rounded-full shadow-md cursor-pointer border-primary"
-          dragElastic={0.1}
-          drag
-          dragConstraints={constraintsRef}
-          dragMomentum={false}
-          animate={
-            typeof percentPosition === "number"
-              ? {
-                  x:
-                    ((wrapperBounds.width - draggableElBounds.width) *
-                      percentPosition) /
-                    100,
-                }
-              : undefined
-          }
-          onMouseDown={handleDragStart}
-          onDragEnd={(e, info) => {
-            handleDragEnd(info.point.x);
-          }}
-        ></motion.div>
-      </div>
-    </>
+      {/* Pointer */}
+      <motion.div
+        ref={pointerElRef}
+        className="absolute top-0 left-0 w-8 h-8 -mx-4 transition-none bg-white border rounded-full shadow-md cursor-pointer border-primary"
+        style={{ x: pointerX }}
+      ></motion.div>
+    </div>
   );
 };
 
