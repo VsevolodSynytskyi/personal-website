@@ -16,8 +16,6 @@ const STEP_SIZE = 1;
 const MIN_STEP = 0;
 
 const SliderBlock: React.FC<SliderBlockProps> = (props) => {
-  const value = props.value;
-
   const onStepCommit = (commitedStep: number) => {
     props.onValueChange?.(commitedStep);
   };
@@ -38,6 +36,11 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
           max={3}
           step={STEP_SIZE}
           defaultValue={props.value}
+          tooltipText={
+            typeof props.value === "number"
+              ? props.tooltipTextTransform(props.value)
+              : undefined
+          }
         />
       </div>
     </div>

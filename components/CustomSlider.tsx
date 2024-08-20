@@ -1,5 +1,10 @@
-import { motion, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
 
 interface CustomSliderProps {
@@ -8,11 +13,13 @@ interface CustomSliderProps {
   step?: number;
   onStepCommit?: (newStep: number) => void;
   defaultValue?: number;
+  tooltipText?: string;
 }
 
 const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   const [wrapperRef, wrapperBounds] = useMeasure();
   const [pointerElRef, draggableElBounds] = useMeasure();
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
   // values
 
@@ -27,7 +34,9 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
 
   // Animation
 
-  const pointerX = useSpring(16, { stiffness: 500, damping: 20 });
+  const x = useMotionValue(16);
+  const tooltipX = useSpring(x, { stiffness: 300, damping: 20 });
+  const pointerX = useSpring(x, { stiffness: 500, damping: 20 });
   //
 
   // Calculations
@@ -47,20 +56,19 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
 
   // Event handlers
   const handlePointerMove = (e: PointerEvent) => {
-    pointerX.set(getRelativePointerPosition(e.clientX));
+    x.set(getRelativePointerPosition(e.clientX));
+    commitValue();
   };
 
   const handlePointerDown = (e: React.PointerEvent) => {
-    pointerX.set(getRelativePointerPosition(e.clientX));
+    setTooltipOpen(true);
+    x.set(getRelativePointerPosition(e.clientX));
     window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerup", handlePointerUp);
   };
 
-  const handlePointerUp = () => {
-    // Snap to position
-    const snappedPosition = getSnappedPointerPosition(pointerX.get());
-    pointerX.set(snappedPosition);
-
+  const commitValue = () => {
+    const snappedPosition = getSnappedPointerPosition(x.get());
     // Commit value
     if (props.onStepCommit) {
       let valueToCommit = minValue;
@@ -73,7 +81,15 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
       }
       props.onStepCommit(valueToCommit);
     }
+  };
 
+  const handlePointerUp = () => {
+    // Snap to position
+    const snappedPosition = getSnappedPointerPosition(x.get());
+    x.set(snappedPosition);
+    //
+    commitValue();
+    setTooltipOpen(false);
     // Clean up listeners
     window.removeEventListener("pointermove", handlePointerMove);
     window.removeEventListener("pointerup", handlePointerUp);
@@ -82,9 +98,7 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   useEffect(() => {
     if (wrapperBounds.width > 0 && draggableElBounds.width > 0) {
       if (typeof props.defaultValue === "number") {
-        pointerX.jump(
-          getSnappedPointerPosition(props.defaultValue * stepWidth)
-        );
+        x.jump(getSnappedPointerPosition(props.defaultValue * stepWidth));
       }
     }
   }, [wrapperBounds, draggableElBounds]);
@@ -101,6 +115,42 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
           <div className="flex-1 h-px bg-primary" key={index}></div>
         ))}
       </div>
+      {/* Tooltip */}
+      <AnimatePresence>
+        {props.tooltipText && (
+          <motion.div
+            className={`pointer-events-none absolute w-0 z-10 left-0 select-none -top-12 flex items-center justify-center`}
+            style={{ x: tooltipX }}
+          >
+            <motion.div
+              animate={
+                tooltipOpen
+                  ? {
+                      scale: 1,
+                      opacity: 1,
+                    }
+                  : {
+                      scale: 0,
+                      opacity: 0,
+                      y: 16,
+                    }
+              }
+              className="px-2 py-1 border rounded shadow-md whitespace-nowrap text-primary bg-background border-border"
+            >
+              <AnimatePresence>
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, position: "absolute" }}
+                  key={props.tooltipText}
+                >
+                  {props.tooltipText}
+                </motion.span>
+              </AnimatePresence>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Pointer */}
       <motion.div
