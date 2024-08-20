@@ -36,7 +36,7 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
 
   const x = useMotionValue(16);
   const tooltipX = useSpring(x, { stiffness: 300, damping: 20 });
-  const pointerX = useSpring(x, { stiffness: 500, damping: 20 });
+  const pointerX = useSpring(x, { stiffness: 600, damping: 40 });
   //
 
   // Calculations
