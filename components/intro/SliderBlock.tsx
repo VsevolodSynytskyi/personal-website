@@ -37,6 +37,7 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
           min={MIN_STEP}
           max={3}
           step={STEP_SIZE}
+          defaultValue={props.value}
         />
       </div>
     </div>

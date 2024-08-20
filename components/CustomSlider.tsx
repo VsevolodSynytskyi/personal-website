@@ -1,4 +1,5 @@
 import { motion, useSpring } from "framer-motion";
+import { useEffect } from "react";
 import useMeasure from "react-use-measure";
 
 interface CustomSliderProps {
@@ -6,6 +7,7 @@ interface CustomSliderProps {
   max?: number;
   step?: number;
   onStepCommit?: (newStep: number) => void;
+  defaultValue?: number;
 }
 
 const CustomSlider: React.FC<CustomSliderProps> = (props) => {
@@ -22,7 +24,6 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
 
   const maxPosition = wrapperBounds.width - draggableElBounds.width / 2;
   const minPositon = draggableElBounds.width / 2;
-  const positionRange = maxPosition - minPositon;
 
   // Animation
 
@@ -39,10 +40,9 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   };
 
   const getSnappedPointerPosition = (originalPosition: number) => {
-    const stepIndex = Math.round(originalPosition / stepWidth);
-    const snapedPercentPosition = stepIndex * stepWidth;
-
-    return getConstrainedValue(snapedPercentPosition);
+    const stepIndex = stepWidth ? Math.round(originalPosition / stepWidth) : 1;
+    const snapedPosition = stepIndex * stepWidth;
+    return getConstrainedValue(snapedPosition);
   };
 
   // Event handlers
@@ -56,7 +56,7 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
     window.addEventListener("pointerup", handlePointerUp);
   };
 
-  const handlePointerUp = (e: PointerEvent) => {
+  const handlePointerUp = () => {
     // Snap to position
     const snappedPosition = getSnappedPointerPosition(pointerX.get());
     pointerX.set(snappedPosition);
@@ -79,6 +79,16 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
     window.removeEventListener("pointerup", handlePointerUp);
   };
 
+  useEffect(() => {
+    if (wrapperBounds.width > 0 && draggableElBounds.width > 0) {
+      if (typeof props.defaultValue === "number") {
+        pointerX.jump(
+          getSnappedPointerPosition(props.defaultValue * stepWidth)
+        );
+      }
+    }
+  }, [wrapperBounds, draggableElBounds]);
+
   return (
     <div
       ref={wrapperRef}
@@ -95,8 +105,11 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
       {/* Pointer */}
       <motion.div
         ref={pointerElRef}
-        className="absolute top-0 left-0 w-8 h-8 -mx-4 transition-none bg-white border rounded-full shadow-md cursor-pointer border-primary"
+        className="absolute top-0 left-0 w-8 h-8 -mx-4 transition-none bg-white border rounded-full shadow-md opacity-0 cursor-pointer border-primary"
         style={{ x: pointerX }}
+        animate={{
+          opacity: 1,
+        }}
       ></motion.div>
     </div>
   );
