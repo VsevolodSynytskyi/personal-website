@@ -1,5 +1,6 @@
 "use client";
 
+import { Separator } from "../components/aceternity-ui/separator";
 import ContactSection from "../components/contacts/ContactsSection";
 import HomeBody from "../components/home-body/HomeBody";
 import HomeIntro from "../components/intro/HomeIntro";
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="flex flex-col w-full max-w-sm gap-16">
         <HomeIntro />
         <HomeBody />
+        <Separator className="my-10" />
         <ContactSection />
       </div>
     </div>

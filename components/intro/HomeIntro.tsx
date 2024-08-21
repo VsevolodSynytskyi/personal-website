@@ -8,9 +8,9 @@ const introText = `Привіт!
 
 const HomeIntro = () => {
   return (
-    <div className="flex flex-col justify-between min-h-[calc(100vh-12rem)]">
+    <div className="flex flex-col justify-between min-h-[calc(100vh-18rem)] md:min-h-[calc(100vh-12rem)]">
       <ContactsModalButton />
-      <div className="flex flex-col justify-end">
+      <div className="flex flex-col justify-center flex-1">
         <div className="flex flex-col gap-16">
           <div className="whitespace-pre-line">{introText}</div>
           <Suspense>

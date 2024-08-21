@@ -23,7 +23,11 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
   );
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? [0.8, 1] : [1.2, 1]
+  );
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 1], [`-2rem`, `0rem`]);
 
@@ -44,7 +48,7 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
           className="bg-white"
         >
           <motion.div
-            className="absolute w-full h-screen bg-white"
+            className="absolute w-full h-screen bg-white rounded-sm"
             style={{
               boxShadow:
                 "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
@@ -53,7 +57,7 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
           >
             {/* TODO download background image and host */}
             <div
-              className="absolute w-full h-full bg-white border border-border"
+              className="absolute w-full h-full bg-white border rounded-sm border-border"
               style={{
                 backgroundImage: `url('https://www.transparenttextures.com/patterns/paper.png'), linear-gradient(to top right, #fdfdfd, #f8f8f8)`,
                 backgroundBlendMode: "multiply",

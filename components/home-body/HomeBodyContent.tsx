@@ -1,10 +1,15 @@
 import dayjs from "dayjs";
+import { motion } from "framer-motion";
 import { LinkPreview } from "../aceternity-ui/link-preview";
 import ContentSection from "./ContentSection";
 
 const HomeBodyContent: React.FC = () => {
   return (
-    <div className="text-content">
+    <motion.div
+      className="text-content"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       <ContentSection
         title="Кар’єра"
         contentBlocks={[
@@ -432,7 +437,7 @@ const HomeBodyContent: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </motion.div>
   );
 };
 
