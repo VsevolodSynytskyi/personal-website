@@ -29,8 +29,13 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   const numberOfSteps = maxValue - minValue;
   const stepWidth = wrapperBounds.width / numberOfSteps;
 
-  const maxPosition = wrapperBounds.width - draggableElBounds.width / 2;
-  const minPositon = draggableElBounds.width / 2;
+  const getMinMaxPosition = () => {
+    const pointerSize = 32;
+    return {
+      minPosition: pointerSize / 2,
+      maxPosition: wrapperBounds.width - pointerSize / 2,
+    };
+  };
 
   // Animation
 
@@ -45,7 +50,8 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   };
 
   const getConstrainedValue = (value: number) => {
-    return Math.max(Math.min(value, maxPosition), minPositon);
+    const { minPosition, maxPosition } = getMinMaxPosition();
+    return Math.max(Math.min(value, maxPosition), minPosition);
   };
 
   const getSnappedPointerPosition = (originalPosition: number) => {
@@ -71,8 +77,9 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
     const snappedPosition = getSnappedPointerPosition(x.get());
     // Commit value
     if (props.onStepCommit) {
+      const { minPosition, maxPosition } = getMinMaxPosition();
       let valueToCommit = minValue;
-      if (snappedPosition <= minPositon) {
+      if (snappedPosition <= minPosition) {
         valueToCommit = minValue;
       } else if (snappedPosition >= maxPosition) {
         valueToCommit = maxValue;
@@ -117,26 +124,27 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
       </div>
       {/* Tooltip */}
       <AnimatePresence>
-        {props.tooltipText && (
+        {props.tooltipText && tooltipOpen && (
           <motion.div
             className={`pointer-events-none absolute w-0 z-10 left-0 select-none -top-12 flex items-center justify-center`}
             style={{ x: tooltipX }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+              y: 0,
+            }}
+            initial={{
+              scale: 0,
+              opacity: 0,
+              y: 16,
+            }}
+            exit={{
+              scale: 0,
+              opacity: 0,
+              y: 16,
+            }}
           >
-            <motion.div
-              animate={
-                tooltipOpen
-                  ? {
-                      scale: 1,
-                      opacity: 1,
-                    }
-                  : {
-                      scale: 0,
-                      opacity: 0,
-                      y: 16,
-                    }
-              }
-              className="px-2 py-1 border rounded shadow-md whitespace-nowrap text-primary bg-background border-border"
-            >
+            <motion.div className="px-2 py-1 border rounded shadow-md whitespace-nowrap text-primary bg-background border-border">
               <AnimatePresence>
                 <motion.span
                   initial={{ opacity: 0 }}
@@ -153,14 +161,18 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
       </AnimatePresence>
 
       {/* Pointer */}
-      <motion.div
-        ref={pointerElRef}
-        className="absolute top-0 left-0 w-8 h-8 -mx-4 transition-none bg-white border rounded-full shadow-md opacity-0 cursor-pointer border-primary"
-        style={{ x: pointerX }}
-        animate={{
-          opacity: 1,
-        }}
-      ></motion.div>
+      <AnimatePresence>
+        <motion.div
+          ref={pointerElRef}
+          className="absolute top-0 left-0 w-8 h-8 -mx-4 transition-none bg-white border rounded-full shadow-md cursor-pointer border-primary"
+          style={{ x: pointerX }}
+          animate={{
+            scale: 1,
+          }}
+          exit={{ scale: 0 }}
+          initial={{ scale: 0 }}
+        ></motion.div>
+      </AnimatePresence>
     </div>
   );
 };
