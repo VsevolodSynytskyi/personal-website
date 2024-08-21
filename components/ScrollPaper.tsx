@@ -40,6 +40,8 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
         }}
       >
         <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           style={{
             rotateX: rotate,
             scale,
