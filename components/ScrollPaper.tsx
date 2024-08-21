@@ -12,10 +12,6 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
   const screen = useScreen();
   const isMobile = screen ? screen.width <= 769 : false;
 
-  console.log(isMobile);
-
-  console.log(scrollYProgress);
-  // const progressMotionValue = useMotionValue(scrollYProgress)
   const progressMotionValueTransformed = useTransform(
     scrollYProgress,
     [0, 1],

@@ -5,6 +5,7 @@ import TimeToReadSlider from "./TimeToReadSlider";
 import { SlidersHorizontal } from "lucide-react";
 
 import { Button } from "../aceternity-ui/button";
+import ContentTypeSlider from "./ContentTypeSlider";
 
 const PageContentConstructor: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,6 +32,7 @@ const PageContentConstructor: React.FC = () => {
       </motion.div>
       {/* Sliders */}
       <motion.div ref={ref} className="flex flex-col gap-8">
+        <ContentTypeSlider />
         <TimeToReadSlider />
       </motion.div>
     </>
