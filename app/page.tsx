@@ -7,11 +7,13 @@ import HomeIntro from "../components/intro/HomeIntro";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center p-8">
+    <div className="flex flex-col items-center p-8 sm:pb-24">
       <div className="flex flex-col w-full max-w-sm gap-16">
         <HomeIntro />
         <HomeBody />
-        <Separator className="my-10" />
+        <div className="relative flex flex-col items-center">
+          <Separator className="w-[calc(100vw-1rem)] my-10" />
+        </div>
         <ContactSection />
       </div>
     </div>
