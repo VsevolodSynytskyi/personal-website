@@ -55,7 +55,7 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
           >
             {/* TODO download background image and host */}
             <div
-              className="absolute w-full h-full bg-white border rounded-sm border-border"
+              className="absolute w-full h-full bg-white border rounded-sm pointer-events-none border-border"
               style={{
                 backgroundImage: `url('https://www.transparenttextures.com/patterns/paper.png'), linear-gradient(to top right, #fdfdfd, #f8f8f8)`,
                 backgroundBlendMode: "multiply",
