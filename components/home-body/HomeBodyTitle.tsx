@@ -1,38 +1,27 @@
 "use client";
-import useSearchParamState from "@/lib/useSearchParamState";
+import { ContentMatrix } from "@/lib/ContentMatrixType";
+import useContentTypeParam from "@/lib/useContentTypeParam";
+import useReadTimeParam from "@/lib/useReadTimeParam";
 import { AnimatePresence, motion } from "framer-motion";
 import { TextGenerateEffect } from "../aceternity-ui/text-generate-effect";
 
-const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
-`;
-
-export function TextGenerateEffectDemo() {
-  return <TextGenerateEffect words={words} />;
-}
+const titleMatrix: ContentMatrix<string> = [
+  [
+    "Моє CV",
+    "Мої Проекти",
+    "Мій Професійний Досвід",
+    "Про Кар'єру, Власні Проекти і Навчання",
+  ],
+  ["10", "11", "12", "13"],
+  ["20", "21", "22", "23"],
+  ["Про Мене", "31", "32", "Коротка Біографія"],
+];
 
 const HomeBodyTitle: React.FC = () => {
-  const [contentType] = useSearchParamState("content_type");
-  const [readTime] = useSearchParamState("read_time");
+  const [contentType] = useContentTypeParam();
+  const [readTime] = useReadTimeParam();
 
-  let titleText = `Хто я`;
-
-  switch (readTime) {
-    case "0":
-      titleText = "Моє CV";
-      break;
-    case "1":
-      titleText = "Мої Проекти";
-      break;
-    case "2":
-      titleText = "Мій Професійний Досвід";
-      break;
-    case "3":
-      titleText = "Про Кар'єру, Власні Проекти і Навчання";
-      break;
-    default:
-      titleText = "Про мене";
-  }
-
+  let titleText = titleMatrix[contentType][readTime];
   /*
   Лак-1. Проф
 
@@ -70,7 +59,7 @@ const HomeBodyTitle: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          key={titleText}
+          key={titleText?.toString()}
         >
           <p className="absolute top-0 text-xl font-semibold tracking-tight scroll-m-20 lg:text-xl">
             <TextGenerateEffect words={titleText} />

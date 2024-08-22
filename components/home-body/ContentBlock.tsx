@@ -1,4 +1,5 @@
 import dayjs, { Dayjs } from "dayjs";
+import { motion } from "framer-motion";
 
 import "dayjs/locale/uk"; // Import Ukrainian locale
 
@@ -6,24 +7,29 @@ import "dayjs/locale/uk"; // Import Ukrainian locale
 dayjs.locale("uk");
 
 export interface ContentBlockProps {
-  title: React.ReactNode;
+  title?: React.ReactNode;
   dates?: Dayjs[];
-
-  // The first element of array is the shortest content option.
-  // The last element of the array is the longest content option
   content?: React.ReactNode;
 }
 
 const ContentBlock: React.FC<ContentBlockProps> = (props) => {
   return (
     <>
-      <h3>{props.title}</h3>
+      {!!props.title && <h3>{props.title}</h3>}
       <p className="text-sm italic text-muted-foreground">
         {props.dates
           ?.map((date) => date.locale("uk").format("MMMM YYYY"))
           .join(" - ")}
       </p>
-      {!!props.content && <div>{props.content}</div>}
+      {!!props.content && (
+        <motion.div
+          className="text-content"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+          {props.content}
+        </motion.div>
+      )}
     </>
   );
 };

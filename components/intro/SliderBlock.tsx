@@ -7,7 +7,7 @@ interface SliderBlockProps {
   minText?: string;
   maxText?: string;
   stepsNumber: number;
-  tooltipTextTransform: (n: number) => string;
+  tooltipTextTransform: (n: number) => string | undefined;
   value?: number;
   onValueChange?: (newValue: number) => void;
 }
@@ -19,6 +19,8 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
   const onStepCommit = (commitedStep: number) => {
     props.onValueChange?.(commitedStep);
   };
+
+  console.log(`Slider block value =${props.value}`);
 
   return (
     <div className="flex flex-col gap-2">

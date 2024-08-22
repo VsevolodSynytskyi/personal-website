@@ -1,36 +1,30 @@
-import useSearchParamState, {
-  searchParamToNumber,
-} from "@/lib/useSearchParamState";
+import { ContentMatrix } from "@/lib/ContentMatrixType";
+import useContentTypeParam from "@/lib/useContentTypeParam";
+import useReadTimeParam from "@/lib/useReadTimeParam";
 import { AnimatePresence, motion } from "framer-motion";
 import Content00 from "./content/Content00";
 import Content01 from "./content/Content01";
 import Content02 from "./content/Content02";
 import Content03 from "./content/Content03";
+import Content13 from "./content/Content13";
+import Content23 from "./content/Content23";
+import Content30 from "./content/Content30";
+import Content31 from "./content/Content31";
+import Content32 from "./content/Content32";
+import Content33 from "./content/Content33";
 
-// Content Matrix:
-// [i][j] - each element represents entire component content
-// where:
-// i - value of content_type (proffessional vs personal)
-// j - value of read_time (short vs descriptive)
-
-const contentMatrix: React.ReactNode[][] = [
+const contentMatrix: ContentMatrix = [
   [<Content00 />, <Content01 />, <Content02 />, <Content03 />],
-  [, , ,],
-  [, , ,],
-  [, , ,],
+  [, , , <Content13 />],
+  [, , , <Content23 />],
+  [<Content30 />, <Content31 />, <Content32 />, <Content33 />],
 ];
 
-const searchParamToIndex: (searchParam: null | string) => number = (
-  searchParam
-) =>
-  typeof searchParam === "string" ? searchParamToNumber(searchParam) || 0 : 0;
-
 const HomeBodyContent: React.FC = () => {
-  const [readTimeValue] = useSearchParamState("read_time", "0");
-  const [contentTypeValue] = useSearchParamState("content_type", "0");
+  const [contentTypeIndex] = useContentTypeParam();
+  const [readTimeIndex] = useReadTimeParam();
 
-  const readTimeIndex = searchParamToIndex(readTimeValue);
-  const contentTypeIndex = searchParamToIndex(contentTypeValue);
+  const content = contentMatrix[contentTypeIndex][readTimeIndex];
 
   return (
     <motion.div
@@ -47,7 +41,7 @@ const HomeBodyContent: React.FC = () => {
           key={`${contentTypeIndex}${readTimeIndex}`}
         >
           <div>{`contentMatrix[${contentTypeIndex}][${readTimeIndex}]`}</div>
-          {contentMatrix[contentTypeIndex][readTimeIndex]}
+          {content}
         </motion.div>
       </AnimatePresence>
     </motion.div>

@@ -1,4 +1,4 @@
-import useSearchParamState from "@/lib/useSearchParamState";
+import useContentTypeParam from "@/lib/useContentTypeParam";
 import React from "react";
 import SliderBlock from "./SliderBlock";
 
@@ -8,7 +8,7 @@ const maxText = `Особисте`;
 
 const ContentTypeSlider: React.FC = () => {
   // const [sliderValue, setSliderValue] = useState(0);
-  const [contentType, setContentType] = useSearchParamState("content_type");
+  const [contentType, setContentType] = useContentTypeParam();
 
   const tooltipTextTransform = (n: number) => {
     switch (n) {
@@ -25,19 +25,14 @@ const ContentTypeSlider: React.FC = () => {
     }
   };
 
-  const contentTypeValue =
-    typeof contentType === "string" ? parseInt(contentType) : undefined;
-
   return (
     <SliderBlock
       stepsNumber={4}
       title={stepTitle}
       minText={minText}
       maxText={maxText}
-      value={contentTypeValue}
-      onValueChange={(newValue) => {
-        setContentType(newValue + "");
-      }}
+      value={contentType}
+      onValueChange={setContentType}
       tooltipTextTransform={tooltipTextTransform}
     />
   );

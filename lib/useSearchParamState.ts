@@ -5,6 +5,11 @@ export const searchParamToNumber = (searchParam: string) => {
   return typeof searchParam === "string" ? parseInt(searchParam) : null;
 };
 
+export const searchParamToIndex: (searchParam: null | string) => number = (
+  searchParam
+) =>
+  typeof searchParam === "string" ? searchParamToNumber(searchParam) || 0 : 0;
+
 const useSearchParamState = (
   searchParamName: string,
   defaultValue?: string

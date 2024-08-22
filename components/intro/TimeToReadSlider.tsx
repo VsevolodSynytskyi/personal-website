@@ -1,4 +1,4 @@
-import useSearchParamState from "@/lib/useSearchParamState";
+import useReadTimeParam from "@/lib/useReadTimeParam";
 import SliderBlock from "./SliderBlock";
 
 const stepTitle = `Час на прочитання`;
@@ -6,26 +6,22 @@ const minText = `10 сек`;
 const maxText = `2 хв`;
 
 const TimeToReadSlider: React.FC = () => {
-  const [sliderValue, setSliderValue] = useSearchParamState("read_time");
+  const [sliderValue, setSliderValue] = useReadTimeParam();
 
   const tooltipTextTransform = (n: number) => {
     switch (n) {
       case 0:
         return "10 секунд";
-
       case 1:
         return "30 секунд";
       case 2:
         return "1 хвилина";
       case 3:
-        return "2 хвилини";
+        return "2-3 хвилини";
       default:
-        return "1 хвилина";
+        break;
     }
   };
-
-  const value =
-    typeof sliderValue === "string" ? parseInt(sliderValue) : undefined;
 
   return (
     <SliderBlock
@@ -33,10 +29,8 @@ const TimeToReadSlider: React.FC = () => {
       title={stepTitle}
       minText={minText}
       maxText={maxText}
-      value={value}
-      onValueChange={(newValue) => {
-        setSliderValue(newValue + "");
-      }}
+      value={sliderValue}
+      onValueChange={setSliderValue}
       tooltipTextTransform={tooltipTextTransform}
     />
   );
