@@ -1,19 +1,14 @@
-// pages/qr-networking.js
+"use client";
 
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-const QrTshirt: React.FC = () => {
+const QrTshirtPage: React.FC = () => {
   const router = useRouter();
 
-  console.log(`tshirt page test`);
+  useEffect(() => {}, [router.push("/")]);
 
-  useEffect(() => {
-    // Redirect to the homepage or any other page
-    router.push("/");
-  }, [router]);
-
-  return <div>Redirecting...</div>;
+  return null;
 };
 
-export default QrTshirt;
+export default QrTshirtPage;
