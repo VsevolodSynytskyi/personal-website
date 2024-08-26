@@ -19,9 +19,11 @@ const HomeBodyContent: React.FC = () => {
             ),
             dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
             contentByLength: [
-              <p>
-                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar
-              </p>,
+              <>
+                <p>
+                  React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar
+                </p>
+              </>,
               <>
                 <li>
                   Дизайн і розробка лендігу на Webflow -{" "}
