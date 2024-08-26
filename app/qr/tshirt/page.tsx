@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const QrTshirtPage: React.FC = () => {
   const router = useRouter();
 
-  useEffect(() => {}, [router.push("/")]);
+  useEffect(() => {}, [router.replace("/")]);
 
   return null;
 };
