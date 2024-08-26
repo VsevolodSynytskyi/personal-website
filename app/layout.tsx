@@ -1,5 +1,6 @@
 import { Toaster } from "@/components/aceternity-ui/sonner";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Toaster closeButton position="top-center" />
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
