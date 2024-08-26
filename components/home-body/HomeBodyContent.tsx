@@ -101,10 +101,12 @@ const HomeBodyContent: React.FC = () => {
                 <p>Розробка Лендінгів на Wordpress</p>
               </>,
               // X=1 (shorter content)
-              <p>
-                З командою розробників, створювали корпоративні сайти на
-                Wordpress для замовників агенції.
-              </p>,
+              <>
+                <p>
+                  З командою розробників, створювали корпоративні сайти на
+                  Wordpress для замовників агенції.
+                </p>
+              </>,
               // X=2 (short content)
               <>
                 <p>
@@ -373,7 +375,9 @@ const HomeBodyContent: React.FC = () => {
             ),
             contentByLength: [
               ,
-              <p>Поглиблений курс для розробки на React JS.</p>,
+              <>
+                <p>Поглиблений курс для розробки на React JS.</p>
+              </>,
             ],
             dates: [dayjs("Jul 2020")],
           },
@@ -387,35 +391,41 @@ const HomeBodyContent: React.FC = () => {
             title: <>DEV.TO</>,
             dates: [dayjs("Oct 2022")],
             contentByLength: [
-              <p>
-                <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
-                  «Leading a UI design team as a developer»
-                </LinkPreview>
-              </p>,
+              <>
+                <p>
+                  <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
+                    «Leading a UI design team as a developer»
+                  </LinkPreview>
+                </p>
+              </>,
             ],
           },
           {
             title: <>Telegraph</>,
             dates: [dayjs("Oct 2022")],
             contentByLength: [
-              <p>
-                <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
-                  «Коли розробник керує дизайнерами.
-                  <br /> Як налагодити взаємодію в команді»
-                </LinkPreview>
-              </p>,
+              <>
+                <p>
+                  <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
+                    «Коли розробник керує дизайнерами.
+                    <br /> Як налагодити взаємодію в команді»
+                  </LinkPreview>
+                </p>
+              </>,
             ],
           },
           {
             title: <>DOU</>,
             dates: [dayjs("June 2022")],
             contentByLength: [
-              <p>
-                <LinkPreview href="https://dou.ua/forums/topic/38459/">
-                  «Розповідаю про перший досвід розвитку волонтерського продукту
-                  під час війни»
-                </LinkPreview>
-              </p>,
+              <>
+                <p>
+                  <LinkPreview href="https://dou.ua/forums/topic/38459/">
+                    «Розповідаю про перший досвід розвитку волонтерського
+                    продукту під час війни»
+                  </LinkPreview>
+                </p>
+              </>,
             ],
           },
         ]}
