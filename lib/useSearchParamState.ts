@@ -1,5 +1,5 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 export const searchParamToNumber = (searchParam: string) => {
   return typeof searchParam === "string" ? parseInt(searchParam) : null;
@@ -13,7 +13,7 @@ export const searchParamToIndex: (searchParam: null | string) => number = (
 const useSearchParamState = (
   searchParamName: string,
   defaultValue?: string
-): [string | null, (searcParamsValue: string) => void] => {
+): [string | null, (searchParamValue: string) => void] => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -41,11 +41,12 @@ const useSearchParamState = (
     );
   };
 
-  if (defaultValue !== undefined) {
-    if (searchParamState === null) {
+  // Set the default value after the initial render if it's not already set
+  useEffect(() => {
+    if (defaultValue !== undefined && searchParamState === null) {
       setSearchParam(defaultValue);
     }
-  }
+  }, [defaultValue, searchParamState, setSearchParam]);
 
   return [searchParamState, setSearchParam];
 };

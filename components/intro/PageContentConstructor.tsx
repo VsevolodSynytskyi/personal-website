@@ -18,13 +18,13 @@ const PageContentConstructor: React.FC = () => {
     <>
       {/* Top Button */}
       <motion.div
-        initial={{ y: "-100" }}
+        // initial={{ y: "0" }}
         animate={isInView ? { y: "-100%" } : { y: "0" }}
         viewport={{
           root: ref,
         }}
         style={{ left: `calc(min(100% - 4.5rem,50% + 9.5rem))` }}
-        className="fixed top-0 z-20"
+        className="fixed top-0 z-20 -translate-y-full"
       >
         <Button onClick={onScrollClick} variant={"ghost"} size="icon">
           <SlidersHorizontal className="w-4 h-4" />
