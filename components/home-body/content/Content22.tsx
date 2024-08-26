@@ -1,7 +1,8 @@
 import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+import dayjs from "dayjs";
 import ContentSection from "../ContentSection";
 
-const Content32: React.FC = () => {
+const Content22: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -21,10 +22,9 @@ const Content32: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Хоббі"
+        title="Походи"
         contentBlocks={[
           {
-            title: "Походи",
             content: (
               <>
                 <p>
@@ -40,9 +40,12 @@ const Content32: React.FC = () => {
               </>
             ),
           },
-
+        ]}
+      />
+      <ContentSection
+        title="Біг"
+        contentBlocks={[
           {
-            title: "Біг",
             content: (
               <>
                 <p>
@@ -79,41 +82,70 @@ const Content32: React.FC = () => {
           },
         ]}
       />
-
       <ContentSection
-        title={"Нора"}
+        title="Кар’єра"
         contentBlocks={[
           {
-            content: (
-              <p>Я маю собаку, яка розділяє мої захоплення бігом і походами.</p>
+            title: (
+              <>
+                Product Designer & Frontend Developer at{" "}
+                <LinkPreview href="https://www.siteform.io/">
+                  SiteForm
+                </LinkPreview>
+              </>
             ),
+            dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
+            content: (
+              <p>
+                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
+              </p>
+            ),
+          },
+          {
+            title: (
+              <>
+                Frontend Developer at{" "}
+                <LinkPreview href="https://www.ryze-digital.de/">
+                  Ryze Digital
+                </LinkPreview>
+              </>
+            ),
+            dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
+            content: <p>Розробка Лендінгів на Wordpress.</p>,
+          },
+          {
+            title: (
+              <>
+                Graphic Designer at{" "}
+                <LinkPreview href="https://it-artel.ua/">iT Artel</LinkPreview>
+              </>
+            ),
+            dates: [dayjs("Apr 2021"), dayjs("May 2021")],
+            content: <p>Сайти і презентації.</p>,
           },
         ]}
       />
-
       <ContentSection
-        title="Ідея Приборкання Місцевості"
+        title="Власні ініціативи"
         contentBlocks={[
           {
+            title: (
+              <LinkPreview href="https://www.instagram.com/inflow.coworking/">
+                Коворкінг
+              </LinkPreview>
+            ),
+            dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
             content: (
-              <>
-                <p>
-                  Я часто переїжджаю. Мені подобається адаптуватися до стилю
-                  життя нового міста, знаходити його унікальну романтику. Кожне
-                  нове місце має свої особливості, які можна пізнати, частково
-                  відмовившись від попередніх звичок і норм. Так я вчуся любити
-                  нове і адаптовуватися до нього.
-                </p>
-                <p>
-                  Тривожного киянина Одеса навчила вольяжно прогулюватись
-                  будніми ранками.
-                  <br /> Франківськ плануванню фразами “Не будем загадувать”,
-                  “Буде видно” і “Ну то побачим”.
-                  <br />А Карпатська зима загартувала дитину асфалту, щоб
-                  патлатий хлопчик з шопером полюбив старі джипи і американо з
-                  автомату.
-                </p>
-              </>
+              <p>
+                Відкриття коворкінгу під час зимових відключень 2022-го року.
+              </p>
+            ),
+          },
+          {
+            title: "Волонтерство",
+            dates: [dayjs("Mar 2022")],
+            content: (
+              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
           },
         ]}
@@ -122,4 +154,4 @@ const Content32: React.FC = () => {
   );
 };
 
-export default Content32;
+export default Content22;

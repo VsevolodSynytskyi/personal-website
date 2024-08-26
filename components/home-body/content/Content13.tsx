@@ -180,7 +180,11 @@ const Content13: React.FC = () => {
                 </p>
                 <p>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
-                  — Бігова Спільнота "Чумаки".
+                  — Бігова Спільнота{" "}
+                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
+                    "Чумаки"
+                  </LinkPreview>
+                  .
                 </p>
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>

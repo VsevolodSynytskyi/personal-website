@@ -69,7 +69,7 @@
 }
 
 .text-content p {
-  @apply mt-6 leading-7;
+  @apply leading-7;
 }
 .text-content p:not(:first-child) {
   @apply mt-6;
@@ -99,5 +99,5 @@
 }
 
 .text-content blockquote {
-  @apply border-l-2 pl-6 italic my-2;
+  @apply pl-6 my-2 italic border-l-2;
 }

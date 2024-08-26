@@ -1,7 +1,7 @@
 import ContentBlock, { ContentBlockProps } from "./ContentBlock";
 
 interface ContentSectionProps {
-  title: React.ReactNode;
+  title?: React.ReactNode;
   contentBlocks?: ContentBlockProps[];
 }
 

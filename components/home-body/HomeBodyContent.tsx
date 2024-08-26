@@ -6,7 +6,13 @@ import Content00 from "./content/Content00";
 import Content01 from "./content/Content01";
 import Content02 from "./content/Content02";
 import Content03 from "./content/Content03";
+import Content10 from "./content/Content10";
+import Content11 from "./content/Content11";
+import Content12 from "./content/Content12";
 import Content13 from "./content/Content13";
+import Content20 from "./content/Content20";
+import Content21 from "./content/Content21";
+import Content22 from "./content/Content22";
 import Content23 from "./content/Content23";
 import Content30 from "./content/Content30";
 import Content31 from "./content/Content31";
@@ -15,8 +21,8 @@ import Content33 from "./content/Content33";
 
 const contentMatrix: ContentMatrix = [
   [<Content00 />, <Content01 />, <Content02 />, <Content03 />],
-  [, , , <Content13 />],
-  [, , , <Content23 />],
+  [<Content10 />, <Content11 />, <Content12 />, <Content13 />],
+  [<Content20 />, <Content21 />, <Content22 />, <Content23 />],
   [<Content30 />, <Content31 />, <Content32 />, <Content33 />],
 ];
 
@@ -40,7 +46,6 @@ const HomeBodyContent: React.FC = () => {
           exit={{ opacity: 0, position: "absolute" }}
           key={`${contentTypeIndex}${readTimeIndex}`}
         >
-          <div>{`contentMatrix[${contentTypeIndex}][${readTimeIndex}]`}</div>
           {content}
         </motion.div>
       </AnimatePresence>

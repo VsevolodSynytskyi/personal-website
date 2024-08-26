@@ -1,3 +1,4 @@
+import { LinkPreview } from "@/components/aceternity-ui/link-preview";
 import dayjs from "dayjs";
 import ContentSection from "../ContentSection";
 
@@ -37,7 +38,11 @@ const Content33: React.FC = () => {
                 </p>
                 <p>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
-                  — Бігова Спільнота "Чумаки".
+                  — Бігова Спільнота{" "}
+                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
+                    "Чумаки"
+                  </LinkPreview>
+                  .
                 </p>
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
@@ -53,8 +58,8 @@ const Content33: React.FC = () => {
               <>
                 <p>
                   Нора з'явилась у моєму житті взимку 2022-2023. Часто питають,
-                  як я привчив її до мандрівок. Така вже в неї порода -
-                  Франківська Туристична.
+                  як я привчив її до мандрівок. Така в неї порода - Франківська
+                  Туристична.
                 </p>
               </>
             ),
@@ -219,7 +224,7 @@ const Content33: React.FC = () => {
             ),
           },
           {
-            title: "Філософія Приборкання Місцевості",
+            title: "Ідея Приборкання Місцевості",
             content: (
               <>
                 <p>
