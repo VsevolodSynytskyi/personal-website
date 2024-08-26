@@ -6,6 +6,8 @@ import { useEffect } from "react";
 const QrTshirt: React.FC = () => {
   const router = useRouter();
 
+  console.log(`tshirt page test`);
+
   useEffect(() => {
     // Redirect to the homepage or any other page
     router.push("/");
