@@ -20,10 +20,30 @@ import Content32 from "./content/Content32";
 import Content33 from "./content/Content33";
 
 const contentMatrix: ContentMatrix = [
-  [<Content00 />, <Content01 />, <Content02 />, <Content03 />],
-  [<Content10 />, <Content11 />, <Content12 />, <Content13 />],
-  [<Content20 />, <Content21 />, <Content22 />, <Content23 />],
-  [<Content30 />, <Content31 />, <Content32 />, <Content33 />],
+  [
+    <Content00 key={"00"} />,
+    <Content01 key={"01"} />,
+    <Content02 key={"02"} />,
+    <Content03 key={"03"} />,
+  ],
+  [
+    <Content10 key={"10"} />,
+    <Content11 key={"11"} />,
+    <Content12 key={"12"} />,
+    <Content13 key={"13"} />,
+  ],
+  [
+    <Content20 key={"20"} />,
+    <Content21 key={"21"} />,
+    <Content22 key={"22"} />,
+    <Content23 key={"23"} />,
+  ],
+  [
+    <Content30 key={"30"} />,
+    <Content31 key={"31"} />,
+    <Content32 key={"32"} />,
+    <Content33 key={"33"} />,
+  ],
 ];
 
 const HomeBodyContent: React.FC = () => {
