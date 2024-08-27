@@ -75,6 +75,13 @@
   @apply mt-6;
 }
 
+.text-content > div {
+  @apply leading-7;
+}
+.text-content > div:not(:first-child) {
+  @apply mt-6;
+}
+
 .text-content ul {
   @apply my-6 ml-6 list-disc;
 }

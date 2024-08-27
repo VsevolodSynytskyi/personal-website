@@ -4,7 +4,26 @@ import React from "react";
 import ContentSection from "../ContentSection";
 const Content12: React.FC = () => {
   return (
-    <div>
+    <>
+      <ContentSection
+        title={`Про Мене`}
+        contentBlocks={[
+          {
+            content: (
+              <p>
+                Я виріс у Києві, але поїхав звідти у 2021. З тих пір пожив в
+                Одесі, Львові, Івано-Франківську і в Карпатах.
+              </p>
+            ),
+          },
+          {
+            content: <p>Наразі мешкаю у Львові.</p>,
+          },
+          {
+            content: <p>Я займаюсь бігом, ходжу в гори і маю собаку.</p>,
+          },
+        ]}
+      />
       <ContentSection
         title="Кар’єра"
         contentBlocks={[
@@ -91,10 +110,10 @@ const Content12: React.FC = () => {
             content: (
               <>
                 <p>
-                  В березні 2022, коли багато людей прибувало на Львівський
-                  вокзал у комендантську годину, ми створили телеграм-бота для
-                  координації водіїв і пасажирів. Я займався координацією водіїв
-                  та допомагав юзерам.
+                  Після вторгнення 2022 багато людей прибувало на Львівський
+                  вокзал у комендантську годину, тому ми створили телеграм-бота
+                  для координації водіїв і пасажирів. Я займався координацією
+                  водіїв та допомагав юзерам.
                 </p>
                 <p>
                   Завдяки ініціативі близько 1,500 людей було розвезено до місця
@@ -158,87 +177,46 @@ const Content12: React.FC = () => {
         ]}
       />
       <ContentSection
-        title={"Хоббі"}
-        contentBlocks={[
-          {
-            title: "Походи",
-            content: (
-              <>
-                <p>
-                  За час проживання в Карпатах, походи стали для мене буденною
-                  справою. Я міг будь-якої миті вирушити у гори, без особливих
-                  планів чи підготовки.
-                </p>
-                <p>
-                  Спочатку думав, що після Карпат довго не захочу повертатись у
-                  гори — так вони мені набриднуть. Але я помилився. Здається, що
-                  походів у моєму житті ставатиме дедалі більше.
-                </p>
-              </>
-            ),
-          },
-          {
-            title: "Біг",
-            content: (
-              <>
-                <p>
-                  Біг став важливою частиною мого життя. Не так я кайфую від
-                  бігу, як від спільноти навколо нього.{" "}
-                </p>
-                <p>
-                  <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
-                  — Бігова Спільнота{" "}
-                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
-                    "Чумаки"
-                  </LinkPreview>
-                  .
-                </p>
-              </>
-            ),
-          },
-        ]}
-      />
-      <ContentSection
         title="Статті"
         contentBlocks={[
           {
             title: <>DEV.TO</>,
             dates: [dayjs("Oct 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
                   «Leading a UI design team as a developer»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
           {
             title: <>Telegraph</>,
             dates: [dayjs("Oct 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
                   «Коли розробник керує дизайнерами.
                   <br /> Як налагодити взаємодію в команді»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
           {
             title: <>DOU</>,
             dates: [dayjs("June 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://dou.ua/forums/topic/38459/">
                   «Розповідаю про перший досвід розвитку волонтерського продукту
                   під час війни»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

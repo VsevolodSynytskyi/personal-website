@@ -2,7 +2,7 @@ import ContentSection from "../ContentSection";
 
 const Content30: React.FC = () => {
   return (
-    <div>
+    <>
       <ContentSection
         contentBlocks={[
           {
@@ -21,7 +21,7 @@ const Content30: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

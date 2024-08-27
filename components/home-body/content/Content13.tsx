@@ -113,11 +113,10 @@ const Content13: React.FC = () => {
             content: (
               <>
                 <p>
-                  В березні 2022 я був у Львові під час комендантської години,
-                  коли багато людей ночували на залізничному вокзалі після
-                  довгих поїздок. Ми створили телеграм-бота для зв`язку
-                  водіїв-волонтерів і пасажирів. Я відповідав за координацію
-                  водіїв і допомогу користувачам.
+                  Після вторгнення 2022 багато людей прибувало на Львівський
+                  вокзал у комендантську годину, тому ми створили телеграм-бота
+                  для координації водіїв і пасажирів. Я займався координацією
+                  водіїв та допомагав юзерам.
                 </p>
                 <p>
                   В результаті близько 1,500 людей були розвезені до місця
@@ -129,7 +128,7 @@ const Content13: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Робочі Цінності"
+        title="Професійні Цінності"
         contentBlocks={[
           {
             content: (
@@ -178,14 +177,14 @@ const Content13: React.FC = () => {
                   Біг став важливою частиною мого життя. Не так я кайфую від
                   бігу, як від спільноти навколо нього.{" "}
                 </p>
-                <p>
+                <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
                   <LinkPreview href="https://www.instagram.com/chumaky.way/">
                     "Чумаки"
                   </LinkPreview>
                   .
-                </p>
+                </div>
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
             ),
@@ -257,35 +256,35 @@ const Content13: React.FC = () => {
             title: <>DEV.TO</>,
             dates: [dayjs("Oct 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
                   «Leading a UI design team as a developer»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
           {
             title: <>Telegraph</>,
             dates: [dayjs("Oct 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
                   «Коли розробник керує дизайнерами.
                   <br /> Як налагодити взаємодію в команді»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
           {
             title: <>DOU</>,
             dates: [dayjs("June 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://dou.ua/forums/topic/38459/">
                   «Розповідаю про перший досвід розвитку волонтерського продукту
                   під час війни»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
         ]}

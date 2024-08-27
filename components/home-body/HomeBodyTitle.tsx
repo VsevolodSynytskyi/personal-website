@@ -7,14 +7,29 @@ import { TextGenerateEffect } from "../aceternity-ui/text-generate-effect";
 
 const titleMatrix: ContentMatrix<string> = [
   [
-    "Моє CV",
-    "Мої Проекти",
-    "Мій Професійний Досвід",
-    "Про Кар'єру, Власні Проекти і Навчання",
+    "Меньше ніж CV",
+    "Майже CV",
+    "CV",
+    "Про Кар'єру, Власні Проекти та Навчання",
   ],
-  ["Карʼєра", "Карʼєра і Хоббі", "Карʼєра і Хоббі", "Кар'єра і Хоббі"],
-  ["Про Мене", "Хоббі і Кар'єра", "Хоббі і Кар'єра", "Хоббі і Кар'єра"],
-  ["Про Мене", "Мої Захоплення", "Хоббі та Ідеї", "Коротка Біографія"],
+  [
+    "Звідки Я і Чим Займаюсь",
+    "Карʼєра",
+    "Карʼєра",
+    "Професійний Шлях та Хоббі",
+  ],
+  [
+    "Звідки Я і Чим Займаюсь",
+    "Хоббі та Робота",
+    "Хоббі та Кар'єра",
+    "Хоббі та Кар'єра",
+  ],
+  [
+    "Коротко Про Мене",
+    "Мої Захоплення",
+    "Звідки Я, Хоббі та Ідеї",
+    "Чим Я Живу",
+  ],
 ];
 
 const HomeBodyTitle: React.FC = () => {
@@ -30,7 +45,7 @@ const HomeBodyTitle: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          key={titleText?.toString()}
+          key={`${readTime}${contentType}`}
         >
           <p className="absolute top-0 text-xl font-semibold tracking-tight scroll-m-20 lg:text-xl">
             <TextGenerateEffect words={titleText} />

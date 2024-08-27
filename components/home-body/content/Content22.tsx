@@ -52,14 +52,14 @@ const Content22: React.FC = () => {
                   Біг став важливою частиною мого життя. Не так я кайфую від
                   бігу, як від спільноти навколо нього.{" "}
                 </p>
-                <p>
+                <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
                   <LinkPreview href="https://www.instagram.com/chumaky.way/">
                     "Чумаки"
                   </LinkPreview>
                   .
-                </p>
+                </div>
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
             ),

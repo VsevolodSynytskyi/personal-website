@@ -1,5 +1,4 @@
 import { LinkPreview } from "@/components/aceternity-ui/link-preview";
-import dayjs from "dayjs";
 import ContentSection from "../ContentSection";
 
 const Content21: React.FC = () => {
@@ -49,83 +48,37 @@ const Content21: React.FC = () => {
                   Біг став важливою частиною мого життя. Не так я кайфую від
                   бігу, як від спільноти навколо нього.{" "}
                 </p>
-                <p>
+                <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
                   <LinkPreview href="https://www.instagram.com/chumaky.way/">
                     "Чумаки"
                   </LinkPreview>
                   .
+                </div>
+              </>
+            ),
+          },
+        ]}
+      />
+      <ContentSection
+        title="Робота"
+        contentBlocks={[
+          {
+            content: (
+              <>
+                <p>Я працюю на стику дизайну і розробки.</p>
+                <p>
+                  Мене захоплює проектування інтерфейсів, які виклиають відчуття
+                  "сів і поїхав", а розробка - інструмент втілення творчих
+                  задумів.
+                </p>
+                <p>
+                  Останні 2+ роки покращував UX сервісу для управління
+                  будівельними проектами в Штатах. (SaaS, B2B, construction,
+                  USA)
                 </p>
               </>
-            ),
-          },
-        ]}
-      />
-      <ContentSection
-        title="Кар’єра"
-        contentBlocks={[
-          {
-            title: (
-              <>
-                Product Designer & Frontend Developer at{" "}
-                <LinkPreview href="https://www.siteform.io/">
-                  SiteForm
-                </LinkPreview>
-              </>
-            ),
-            dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
-            content: (
-              <p>
-                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
-              </p>
-            ),
-          },
-          {
-            title: (
-              <>
-                Frontend Developer at{" "}
-                <LinkPreview href="https://www.ryze-digital.de/">
-                  Ryze Digital
-                </LinkPreview>
-              </>
-            ),
-            dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
-            content: <p>Розробка Лендінгів на Wordpress.</p>,
-          },
-          {
-            title: (
-              <>
-                Graphic Designer at{" "}
-                <LinkPreview href="https://it-artel.ua/">iT Artel</LinkPreview>
-              </>
-            ),
-            dates: [dayjs("Apr 2021"), dayjs("May 2021")],
-            content: <p>Сайти і презентації.</p>,
-          },
-        ]}
-      />
-      <ContentSection
-        title="Власні ініціативи"
-        contentBlocks={[
-          {
-            title: (
-              <LinkPreview href="https://www.instagram.com/inflow.coworking/">
-                Коворкінг
-              </LinkPreview>
-            ),
-            dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
-            content: (
-              <p>
-                Відкриття коворкінгу під час зимових відключень 2022-го року.
-              </p>
-            ),
-          },
-          {
-            title: "Волонтерство",
-            dates: [dayjs("Mar 2022")],
-            content: (
-              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
           },
         ]}

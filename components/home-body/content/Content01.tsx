@@ -2,6 +2,7 @@ import { LinkPreview } from "@/components/aceternity-ui/link-preview";
 import dayjs from "dayjs";
 import React from "react";
 import ContentSection from "../ContentSection";
+
 const Content01: React.FC = () => {
   return (
     <div>
@@ -19,22 +20,9 @@ const Content01: React.FC = () => {
             ),
             dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
             content: (
-              <>
-                <li>
-                  Дизайн і розробка лендігу на Webflow -{" "}
-                  <LinkPreview
-                    href="https://www.siteform.io/"
-                    className="font-medium underline text-primary underline-offset-4"
-                  >
-                    https://www.siteform.io/
-                  </LinkPreview>
-                </li>
-                <li>
-                  Дизайн інтерфейсу і розробка веб-застосунку (React,
-                  Typescript, Tailwind, Graphql, Framer Motion)
-                </li>
-                <li>Аналіз поведінки юзерів через Hotjar</li>
-              </>
+              <p>
+                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
+              </p>
             ),
           },
           {
@@ -47,12 +35,7 @@ const Content01: React.FC = () => {
               </>
             ),
             dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
-            content: (
-              <p>
-                З командою розробників, створювали корпоративні сайти на
-                Wordpress для замовників агенції.
-              </p>
-            ),
+            content: <p>Розробка Лендінгів на Wordpress.</p>,
           },
           {
             title: (
@@ -62,9 +45,7 @@ const Content01: React.FC = () => {
               </>
             ),
             dates: [dayjs("Apr 2021"), dayjs("May 2021")],
-            content: (
-              <p>Дизайн корпоративного сайту компанії і проектів замовників.</p>
-            ),
+            content: <p>Сайти і презентації.</p>,
           },
         ]}
       />
@@ -80,8 +61,7 @@ const Content01: React.FC = () => {
             dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
             content: (
               <p>
-                Підприємницький досвід відкриття коворкінгу під час зимових
-                відключень 2022-го року.
+                Відкриття коворкінгу під час зимових відключень 2022-го року.
               </p>
             ),
           },
@@ -89,18 +69,7 @@ const Content01: React.FC = () => {
             title: "Волонтерство",
             dates: [dayjs("Mar 2022")],
             content: (
-              <>
-                <p>
-                  В березні 2022, коли багато людей прибувало на Львівський
-                  вокзал у комендантську годину, ми створили телеграм-бота для
-                  координації водіїв і пасажирів. Я займався координацією водіїв
-                  та допомагав юзерам.
-                </p>
-                <p>
-                  Завдяки ініціативі близько 1,500 людей було розвезено до місця
-                  ночівлі.
-                </p>
-              </>
+              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
           },
         ]}
@@ -115,12 +84,6 @@ const Content01: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Dec 2023"), dayjs("Mar 2024")],
-            content: (
-              <p>
-                Працюючи на стартапі, я брав на себе маркетингові обов`язки і
-                вирішив поглибити свої знання в цій сфері.
-              </p>
-            ),
           },
           {
             title: (
@@ -129,11 +92,6 @@ const Content01: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Jun 2023"), dayjs("Oct 2023")],
-            content: (
-              <p>
-                На курсі я усунув теоретичні прогалини в продуктовому дизайні.
-              </p>
-            ),
           },
           {
             title: (
@@ -142,9 +100,6 @@ const Content01: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Jul 2023"), dayjs("Sep 2023")],
-            content: (
-              <p>Практикував навички прототипування і бізнес-аналізу.</p>
-            ),
           },
           {
             title: (
@@ -153,7 +108,6 @@ const Content01: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Jul 2020")],
-            content: <p>Поглиблений курс для розробки на React JS.</p>,
           },
         ]}
       />
@@ -164,35 +118,35 @@ const Content01: React.FC = () => {
             title: <>DEV.TO</>,
             dates: [dayjs("Oct 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
                   «Leading a UI design team as a developer»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
           {
             title: <>Telegraph</>,
             dates: [dayjs("Oct 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
                   «Коли розробник керує дизайнерами.
                   <br /> Як налагодити взаємодію в команді»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
           {
             title: <>DOU</>,
             dates: [dayjs("June 2022")],
             content: (
-              <p>
+              <div>
                 <LinkPreview href="https://dou.ua/forums/topic/38459/">
                   «Розповідаю про перший досвід розвитку волонтерського продукту
                   під час війни»
                 </LinkPreview>
-              </p>
+              </div>
             ),
           },
         ]}

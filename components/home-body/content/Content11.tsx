@@ -7,6 +7,7 @@ const Content11: React.FC = () => {
   return (
     <div>
       <ContentSection
+        title={"Звідки Я"}
         contentBlocks={[
           {
             content: (
@@ -18,9 +19,6 @@ const Content11: React.FC = () => {
           },
           {
             content: <p>Наразі мешкаю у Львові.</p>,
-          },
-          {
-            content: <p>Я займаюсь бігом, ходжу в гори і маю собаку.</p>,
           },
         ]}
       />
@@ -126,46 +124,6 @@ const Content11: React.FC = () => {
               </LinkPreview>
             ),
             dates: [dayjs("Jul 2020")],
-          },
-        ]}
-      />
-      <ContentSection
-        title="Статті"
-        contentBlocks={[
-          {
-            title: <>DEV.TO</>,
-            dates: [dayjs("Oct 2022")],
-            content: (
-              <p>
-                <LinkPreview href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld">
-                  «Leading a UI design team as a developer»
-                </LinkPreview>
-              </p>
-            ),
-          },
-          {
-            title: <>Telegraph</>,
-            dates: [dayjs("Oct 2022")],
-            content: (
-              <p>
-                <LinkPreview href="https://telegraf.design/designer-keruye-rozrobnykamy/">
-                  «Коли розробник керує дизайнерами.
-                  <br /> Як налагодити взаємодію в команді»
-                </LinkPreview>
-              </p>
-            ),
-          },
-          {
-            title: <>DOU</>,
-            dates: [dayjs("June 2022")],
-            content: (
-              <p>
-                <LinkPreview href="https://dou.ua/forums/topic/38459/">
-                  «Розповідаю про перший досвід розвитку волонтерського продукту
-                  під час війни»
-                </LinkPreview>
-              </p>
-            ),
           },
         ]}
       />

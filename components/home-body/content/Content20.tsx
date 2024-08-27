@@ -1,5 +1,3 @@
-import { LinkPreview } from "@/components/aceternity-ui/link-preview";
-import dayjs from "dayjs";
 import React from "react";
 import ContentSection from "../ContentSection";
 
@@ -7,6 +5,7 @@ const Content20: React.FC = () => {
   return (
     <div>
       <ContentSection
+        title={"Звідки Я"}
         contentBlocks={[
           {
             content: (
@@ -19,51 +18,20 @@ const Content20: React.FC = () => {
           {
             content: <p>Наразі мешкаю у Львові.</p>,
           },
-          {
-            content: <p>Я займаюсь бігом, ходжу в гори і маю собаку.</p>,
-          },
         ]}
       />
       <ContentSection
-        title="Кар’єра"
+        title="Робота"
         contentBlocks={[
           {
-            title: (
-              <>
-                Product Designer & Frontend Developer at{" "}
-                <LinkPreview href="https://www.siteform.io/">
-                  SiteForm
-                </LinkPreview>
-              </>
-            ),
-            dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
             content: (
-              <p>
-                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
-              </p>
-            ),
-          },
-          {
-            title: (
               <>
-                Frontend Developer at{" "}
-                <LinkPreview href="https://www.ryze-digital.de/">
-                  Ryze Digital
-                </LinkPreview>
+                <p>
+                  Останні 2+ роки покращував UX сервісу для управління
+                  будівельними проектами в Штатах.
+                </p>
               </>
             ),
-            dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
-            content: <p>Розробка Лендінгів на Wordpress.</p>,
-          },
-          {
-            title: (
-              <>
-                Graphic Designer at{" "}
-                <LinkPreview href="https://it-artel.ua/">iT Artel</LinkPreview>
-              </>
-            ),
-            dates: [dayjs("Apr 2021"), dayjs("May 2021")],
-            content: <p>Сайти і презентації.</p>,
           },
         ]}
       />
