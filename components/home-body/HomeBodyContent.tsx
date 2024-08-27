@@ -18,6 +18,7 @@ import Content30 from "./content/Content30";
 import Content31 from "./content/Content31";
 import Content32 from "./content/Content32";
 import Content33 from "./content/Content33";
+import CvButtonSection from "./CvButtonSection";
 
 const contentMatrix: ContentMatrix = [
   [
@@ -67,6 +68,7 @@ const HomeBodyContent: React.FC = () => {
           key={`${contentTypeIndex}${readTimeIndex}`}
         >
           {content}
+          {contentTypeIndex === 0 && <CvButtonSection />}
         </motion.div>
       </AnimatePresence>
     </motion.div>
