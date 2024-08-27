@@ -5,7 +5,7 @@ import ContentSection from "../ContentSection";
 
 const Content01: React.FC = () => {
   return (
-    <div>
+    <>
       <ContentSection
         title="Кар’єра"
         contentBlocks={[
@@ -151,7 +151,7 @@ const Content01: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

@@ -4,7 +4,7 @@ import React from "react";
 import ContentSection from "../ContentSection";
 const Content02: React.FC = () => {
   return (
-    <div>
+    <>
       <ContentSection
         title="Кар’єра"
         contentBlocks={[
@@ -199,7 +199,7 @@ const Content02: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

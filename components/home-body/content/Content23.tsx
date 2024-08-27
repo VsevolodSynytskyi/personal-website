@@ -1,10 +1,20 @@
 import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+import BackpackingPicture from "@/components/pictures/BackpackingPicture";
+import CarMovingPicture from "@/components/pictures/CarMovingPicture";
+import ClothesPicture from "@/components/pictures/ClothesPicture";
+import CoworkingPicture from "@/components/pictures/CoworkingPicture";
+import CranePicture from "@/components/pictures/CranePicture";
+import DogRunningPicture from "@/components/pictures/DogRunningPicture";
+import RunningPicture from "@/components/pictures/RunningPicture";
+import SeagullsPicture from "@/components/pictures/SeagullsPic";
+import PictureTrainStation from "@/components/pictures/TrainStationPicture";
+import WorkersPicture from "@/components/pictures/WorkersPicture";
 import dayjs from "dayjs";
 import ContentSection from "../ContentSection";
 
 const Content33: React.FC = () => {
   return (
-    <div>
+    <>
       <ContentSection
         title="Походи"
         contentBlocks={[
@@ -16,6 +26,7 @@ const Content33: React.FC = () => {
                   справою. Я міг будь-якої миті вирушити у гори, без особливих
                   планів чи підготовки.
                 </p>
+                <BackpackingPicture />
                 <p>
                   Спочатку думав, що після Карпат довго не захочу повертатись у
                   гори — так вони мені набриднуть. Але я помилився. Здається, що
@@ -44,6 +55,7 @@ const Content33: React.FC = () => {
                   </LinkPreview>
                   .
                 </div>
+                <RunningPicture />
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
             ),
@@ -61,6 +73,7 @@ const Content33: React.FC = () => {
                   як я привчив її до мандрівок. Така в неї порода - Франківська
                   Туристична.
                 </p>
+                <DogRunningPicture />
               </>
             ),
           },
@@ -85,40 +98,10 @@ const Content33: React.FC = () => {
                   Люди часто думають, що я втік від соціуму. Але я не тікав, я
                   шукав тишу та усамітнення. Це різне.
                 </p>
+                <CarMovingPicture />
               </>
             ),
           },
-          // {
-          //   title: "Прийняття рішень",
-          //   content: (
-          //     <>
-          //       <p>
-          //         Люди схильні приймати "оптимальні" рішення в усьому. Але мені
-          //         це часто невластиво… Я прагну яскравого життя. Тому приймаю
-          //         відповідні рішення.
-          //       </p>
-          //       <p>
-          //         Переїзд в Карпати був неоптимальним рішенням, бо я мусив
-          //         пожертвувати комфортом міського життя. Але це дозволило мені
-          //         знайти нові пригоди та виклики.
-          //       </p>
-          //       <p>
-          //         Проблеми з логістикою змусили мене опанувати автомобілі.
-          //         Приборкавши жигуль місцевої автошколи, я купив 30-річний
-          //         рамний джип в сусідньому селі. "Неоптимальність" цього рішення
-          //         була в тому, що цей корч прожерливий, громіздкий і викликав
-          //         сумніви в безпеці, але він міг завезти свого водія, куди той
-          //         забажає. А мова йшла про зимові Карпати. Тому другорядні
-          //         нюанси йому пробачались.
-          //       </p>
-          //       <p>Тепер кожна поїздка в магазин перетворилась на атракціон.</p>
-          //       <p>
-          //         Якби я щоразу приймав оптимальні рішення, я не мав би цих
-          //         викликів і пригод. Тому замість комфорту я обираю авантюризм.
-          //       </p>
-          //     </>
-          //   ),
-          // },
         ]}
       />
       <ContentSection
@@ -128,10 +111,15 @@ const Content33: React.FC = () => {
             dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
             content: (
               <>
-                <p>
-                  В кінці 2021 року я виконав фріланс-замовлення для компанії
-                  Ендрю і згодом він запросив мене в штат.
-                </p>
+                <div className="relative pt-20 pb-8">
+                  <div className="absolute top-0 right-0 w-48 -mt-8">
+                    <CranePicture />
+                  </div>
+                  <p className="w-[17rem]">
+                    В кінці 2021 року я виконав фріланс-замовлення для компанії
+                    Ендрю і згодом він запросив мене в штат.
+                  </p>
+                </div>
                 <p>
                   Відтоді я працював у SiteForm до весни 2024. SiteForm — це
                   сервіс для управління будівельними проектами для американських
@@ -139,6 +127,7 @@ const Content33: React.FC = () => {
                   все. Найбільше я займався продуктовим дизайном і
                   фронтенд-розробкою веб-застосунку.
                 </p>
+                <WorkersPicture />
                 <p>
                   Найцікавішим завданням була розробка орієнтації для
                   будівельників на проект. У США, забудовник мусить провести
@@ -165,6 +154,7 @@ const Content33: React.FC = () => {
                   однодумців відкрили коворкінг. Це була авантюра недосвідчених
                   непідприємців.
                 </p>
+                <CoworkingPicture />
                 <p>
                   З цього проекта я найбільше ціную нові знайомства з класними
                   людьми та підприємницький досвід.
@@ -183,6 +173,7 @@ const Content33: React.FC = () => {
                   для координації водіїв і пасажирів. Я займався координацією
                   водіїв та допомагав юзерам.
                 </p>
+                <PictureTrainStation />
                 <p>
                   Завдяки ініціативі близько 1,500 людей було розвезено до місця
                   ночівлі.
@@ -213,6 +204,8 @@ const Content33: React.FC = () => {
             dates: [dayjs("Jun 2021")],
             content: (
               <>
+                <SeagullsPicture />
+
                 <p>
                   Я мав місячний проміжок між виїздом з орендованої квартири в
                   Києві та заїздом до Одеси. Тобто місяць я був бездомним. І я
@@ -220,6 +213,7 @@ const Content33: React.FC = () => {
                   і катаючись блаблакаром, 19-річний я об'їхав 8 обласних
                   центрів протягом червня 2021, щоб врешті осісти в Одесі.
                 </p>
+                <ClothesPicture />
               </>
             ),
           },
@@ -239,7 +233,7 @@ const Content33: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

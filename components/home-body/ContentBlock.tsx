@@ -23,7 +23,7 @@ const ContentBlock: React.FC<ContentBlockProps> = (props) => {
       </p>
       {!!props.content && (
         <motion.div
-          className="text-content"
+          className="mt-6 text-content"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
         >

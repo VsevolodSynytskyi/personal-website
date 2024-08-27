@@ -3,7 +3,7 @@ import ContentSection from "../ContentSection";
 
 const Content20: React.FC = () => {
   return (
-    <div>
+    <>
       <ContentSection
         title={"Звідки Я"}
         contentBlocks={[
@@ -35,7 +35,7 @@ const Content20: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 

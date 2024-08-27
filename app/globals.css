@@ -108,3 +108,7 @@
 .text-content blockquote {
   @apply pl-6 my-2 italic border-l-2;
 }
+
+.text-content > img {
+  @apply my-6;
+}

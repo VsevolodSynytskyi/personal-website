@@ -2,21 +2,16 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { PropsWithChildren, useRef } from "react";
 import { useScreen } from "usehooks-ts";
+import paperBg from "../images/paper.png";
 
 const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
-  const containerRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "start center"],
   });
   const screen = useScreen();
   const isMobile = screen ? screen.width <= 769 : false;
-
-  const progressMotionValueTransformed = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", "100%"]
-  );
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
   const scale = useTransform(
@@ -53,11 +48,10 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
               opacity,
             }}
           >
-            {/* TODO download background image and host */}
             <div
               className="absolute w-full h-full bg-white border rounded-sm pointer-events-none border-border"
               style={{
-                backgroundImage: `url('https://www.transparenttextures.com/patterns/paper.png'), linear-gradient(to top right, #fdfdfd, #f8f8f8)`,
+                backgroundImage: `url(${paperBg.src}), linear-gradient(to top right, #fdfdfd, #f8f8f8)`,
                 backgroundBlendMode: "multiply",
               }}
             ></div>

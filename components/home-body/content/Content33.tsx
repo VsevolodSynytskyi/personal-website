@@ -1,10 +1,20 @@
 import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+
+import RunningPicture from "@/components/pictures/RunningPicture";
+import { YOUTUBE_VIDEO_URL } from "@/lib/constants";
 import dayjs from "dayjs";
+
+import BackpackingPicture from "@/components/pictures/BackpackingPicture";
+import CarMovingPicture from "@/components/pictures/CarMovingPicture";
+import CarsPicture from "@/components/pictures/CarsPicture";
+import ClothesPicture from "@/components/pictures/ClothesPicture";
+import DogRunningPicture from "@/components/pictures/DogRunningPicture";
+import SeagullsPicture from "@/components/pictures/SeagullsPic";
 import ContentSection from "../ContentSection";
 
 const Content33: React.FC = () => {
   return (
-    <div>
+    <>
       <ContentSection
         title={"Звідки Я"}
         contentBlocks={[
@@ -32,11 +42,15 @@ const Content33: React.FC = () => {
                   справою. Я міг будь-якої миті вирушити у гори, без особливих
                   планів чи підготовки.
                 </p>
+                <BackpackingPicture />
                 <p>
                   Спочатку думав, що після Карпат довго не захочу повертатись у
                   гори — так вони мені набриднуть. Але я помилився. Здається, що
                   походів у моєму житті ставатиме дедалі більше.
                 </p>
+                <LinkPreview href={YOUTUBE_VIDEO_URL}>
+                  відео з походами
+                </LinkPreview>
               </>
             ),
           },
@@ -60,6 +74,7 @@ const Content33: React.FC = () => {
                   </LinkPreview>
                   .
                 </div>
+                <RunningPicture />
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
             ),
@@ -77,6 +92,7 @@ const Content33: React.FC = () => {
                   як я привчив її до мандрівок. Така в неї порода - Франківська
                   Туристична.
                 </p>
+                <DogRunningPicture />
               </>
             ),
           },
@@ -99,6 +115,7 @@ const Content33: React.FC = () => {
                   Люди часто думають, що я втік від соціуму. Але я не тікав, я
                   шукав тишу та усамітнення. Це різне.
                 </p>
+                <CarMovingPicture />
               </>
             ),
           },
@@ -126,6 +143,7 @@ const Content33: React.FC = () => {
                   нюанси йому пробачались.
                 </p>
                 <p>Тепер кожна поїздка в магазин перетворилась на атракціон.</p>
+                <CarsPicture />
                 <p>
                   Якби я щоразу приймав оптимальні рішення, я не мав би цих
                   викликів і пригод. Тому замість комфорту я обираю авантюризм.
@@ -143,6 +161,8 @@ const Content33: React.FC = () => {
             dates: [dayjs("Jun 2021")],
             content: (
               <>
+                <SeagullsPicture />
+
                 <p>Влітку 2021 року я переїхав в Одесу з карʼєрних причин.</p>
                 <p>
                   Я мав місячний проміжок між виїздом з орендованої квартири в
@@ -151,6 +171,7 @@ const Content33: React.FC = () => {
                   і катаючись блаблакаром, 19-річний я об'їхав 8 обласних
                   центрів протягом червня 2021, щоб врешті осісти в Одесі.
                 </p>
+                <ClothesPicture />
                 <p>
                   Я полюбив Одеські світанки та море, навіть зимове. Одеса
                   навчила мене не поспішати, а насолоджуватися моментом.
@@ -183,7 +204,7 @@ const Content33: React.FC = () => {
           },
         ]}
       />
-    </div>
+    </>
   );
 };
 
