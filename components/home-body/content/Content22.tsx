@@ -121,7 +121,7 @@ const Content22: React.FC = () => {
               </>
             ),
             dates: [dayjs("Apr 2021"), dayjs("May 2021")],
-            content: <p>Сайти і презентації.</p>,
+            content: <p>Сайти та презентації.</p>,
           },
         ]}
       />

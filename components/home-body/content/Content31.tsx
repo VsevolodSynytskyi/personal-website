@@ -21,7 +21,7 @@ const Content31: React.FC = () => {
         ]}
       />
       <ContentSection
-        title={"Хоббі"}
+        title={"Хобі"}
         contentBlocks={[
           {
             title: "Походи",
