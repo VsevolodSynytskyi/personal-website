@@ -1,3 +1,4 @@
+"useClient";
 import { useEffect } from "react";
 import { hotjar } from "react-hotjar";
 import environment from "./environment";
