@@ -11,7 +11,6 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Basic redirect
       {
         source: "/qr/tshirt",
         destination: "/",

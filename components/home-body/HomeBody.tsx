@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import ScrollPaper from "../ScrollPaper";
 import HomeBodyContent from "./HomeBodyContent";
 import HomeBodyTitle from "./HomeBodyTitle";
+import ScrollPaper from "./ScrollPaper";
 
 export function HomeBody() {
   return (

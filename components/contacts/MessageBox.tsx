@@ -79,9 +79,6 @@ const MessageBox: React.FC = () => {
                   <FormControl>
                     <Textarea placeholder={messagePlaceholder} {...field} />
                   </FormControl>
-                  {/* <FormDescription>
-                  lorem ipsum
-                </FormDescription> */}
                   <FormMessage />
                 </FormItem>
               );

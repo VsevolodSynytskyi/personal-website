@@ -1,6 +1,6 @@
 import React from "react";
 
-import CustomSlider from "../CustomSlider";
+import CustomSlider from "./CustomSlider";
 
 interface SliderBlockProps {
   title?: string;

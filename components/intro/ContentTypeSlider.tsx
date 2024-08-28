@@ -7,7 +7,6 @@ const minText = `Професійне`;
 const maxText = `Особисте`;
 
 const ContentTypeSlider: React.FC = () => {
-  // const [sliderValue, setSliderValue] = useState(0);
   const [contentType, setContentType] = useContentTypeParam();
 
   const tooltipTextTransform = (n: number) => {
