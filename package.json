@@ -30,6 +30,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.2",
+    "react-hotjar": "^6.3.1",
     "react-use-measure": "^2.1.1",
     "resend": "^3.5.0",
     "sonner": "^1.5.0",
