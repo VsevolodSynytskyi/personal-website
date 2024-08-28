@@ -1,5 +1,5 @@
 import { Toaster } from "@/components/aceternity-ui/sonner";
-import useHotjar from "@/lib/useHotjar";
+import Hotjar from "@/lib/hotjar/Hotjar";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -28,8 +28,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useHotjar();
-
   return (
     <html lang="en">
       <body
@@ -42,6 +40,7 @@ export default function RootLayout({
         {children}
         <SpeedInsights />
         <Analytics />
+        <Hotjar />
       </body>
     </html>
   );
