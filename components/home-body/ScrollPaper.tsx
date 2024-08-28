@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { PropsWithChildren, useRef } from "react";
 import { useScreen } from "usehooks-ts";
-import paperBg from "../images/paper.png";
+import paperBg from "../../images/paper.png";
 
 const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
   const containerRef = useRef<HTMLDivElement>(null);
