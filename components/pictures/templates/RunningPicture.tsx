@@ -13,7 +13,6 @@ const RunningPicture: React.FC<RunningPictureProps> = (props) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [containerMeasureRef, containerBounds] = useMeasure();
   const [bgImageRef, bgImageBounds] = useMeasure();
-  console.log(bgImageBounds);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
