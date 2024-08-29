@@ -23,7 +23,7 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
   const y = useTransform(scrollYProgress, [0, 1], [`-2rem`, `0rem`]);
 
   return (
-    <div ref={containerRef} className="relative z-10 w-[calc(100%+4rem)] -ml-8">
+    <div ref={containerRef} className="relative z-20 w-[calc(100%+4rem)] -ml-8">
       <div
         className="relative w-full"
         style={{

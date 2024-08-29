@@ -5,7 +5,7 @@ import ClothesPicture from "@/components/pictures/ClothesPicture";
 import CoworkingPicture from "@/components/pictures/CoworkingPicture";
 import CranePicture from "@/components/pictures/CranePicture";
 import DogRunningPicture from "@/components/pictures/DogRunningPicture";
-import RunningPicture from "@/components/pictures/RunningPicture";
+import RunningPersonPicture from "@/components/pictures/RunningPersonPicture";
 import SeagullsPicture from "@/components/pictures/SeagullsPic";
 import PictureTrainStation from "@/components/pictures/TrainStationPicture";
 import WorkersPicture from "@/components/pictures/WorkersPicture";
@@ -55,7 +55,7 @@ const Content33: React.FC = () => {
                   </LinkPreview>
                   .
                 </div>
-                <RunningPicture />
+                <RunningPersonPicture />
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
             ),

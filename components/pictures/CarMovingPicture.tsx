@@ -1,5 +1,5 @@
 import carMovingPic from "../../images/car moving.jpg";
-import RotatingPicture from "./RotatingPicture";
+import RotatingPicture from "./templates/RotatingPicture";
 
 const CarMovingPicture: React.FC = () => {
   return (

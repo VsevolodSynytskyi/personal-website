@@ -1,6 +1,5 @@
 import { LinkPreview } from "@/components/aceternity-ui/link-preview";
 
-import RunningPicture from "@/components/pictures/RunningPicture";
 import { YOUTUBE_VIDEO_URL } from "@/lib/constants";
 import dayjs from "dayjs";
 
@@ -9,6 +8,7 @@ import CarMovingPicture from "@/components/pictures/CarMovingPicture";
 import CarsPicture from "@/components/pictures/CarsPicture";
 import ClothesPicture from "@/components/pictures/ClothesPicture";
 import DogRunningPicture from "@/components/pictures/DogRunningPicture";
+import RunningPersonPicture from "@/components/pictures/RunningPersonPicture";
 import SeagullsPicture from "@/components/pictures/SeagullsPic";
 import ContentSection from "../ContentSection";
 
@@ -74,7 +74,7 @@ const Content33: React.FC = () => {
                   </LinkPreview>
                   .
                 </div>
-                <RunningPicture />
+                <RunningPersonPicture />
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
               </>
             ),
