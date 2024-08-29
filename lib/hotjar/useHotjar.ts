@@ -11,8 +11,8 @@ const useHotjar = () => {
       return;
     }
 
-    const hjid = process.env.HOTJAR_ID;
-    const hjsv = process.env.HOTJAR_SV;
+    const hjid = process.env.NEXT_PUBLIC_HOTJAR_ID;
+    const hjsv = process.env.NEXT_PUBLIC_HOTJAR_SV;
     console.log(`hjid type is ${typeof hjid}`);
     console.log(`hjsv type is ${typeof hjsv}`);
     if (hjid !== undefined && hjsv !== undefined) {
