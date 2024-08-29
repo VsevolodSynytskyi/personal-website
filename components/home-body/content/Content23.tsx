@@ -148,7 +148,14 @@ const Content33: React.FC = () => {
         title="Власні Ініціативи"
         contentBlocks={[
           {
-            title: "Коворкінг",
+            title: (
+              <CustomLink
+                withPreview
+                href="https://www.instagram.com/inflow.coworking/"
+              >
+                Коворкінг
+              </CustomLink>
+            ),
             dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
             content: (
               <>
