@@ -51,12 +51,12 @@ const Content32: React.FC = () => {
                 </p>
                 <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
-                  — Бігова Спільнота{" "}
+                  — Бігова спільнота{" "}
                   <CustomLink
                     withPreview
                     href="https://www.instagram.com/chumaky.way/"
                   >
-                    "Чумаки"
+                    chumaky
                   </CustomLink>
                   .
                 </div>
