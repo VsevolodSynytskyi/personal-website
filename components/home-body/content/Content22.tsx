@@ -1,4 +1,4 @@
-import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+import CustomLink from "@/components/CustomLink";
 import dayjs from "dayjs";
 import ContentSection from "../ContentSection";
 
@@ -55,9 +55,12 @@ const Content22: React.FC = () => {
                 <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
-                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
+                  <CustomLink
+                    withPreview
+                    href="https://www.instagram.com/chumaky.way/"
+                  >
                     "Чумаки"
-                  </LinkPreview>
+                  </CustomLink>
                   .
                 </div>
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
@@ -89,9 +92,9 @@ const Content22: React.FC = () => {
             title: (
               <>
                 Product Designer & Frontend Developer at{" "}
-                <LinkPreview href="https://www.siteform.io/">
+                <CustomLink withPreview href="https://www.siteform.io/">
                   SiteForm
-                </LinkPreview>
+                </CustomLink>
               </>
             ),
             dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
@@ -105,9 +108,9 @@ const Content22: React.FC = () => {
             title: (
               <>
                 Frontend Developer at{" "}
-                <LinkPreview href="https://www.ryze-digital.de/">
+                <CustomLink withPreview href="https://www.ryze-digital.de/">
                   Ryze Digital
-                </LinkPreview>
+                </CustomLink>
               </>
             ),
             dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
@@ -117,7 +120,9 @@ const Content22: React.FC = () => {
             title: (
               <>
                 Graphic Designer at{" "}
-                <LinkPreview href="https://it-artel.ua/">iT Artel</LinkPreview>
+                <CustomLink withPreview href="https://it-artel.ua/">
+                  iT Artel
+                </CustomLink>
               </>
             ),
             dates: [dayjs("Apr 2021"), dayjs("May 2021")],
@@ -130,9 +135,12 @@ const Content22: React.FC = () => {
         contentBlocks={[
           {
             title: (
-              <LinkPreview href="https://www.instagram.com/inflow.coworking/">
+              <CustomLink
+                withPreview
+                href="https://www.instagram.com/inflow.coworking/"
+              >
                 Коворкінг
-              </LinkPreview>
+              </CustomLink>
             ),
             dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
             content: (

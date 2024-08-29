@@ -1,4 +1,4 @@
-import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+import CustomLink from "@/components/CustomLink";
 import ContentSection from "../ContentSection";
 
 const Content32: React.FC = () => {
@@ -52,9 +52,12 @@ const Content32: React.FC = () => {
                 <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
-                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
+                  <CustomLink
+                    withPreview
+                    href="https://www.instagram.com/chumaky.way/"
+                  >
                     "Чумаки"
-                  </LinkPreview>
+                  </CustomLink>
                   .
                 </div>
                 <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>

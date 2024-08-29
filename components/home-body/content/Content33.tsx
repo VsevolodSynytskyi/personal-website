@@ -1,4 +1,4 @@
-import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+import CustomLink from "@/components/CustomLink";
 
 import { YOUTUBE_VIDEO_URL } from "@/lib/constants";
 import dayjs from "dayjs";
@@ -48,9 +48,9 @@ const Content33: React.FC = () => {
                   гори — так вони мені набриднуть. Але я помилився. Здається, що
                   походів у моєму житті ставатиме дедалі більше.
                 </p>
-                <LinkPreview href={YOUTUBE_VIDEO_URL}>
+                <CustomLink withPreview href={YOUTUBE_VIDEO_URL}>
                   відео з походами
-                </LinkPreview>
+                </CustomLink>
               </>
             ),
           },
@@ -69,9 +69,12 @@ const Content33: React.FC = () => {
                 <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
-                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
+                  <CustomLink
+                    withPreview
+                    href="https://www.instagram.com/chumaky.way/"
+                  >
                     "Чумаки"
-                  </LinkPreview>
+                  </CustomLink>
                   .
                 </div>
                 <RunningPersonPicture />

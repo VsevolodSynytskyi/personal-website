@@ -1,4 +1,4 @@
-import { LinkPreview } from "@/components/aceternity-ui/link-preview";
+import CustomLink from "@/components/CustomLink";
 import BackpackingPicture from "@/components/pictures/BackpackingPicture";
 import CarMovingPicture from "@/components/pictures/CarMovingPicture";
 import ClothesPicture from "@/components/pictures/ClothesPicture";
@@ -50,9 +50,12 @@ const Content33: React.FC = () => {
                 <div>
                   <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
                   — Бігова Спільнота{" "}
-                  <LinkPreview href="https://www.instagram.com/chumaky.way/">
+                  <CustomLink
+                    withPreview
+                    href="https://www.instagram.com/chumaky.way/"
+                  >
                     "Чумаки"
-                  </LinkPreview>
+                  </CustomLink>
                   .
                 </div>
                 <RunningPersonPicture />
