@@ -4,13 +4,22 @@ import environment from "../environment";
 
 const useHotjar = () => {
   useEffect(() => {
-    if (environment !== "production") return;
+    console.group("Hotjar");
+    if (environment !== "production") {
+      console.log("environment is not production");
+      console.groupEnd();
+      return;
+    }
 
     const hjid = process.env.HOTJAR_ID;
     const hjsv = process.env.HOTJAR_SV;
+    console.log(`hjid type is ${typeof hjid}`);
+    console.log(`hjsv type is ${typeof hjsv}`);
     if (hjid !== undefined && hjsv !== undefined) {
       hotjar.initialize({ id: +hjid, sv: +hjsv });
+      console.log("initializing");
     }
+    console.groupEnd();
   }, []);
 
   return null;

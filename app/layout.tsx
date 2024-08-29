@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/aceternity-ui/sonner";
+import environment from "@/lib/environment";
 import Hotjar from "@/lib/hotjar/Hotjar";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
@@ -38,9 +39,13 @@ export default function RootLayout({
       >
         <Toaster closeButton position="top-center" />
         {children}
-        <SpeedInsights />
-        <Analytics />
-        <Hotjar />
+        {environment === "production" && (
+          <>
+            <SpeedInsights />
+            <Analytics />
+            <Hotjar />
+          </>
+        )}
       </body>
     </html>
   );
