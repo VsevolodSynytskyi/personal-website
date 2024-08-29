@@ -1,13 +1,13 @@
 import React from "react";
 
-import CustomSlider from "./CustomSlider";
+import CustomSlider, { CustomSliderProps } from "./CustomSlider";
 
-interface SliderBlockProps {
+interface SliderBlockProps
+  extends Pick<CustomSliderProps, "tooltipTextTransform"> {
   title?: string;
   minText?: string;
   maxText?: string;
   stepsNumber: number;
-  tooltipTextTransform: (n: number) => string | undefined;
   value?: number;
   onValueChange?: (newValue: number) => void;
 }
@@ -36,11 +36,7 @@ const SliderBlock: React.FC<SliderBlockProps> = (props) => {
           max={3}
           step={STEP_SIZE}
           defaultValue={props.value}
-          tooltipText={
-            typeof props.value === "number"
-              ? props.tooltipTextTransform(props.value)
-              : undefined
-          }
+          tooltipTextTransform={props.tooltipTextTransform}
         />
       </div>
     </div>

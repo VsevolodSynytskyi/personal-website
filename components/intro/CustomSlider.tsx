@@ -4,25 +4,26 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useMeasure from "react-use-measure";
 
-interface CustomSliderProps {
+export interface CustomSliderProps {
   min?: number;
   max?: number;
   step?: number;
   onStepCommit?: (newStep: number) => void;
   defaultValue?: number;
-  tooltipText?: string;
+  tooltipTextTransform?: (value: number) => string | null;
 }
 
 const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   const [wrapperRef, wrapperBounds] = useMeasure();
   const [pointerElRef, draggableElBounds] = useMeasure();
   const [tooltipOpen, setTooltipOpen] = useState(false);
+  const commitTimeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to store the timeout ID
+  const [tooltipText, setTooltipText] = useState<null | string>();
 
   // values
-
   const minValue = props.min || 0;
   const maxValue = props.max || 1000;
   const valueRange = maxValue - minValue;
@@ -38,11 +39,9 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   };
 
   // Animation
-
   const x = useMotionValue(16);
   const tooltipX = useSpring(x, { stiffness: 300, damping: 20 });
   const pointerX = useSpring(x, { stiffness: 600, damping: 40 });
-  //
 
   // Calculations
   const getRelativePointerPosition = (clientX: number) => {
@@ -60,32 +59,56 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
     return getConstrainedValue(snapedPosition);
   };
 
+  const updateTooltipText = () => {
+    if (props.tooltipTextTransform) {
+      setTooltipText(props.tooltipTextTransform(getTransformedSliderValue()));
+    }
+  };
+
   // Event handlers
   const handlePointerMove = (e: PointerEvent) => {
     x.set(getRelativePointerPosition(e.clientX));
-    commitValue();
+
+    // Clear the previous timeout
+    if (commitTimeoutRef.current) {
+      clearTimeout(commitTimeoutRef.current);
+    }
+
+    // Set a new timeout to commit the value after 100ms
+    commitTimeoutRef.current = setTimeout(() => {
+      commitValue();
+    }, 100);
+
+    // Update tooltip text
+    updateTooltipText();
   };
 
   const handlePointerDown = (e: React.PointerEvent) => {
-    setTooltipOpen(true);
+    // Start cursour position tracking
     x.set(getRelativePointerPosition(e.clientX));
     window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerup", handlePointerUp);
+
+    // Update tooltip
+    setTooltipOpen(true);
+    updateTooltipText();
+  };
+
+  const getTransformedSliderValue = () => {
+    const snappedPosition = getSnappedPointerPosition(x.get());
+    const { minPosition, maxPosition } = getMinMaxPosition();
+    if (snappedPosition <= minPosition) {
+      return minValue;
+    } else if (snappedPosition >= maxPosition) {
+      return maxValue;
+    } else {
+      return (snappedPosition / wrapperBounds.width) * valueRange;
+    }
   };
 
   const commitValue = () => {
-    const snappedPosition = getSnappedPointerPosition(x.get());
-    // Commit value
     if (props.onStepCommit) {
-      const { minPosition, maxPosition } = getMinMaxPosition();
-      let valueToCommit = minValue;
-      if (snappedPosition <= minPosition) {
-        valueToCommit = minValue;
-      } else if (snappedPosition >= maxPosition) {
-        valueToCommit = maxValue;
-      } else {
-        valueToCommit = (snappedPosition / wrapperBounds.width) * valueRange;
-      }
+      const valueToCommit = getTransformedSliderValue();
       props.onStepCommit(valueToCommit);
     }
   };
@@ -94,9 +117,16 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
     // Snap to position
     const snappedPosition = getSnappedPointerPosition(x.get());
     x.set(snappedPosition);
-    //
+
+    // Clear the timeout if the pointer is released before 100ms
+    if (commitTimeoutRef.current) {
+      clearTimeout(commitTimeoutRef.current);
+      commitTimeoutRef.current = null;
+    }
+
     commitValue();
     setTooltipOpen(false);
+
     // Clean up listeners
     window.removeEventListener("pointermove", handlePointerMove);
     window.removeEventListener("pointerup", handlePointerUp);
@@ -124,7 +154,7 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
       </div>
       {/* Tooltip */}
       <AnimatePresence>
-        {props.tooltipText && tooltipOpen && (
+        {tooltipText && tooltipOpen && (
           <motion.div
             className={`pointer-events-none absolute w-0 z-10 left-0 select-none -top-12 flex items-center justify-center`}
             style={{ x: tooltipX }}
@@ -150,9 +180,9 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0, position: "absolute" }}
-                  key={props.tooltipText}
+                  key={tooltipText}
                 >
-                  {props.tooltipText}
+                  {tooltipText}
                 </motion.span>
               </AnimatePresence>
             </motion.div>
