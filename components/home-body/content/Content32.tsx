@@ -84,17 +84,6 @@ const Content32: React.FC = () => {
       />
 
       <ContentSection
-        title={"Нора"}
-        contentBlocks={[
-          {
-            content: (
-              <p>Я маю собаку, яка розділяє мої захоплення бігом і походами.</p>
-            ),
-          },
-        ]}
-      />
-
-      <ContentSection
         title="Ідея Приборкання Місцевості"
         contentBlocks={[
           {
