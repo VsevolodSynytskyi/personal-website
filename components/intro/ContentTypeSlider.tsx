@@ -20,7 +20,7 @@ const ContentTypeSlider: React.FC = () => {
       case 3:
         return "Тільки особисте";
       default:
-        return "50 на 50";
+        return null;
     }
   };
 

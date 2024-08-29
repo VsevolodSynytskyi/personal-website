@@ -19,6 +19,7 @@ const TimeToReadSlider: React.FC = () => {
       case 3:
         return "2-3 хвилини";
       default:
+        return null;
         break;
     }
   };
