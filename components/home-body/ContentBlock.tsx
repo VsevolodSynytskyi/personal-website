@@ -1,10 +1,6 @@
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
+
 import { motion } from "framer-motion";
-
-import "dayjs/locale/uk"; // Import Ukrainian locale
-
-// Set the locale to Ukrainian
-dayjs.locale("uk");
 
 export interface ContentBlockProps {
   title?: React.ReactNode;
@@ -13,14 +9,21 @@ export interface ContentBlockProps {
 }
 
 const ContentBlock: React.FC<ContentBlockProps> = (props) => {
+  let dayStrings: string[] = [];
+  props.dates?.forEach((date) => {
+    if (date.isValid()) {
+      dayStrings.push(date.format("MMM YYYY"));
+    }
+  });
+
+  const daysText = dayStrings.join(" - ");
+
   return (
     <>
       {!!props.title && <h3>{props.title}</h3>}
-      <p className="text-sm italic text-muted-foreground">
-        {props.dates
-          ?.map((date) => date.locale("uk").format("MMMM YYYY"))
-          .join(" - ")}
-      </p>
+      {!!daysText && (
+        <p className="text-sm italic text-muted-foreground">{daysText}</p>
+      )}
       {!!props.content && (
         <motion.div
           className="mt-6 text-content"

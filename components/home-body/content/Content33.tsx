@@ -1,7 +1,7 @@
 import CustomLink from "@/components/CustomLink";
 
 import { YOUTUBE_VIDEO_URL } from "@/lib/constants";
-import dayjs from "dayjs";
+import dayjsExtended, { defaultDayjsFormat } from "../../../lib/dayjsExtended";
 
 import BackpackingPicture from "@/components/pictures/BackpackingPicture";
 import CarMovingPicture from "@/components/pictures/CarMovingPicture";
@@ -105,7 +105,10 @@ const Content33: React.FC = () => {
         title="Життя в Карпатах"
         contentBlocks={[
           {
-            dates: [dayjs("Aug 2023"), dayjs("Mar 2024")],
+            dates: [
+              dayjsExtended("08 2023", defaultDayjsFormat),
+              dayjsExtended("03 2024", defaultDayjsFormat),
+            ],
             content: (
               <>
                 <p>
@@ -161,7 +164,7 @@ const Content33: React.FC = () => {
         contentBlocks={[
           {
             title: `Подорож до Одеси`,
-            dates: [dayjs("Jun 2021")],
+            dates: [dayjsExtended("06 2021", defaultDayjsFormat)],
             content: (
               <>
                 <SeagullsPicture />

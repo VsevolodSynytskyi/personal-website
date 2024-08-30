@@ -1,6 +1,6 @@
 import CustomLink from "@/components/CustomLink";
-import dayjs from "dayjs";
 import React from "react";
+import dayjsExtended, { defaultDayjsFormat } from "../../../lib/dayjsExtended";
 import ContentSection from "../ContentSection";
 
 const Content11: React.FC = () => {
@@ -34,7 +34,10 @@ const Content11: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [dayjs("Jan 2022"), dayjs("Mar 2024")],
+            dates: [
+              dayjsExtended("01 2022", defaultDayjsFormat),
+              dayjsExtended("03 2024", defaultDayjsFormat),
+            ],
             content: (
               <p>
                 React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
@@ -50,7 +53,10 @@ const Content11: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [dayjs("Jul 2021"), dayjs("Dec 2022")],
+            dates: [
+              dayjsExtended("07 2021", defaultDayjsFormat),
+              dayjsExtended("12 2021", defaultDayjsFormat),
+            ],
             content: <p>Розробка Лендінгів на Wordpress.</p>,
           },
           {
@@ -62,7 +68,10 @@ const Content11: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [dayjs("Apr 2021"), dayjs("May 2021")],
+            dates: [
+              dayjsExtended("04 2021", defaultDayjsFormat),
+              dayjsExtended("05 2021", defaultDayjsFormat),
+            ],
             content: <p>Сайти та презентації.</p>,
           },
         ]}
@@ -79,7 +88,10 @@ const Content11: React.FC = () => {
                 Коворкінг
               </CustomLink>
             ),
-            dates: [dayjs("Jan 2023"), dayjs("Aug 2023")],
+            dates: [
+              dayjsExtended("01 2023", defaultDayjsFormat),
+              dayjsExtended("08 2023", defaultDayjsFormat),
+            ],
             content: (
               <p>
                 Відкриття коворкінгу під час зимових відключень 2022-го року.
@@ -88,7 +100,7 @@ const Content11: React.FC = () => {
           },
           {
             title: "Волонтерство",
-            dates: [dayjs("Mar 2022")],
+            dates: [dayjsExtended("03 2022", defaultDayjsFormat)],
             content: (
               <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
@@ -107,7 +119,10 @@ const Content11: React.FC = () => {
                 Product Marketing at Projector
               </CustomLink>
             ),
-            dates: [dayjs("Dec 2023"), dayjs("Mar 2024")],
+            dates: [
+              dayjsExtended("12 2023", defaultDayjsFormat),
+              dayjsExtended("03 2024", defaultDayjsFormat),
+            ],
           },
           {
             title: (
@@ -118,7 +133,10 @@ const Content11: React.FC = () => {
                 Product Design at Projector
               </CustomLink>
             ),
-            dates: [dayjs("Jun 2023"), dayjs("Oct 2023")],
+            dates: [
+              dayjsExtended("06 2023", defaultDayjsFormat),
+              dayjsExtended("10 2023", defaultDayjsFormat),
+            ],
           },
           {
             title: (
@@ -129,7 +147,10 @@ const Content11: React.FC = () => {
                 Berkeley Summer
               </CustomLink>
             ),
-            dates: [dayjs("Jul 2023"), dayjs("Sep 2023")],
+            dates: [
+              dayjsExtended("07 2023", defaultDayjsFormat),
+              dayjsExtended("09 2023", defaultDayjsFormat),
+            ],
           },
           {
             title: (
@@ -140,7 +161,7 @@ const Content11: React.FC = () => {
                 Advanced React
               </CustomLink>
             ),
-            dates: [dayjs("Jul 2020")],
+            dates: [dayjsExtended("07 2020", defaultDayjsFormat)],
           },
         ]}
       />
