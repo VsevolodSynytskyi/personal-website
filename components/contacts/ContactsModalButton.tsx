@@ -25,7 +25,7 @@ const ContactsModalButtonTrigger: React.FC = forwardRef<HTMLButtonElement>(
   (props, ref) => {
     return (
       <div>
-        <button {...props} ref={ref} className="w-auto font-medium underline">
+        <button {...props} ref={ref} className="w-auto underline">
           Контакти
         </button>
       </div>

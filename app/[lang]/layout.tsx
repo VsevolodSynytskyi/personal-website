@@ -35,7 +35,7 @@ export const generateMetadata: (props: {
 
   const metadata: Metadata = {
     title: t("title"),
-    description: "Seva's personal website",
+    description: t("description"),
     icons: {
       icon: "./favicon.png",
     },
