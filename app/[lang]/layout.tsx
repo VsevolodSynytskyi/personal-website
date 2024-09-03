@@ -6,6 +6,12 @@ import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale,
+} from "next-intl/server";
 import { Inter } from "next/font/google";
 import { PropsWithChildren } from "react";
 import "../globals.css";
@@ -18,53 +24,67 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-export const metadata: Metadata = {
-  title: "Seva",
-  description: "Seva's personal website",
-  icons: {
-    icon: "./favicon.png",
-  },
+type PageParams = {
+  locale: string;
+};
+
+export const generateMetadata: (props: {
+  params: PageParams;
+}) => Promise<Metadata> = async ({ params: { locale } }) => {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  const metadata: Metadata = {
+    title: t("title"),
+    description: "Seva's personal website",
+    icons: {
+      icon: "./favicon.png",
+    },
+  };
+  return metadata;
 };
 
 interface RootLayoutProps {
-  params: {
-    lang: string;
-  };
+  params: PageParams;
 }
 
-const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = ({
+const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
   children,
   params,
 }) => {
-  const { lang } = params;
+  const { locale } = params;
+  unstable_setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
-    <html lang={lang}>
+    <html lang={locale}>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
           inter.variable
         )}
       >
-        <Toaster closeButton position="top-center" />
-        {children}
-        {environment === "production" && (
-          <>
-            <SpeedInsights />
-            <Analytics />
-            <Hotjar />
-          </>
-        )}
+        <NextIntlClientProvider messages={messages}>
+          <Toaster closeButton position="top-center" />
+          {children}
+          {environment === "production" && (
+            <>
+              <SpeedInsights />
+              <Analytics />
+              <Hotjar />
+            </>
+          )}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
 };
 
-export async function generateStaticParams() {
-  const langParams = locales.map((lang) => ({
-    lang,
+export const generateStaticParams: () => Promise<PageParams[]> = async () => {
+  const localeParams = locales.map((locale) => ({
+    locale,
   }));
 
-  return langParams;
-}
+  return localeParams;
+};
 
 export default RootLayout;

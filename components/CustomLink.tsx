@@ -1,12 +1,14 @@
 import clsx from "clsx";
-import Link, { LinkProps } from "next/link";
+import { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
+import { Link as LinkLocalized } from "../lib/i18n/routing";
 import { LinkPreview } from "./aceternity-ui/link-preview";
 
 interface CustomLinkProps extends LinkProps {
   href: string;
   withPreview?: boolean;
   className?: string;
+  locale?: string;
 }
 
 const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
@@ -22,11 +24,15 @@ const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
           className,
         }}
       >
-        {props.children}
+        <LinkLocalized {...{ ...props, className }}>
+          {props.children}
+        </LinkLocalized>
       </LinkPreview>
     );
   }
-  return <Link {...{ ...props, className }}>{props.children}</Link>;
+  return (
+    <LinkLocalized {...{ ...props, className }}>{props.children}</LinkLocalized>
+  );
 };
 
 export default CustomLink;

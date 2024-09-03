@@ -1,12 +1,9 @@
-import languageMiddleware from "./lib/i18n/languageMiddleware";
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./lib/i18n/routing";
 
-export const middleware = languageMiddleware;
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next)
-    "/((?!_next).*)",
-    // Optional: only run on root (/) URL
-    // '/'
-  ],
+  // Match only internationalized pathnames
+  matcher: ["/", `/(uk|en)/:path*`],
 };

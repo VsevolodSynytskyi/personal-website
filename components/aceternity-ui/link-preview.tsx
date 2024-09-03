@@ -27,7 +27,6 @@ type LinkPreviewProps = {
 export const LinkPreview = ({
   children,
   href,
-  className,
   width = 200,
   height = 125,
   quality = 50,
@@ -95,9 +94,9 @@ export const LinkPreview = ({
         }}
       >
         <HoverCardPrimitive.Trigger
-          onMouseMove={handleMouseMove}
-          className={className}
           href={href}
+          onMouseMove={handleMouseMove}
+          asChild
         >
           {children}
         </HoverCardPrimitive.Trigger>
