@@ -1,12 +1,18 @@
 "use client";
 
+import { Separator } from "@/components/aceternity-ui/separator";
+import ContactSection from "@/components/contacts/ContactsSection";
 import Footer from "@/components/footer/Footer";
-import { Separator } from "../components/aceternity-ui/separator";
-import ContactSection from "../components/contacts/ContactsSection";
-import HomeBody from "../components/home-body/HomeBody";
-import HomeIntro from "../components/intro/HomeIntro";
+import HomeBody from "@/components/home-body/HomeBody";
+import HomeIntro from "@/components/intro/HomeIntro";
+import { NextPage } from "next";
 
-export default function Home() {
+const Home: NextPage<{
+  params: {
+    lang: string;
+  };
+}> = ({ params }) => {
+  const lang = params.lang;
   return (
     <div className="flex flex-col items-center p-8 sm:pb-24">
       <div className="flex flex-col w-full max-w-sm gap-16">
@@ -22,4 +28,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

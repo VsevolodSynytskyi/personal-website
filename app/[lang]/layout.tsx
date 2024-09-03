@@ -1,12 +1,14 @@
 import { Toaster } from "@/components/aceternity-ui/sonner";
 import environment from "@/lib/environment";
 import Hotjar from "@/lib/hotjar/Hotjar";
+import { locales } from "@/lib/i18n/locales";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { PropsWithChildren } from "react";
+import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,13 +26,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+interface RootLayoutProps {
+  params: {
+    lang: string;
+  };
+}
+
+const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = ({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params,
+}) => {
+  const { lang } = params;
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -49,4 +57,14 @@ export default function RootLayout({
       </body>
     </html>
   );
+};
+
+export async function generateStaticParams() {
+  const langParams = locales.map((lang) => ({
+    lang,
+  }));
+
+  return langParams;
 }
+
+export default RootLayout;
