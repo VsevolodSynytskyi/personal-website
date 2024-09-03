@@ -6,5 +6,9 @@
   "Metadata": {
     "title": "Seva",
     "description": "Seva's personal website"
+  },
+  "NotFoundPage": {
+    "title": "No Page Here ¯\\_(ツ)_/¯",
+    "home": "Home"
   }
 }

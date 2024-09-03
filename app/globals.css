@@ -90,6 +90,13 @@
   @apply mt-2;
 }
 
+.text-content h1 {
+  @apply text-4xl font-bold tracking-tight transition-colors scroll-m-20;
+}
+.text-content h1:not(:first-child) {
+  @apply mt-10;
+}
+
 .text-content h2 {
   @apply pb-2 text-2xl font-semibold tracking-tight transition-colors border-b scroll-m-20;
 }
