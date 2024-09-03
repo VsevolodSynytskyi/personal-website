@@ -9,8 +9,7 @@ import RunningPersonPicture from "@/components/pictures/RunningPersonPicture";
 import SeagullsPicture from "@/components/pictures/SeagullsPic";
 import PictureTrainStation from "@/components/pictures/TrainStationPicture";
 import WorkersPicture from "@/components/pictures/WorkersPicture";
-import dayjsExtended, { defaultDayjsFormat } from "../../../lib/dayjsExtended";
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 
 const Content33: React.FC = () => {
   return (
@@ -87,10 +86,7 @@ const Content33: React.FC = () => {
         title="Життя в Карпатах"
         contentBlocks={[
           {
-            dates: [
-              dayjsExtended("08 2023", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["08 2023", "03 2024"],
             content: (
               <>
                 <p>
@@ -114,10 +110,7 @@ const Content33: React.FC = () => {
         title="Робота в SiteForm"
         contentBlocks={[
           {
-            dates: [
-              dayjsExtended("01 2022", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["01 2022", "03 2024"],
             content: (
               <>
                 <div className="relative pt-20 pb-8">
@@ -162,10 +155,7 @@ const Content33: React.FC = () => {
                 Коворкінг
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("01 2023", defaultDayjsFormat),
-              dayjsExtended("08 2023", defaultDayjsFormat),
-            ],
+            dates: ["01 2023", "08 2023"],
             content: (
               <>
                 <p>
@@ -182,7 +172,7 @@ const Content33: React.FC = () => {
             ),
           },
           {
-            dates: [dayjsExtended("03 2022", defaultDayjsFormat)],
+            dates: ["03 2022"],
             title: "Волонтерський Проект",
             content: (
               <>
@@ -207,10 +197,7 @@ const Content33: React.FC = () => {
         contentBlocks={[
           {
             title: "Rize Digital",
-            dates: [
-              dayjsExtended("07 2021", defaultDayjsFormat),
-              dayjsExtended("12 2021", defaultDayjsFormat),
-            ],
+            dates: ["07 2021", "12 2021"],
             content: (
               <>
                 <p>
@@ -223,7 +210,7 @@ const Content33: React.FC = () => {
           },
           {
             title: `Подорож до Одеси`,
-            dates: [dayjsExtended("06 2021")],
+            dates: ["06 2021"],
             content: (
               <>
                 <SeagullsPicture />

@@ -1,4 +1,4 @@
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 
 const Content30: React.FC = () => {
   return (

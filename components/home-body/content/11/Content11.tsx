@@ -1,11 +1,26 @@
 import CustomLink from "@/components/CustomLink";
 import React from "react";
-import dayjsExtended, { defaultDayjsFormat } from "../../../lib/dayjsExtended";
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 
-const Content01: React.FC = () => {
+const Content11: React.FC = () => {
   return (
     <>
+      <ContentSection
+        title={"Звідки Я"}
+        contentBlocks={[
+          {
+            content: (
+              <p>
+                Я виріс у Києві, але поїхав звідти у 2021. Відтоді пожив в
+                Одесі, Львові, Івано-Франківську і в Карпатах.
+              </p>
+            ),
+          },
+          {
+            content: <p>Наразі мешкаю у Львові.</p>,
+          },
+        ]}
+      />
       <ContentSection
         title="Кар’єра"
         contentBlocks={[
@@ -18,10 +33,7 @@ const Content01: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("01 2022", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["01 2022", "03 2024"],
             content: (
               <p>
                 React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
@@ -37,10 +49,7 @@ const Content01: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("07 2021", defaultDayjsFormat),
-              dayjsExtended("12 2021", defaultDayjsFormat),
-            ],
+            dates: ["07 2021", "12 2021"],
             content: <p>Розробка Лендінгів на Wordpress.</p>,
           },
           {
@@ -52,10 +61,7 @@ const Content01: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("04 2021", defaultDayjsFormat),
-              dayjsExtended("05 2021", defaultDayjsFormat),
-            ],
+            dates: ["04 2021", "05 2021"],
             content: <p>Сайти та презентації.</p>,
           },
         ]}
@@ -72,10 +78,7 @@ const Content01: React.FC = () => {
                 Коворкінг
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("01 2023", defaultDayjsFormat),
-              dayjsExtended("08 2023", defaultDayjsFormat),
-            ],
+            dates: ["01 2023", "08 2023"],
             content: (
               <p>
                 Відкриття коворкінгу під час зимових відключень 2022-го року.
@@ -84,7 +87,7 @@ const Content01: React.FC = () => {
           },
           {
             title: "Волонтерство",
-            dates: [dayjsExtended("03 2022", defaultDayjsFormat)],
+            dates: ["03 2022"],
             content: (
               <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
@@ -103,10 +106,7 @@ const Content01: React.FC = () => {
                 Product Marketing at Projector
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("12 2023", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["12 2023", "03 2024"],
           },
           {
             title: (
@@ -117,10 +117,7 @@ const Content01: React.FC = () => {
                 Product Design at Projector
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("06 2023", defaultDayjsFormat),
-              dayjsExtended("10 2023", defaultDayjsFormat),
-            ],
+            dates: ["06 2023", "10 2023"],
           },
           {
             title: (
@@ -131,10 +128,7 @@ const Content01: React.FC = () => {
                 Berkeley Summer
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("07 2023", defaultDayjsFormat),
-              dayjsExtended("09 2023", defaultDayjsFormat),
-            ],
+            dates: ["07 2023", "09 2023"],
           },
           {
             title: (
@@ -145,56 +139,7 @@ const Content01: React.FC = () => {
                 Advanced React
               </CustomLink>
             ),
-            dates: [dayjsExtended("07 2020", defaultDayjsFormat)],
-          },
-        ]}
-      />
-      <ContentSection
-        title="Статті"
-        contentBlocks={[
-          {
-            title: <>DEV.TO</>,
-            dates: [dayjsExtended("10 2022", defaultDayjsFormat)],
-            content: (
-              <div>
-                <CustomLink
-                  withPreview
-                  href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld"
-                >
-                  «Leading a UI design team as a developer»
-                </CustomLink>
-              </div>
-            ),
-          },
-          {
-            title: <>Telegraph</>,
-            dates: [dayjsExtended("10 2022", defaultDayjsFormat)],
-            content: (
-              <div>
-                <CustomLink
-                  withPreview
-                  href="https://telegraf.design/designer-keruye-rozrobnykamy/"
-                >
-                  «Коли розробник керує дизайнерами.
-                  <br /> Як налагодити взаємодію в команді»
-                </CustomLink>
-              </div>
-            ),
-          },
-          {
-            title: <>DOU</>,
-            dates: [dayjsExtended("06 2022", defaultDayjsFormat)],
-            content: (
-              <div>
-                <CustomLink
-                  withPreview
-                  href="https://dou.ua/forums/topic/38459/"
-                >
-                  «Розповідаю про перший досвід розвитку волонтерського продукту
-                  під час війни»
-                </CustomLink>
-              </div>
-            ),
+            dates: ["07 2020"],
           },
         ]}
       />
@@ -202,4 +147,4 @@ const Content01: React.FC = () => {
   );
 };
 
-export default Content01;
+export default Content11;

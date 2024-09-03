@@ -1,16 +1,21 @@
-import { Dayjs } from "dayjs";
+import dayjsExtended, { defaultDayjsFormat } from "@/lib/dayjsExtended";
+import { useLocale } from "next-intl";
 
 import { motion } from "framer-motion";
 
 export interface ContentBlockProps {
   title?: React.ReactNode;
-  dates?: Dayjs[];
+  dates?: string[];
   content?: React.ReactNode;
 }
 
 const ContentBlock: React.FC<ContentBlockProps> = (props) => {
+  const locale = useLocale();
+  dayjsExtended.locale(locale);
+
   let dayStrings: string[] = [];
-  props.dates?.forEach((date) => {
+  props.dates?.forEach((dateStr) => {
+    const date = dayjsExtended(dateStr, defaultDayjsFormat);
     if (date.isValid()) {
       dayStrings.push(date.format("MMM YYYY"));
     }

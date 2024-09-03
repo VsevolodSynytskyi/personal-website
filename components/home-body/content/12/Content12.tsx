@@ -1,7 +1,6 @@
 import CustomLink from "@/components/CustomLink";
 import React from "react";
-import dayjsExtended, { defaultDayjsFormat } from "../../../lib/dayjsExtended";
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 const Content12: React.FC = () => {
   return (
     <>
@@ -36,10 +35,7 @@ const Content12: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("01 2022", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["01 2022", "03 2024"],
             content: (
               <>
                 <li>
@@ -65,10 +61,7 @@ const Content12: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("07 2021", defaultDayjsFormat),
-              dayjsExtended("12 2021", defaultDayjsFormat),
-            ],
+            dates: ["07 2021", "12 2021"],
             content: (
               <p>
                 З командою розробників, створювали корпоративні сайти на
@@ -85,10 +78,7 @@ const Content12: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("04 2021", defaultDayjsFormat),
-              dayjsExtended("05 2021", defaultDayjsFormat),
-            ],
+            dates: ["04 2021", "05 2021"],
             content: (
               <p>
                 Дизайн корпоративного сайту компанії та проектів замовників.
@@ -109,10 +99,7 @@ const Content12: React.FC = () => {
                 Коворкінг
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("01 2023", defaultDayjsFormat),
-              dayjsExtended("08 2023", defaultDayjsFormat),
-            ],
+            dates: ["01 2023", "08 2023"],
             content: (
               <p>
                 Підприємницький досвід відкриття коворкінгу під час зимових
@@ -122,7 +109,7 @@ const Content12: React.FC = () => {
           },
           {
             title: "Волонтерство",
-            dates: [dayjsExtended("03 2022", defaultDayjsFormat)],
+            dates: ["03 2022"],
             content: (
               <>
                 <p>
@@ -152,10 +139,7 @@ const Content12: React.FC = () => {
                 Product Marketing at Projector
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("12 2023", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["12 2023", "03 2024"],
             content: (
               <p>
                 Працюючи на стартапі, я брав на себе маркетингові обов`язки і
@@ -172,10 +156,7 @@ const Content12: React.FC = () => {
                 Product Design at Projector
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("06 2023", defaultDayjsFormat),
-              dayjsExtended("10 2023", defaultDayjsFormat),
-            ],
+            dates: ["06 2023", "10 2023"],
             content: (
               <p>
                 На курсі я усунув теоретичні прогалини в продуктовому дизайні.
@@ -191,10 +172,7 @@ const Content12: React.FC = () => {
                 Berkeley Summer
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("07 2023", defaultDayjsFormat),
-              dayjsExtended("09 2023", defaultDayjsFormat),
-            ],
+            dates: ["07 2023", "09 2023"],
             content: (
               <p>Практикував навички прототипування і бізнес-аналізу.</p>
             ),
@@ -208,7 +186,7 @@ const Content12: React.FC = () => {
                 Advanced React
               </CustomLink>
             ),
-            dates: [dayjsExtended("07 2020", defaultDayjsFormat)],
+            dates: ["07 2020"],
             content: <p>Поглиблений курс для розробки на React JS.</p>,
           },
         ]}
@@ -218,7 +196,7 @@ const Content12: React.FC = () => {
         contentBlocks={[
           {
             title: <>DEV.TO</>,
-            dates: [dayjsExtended("10 2022", defaultDayjsFormat)],
+            dates: ["10 2022"],
             content: (
               <div>
                 <CustomLink
@@ -232,7 +210,7 @@ const Content12: React.FC = () => {
           },
           {
             title: <>Telegraph</>,
-            dates: [dayjsExtended("10 2022", defaultDayjsFormat)],
+            dates: ["10 2022"],
             content: (
               <div>
                 <CustomLink
@@ -247,7 +225,7 @@ const Content12: React.FC = () => {
           },
           {
             title: <>DOU</>,
-            dates: [dayjsExtended("06 2022", defaultDayjsFormat)],
+            dates: ["06 2022"],
             content: (
               <div>
                 <CustomLink

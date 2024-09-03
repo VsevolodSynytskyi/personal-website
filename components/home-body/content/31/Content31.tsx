@@ -1,5 +1,5 @@
 import CustomLink from "@/components/CustomLink";
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 
 const Content31: React.FC = () => {
   return (

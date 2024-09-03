@@ -1,5 +1,5 @@
 import React from "react";
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 
 const Content20: React.FC = () => {
   return (

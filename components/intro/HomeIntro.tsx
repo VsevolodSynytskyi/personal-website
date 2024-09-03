@@ -1,12 +1,6 @@
 import { locales } from "@/lib/i18n/locales";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
 import { Suspense } from "react";
 import ContactsModalButton from "../contacts/ContactsModalButton";
 import CustomLink from "../CustomLink";
@@ -18,23 +12,6 @@ const introText = `Привіт!
 
 const HomeIntro = () => {
   const t = useTranslations(`HomePage`);
-  const pathName = usePathname();
-  useParams;
-
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
-
-  const handleChangeLang = (term: string) => {
-    const params = new URLSearchParams(searchParams);
-    if (term) {
-      params.set("query", term);
-    } else {
-      params.delete("query");
-    }
-
-    replace(`${pathname}?${params.toString()}`);
-  };
 
   return (
     <div className="flex flex-col justify-between min-h-[calc(100vh-18rem)] md:min-h-[calc(100vh-12rem)]">

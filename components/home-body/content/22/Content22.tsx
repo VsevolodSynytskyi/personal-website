@@ -1,6 +1,5 @@
 import CustomLink from "@/components/CustomLink";
-import dayjsExtended, { defaultDayjsFormat } from "../../../lib/dayjsExtended";
-import ContentSection from "../ContentSection";
+import ContentSection from "../../ContentSection";
 
 const Content22: React.FC = () => {
   return (
@@ -97,10 +96,7 @@ const Content22: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("01 2022", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["01 2022", "03 2024"],
             content: (
               <p>
                 React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
@@ -116,10 +112,7 @@ const Content22: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("07 2021", defaultDayjsFormat),
-              dayjsExtended("12 2021", defaultDayjsFormat),
-            ],
+            dates: ["07 2021", "12 2021"],
             content: <p>Розробка Лендінгів на Wordpress.</p>,
           },
           {
@@ -131,10 +124,7 @@ const Content22: React.FC = () => {
                 </CustomLink>
               </>
             ),
-            dates: [
-              dayjsExtended("04 2021", defaultDayjsFormat),
-              dayjsExtended("05 2021", defaultDayjsFormat),
-            ],
+            dates: ["04 2021", "05 2021"],
             content: <p>Сайти та презентації.</p>,
           },
         ]}
@@ -151,10 +141,7 @@ const Content22: React.FC = () => {
                 Коворкінг
               </CustomLink>
             ),
-            dates: [
-              dayjsExtended("01 2023", defaultDayjsFormat),
-              dayjsExtended("08 2023", defaultDayjsFormat),
-            ],
+            dates: ["01 2023", "08 2023"],
             content: (
               <p>
                 Відкриття коворкінгу під час зимових відключень 2022-го року.
@@ -163,7 +150,7 @@ const Content22: React.FC = () => {
           },
           {
             title: "Волонтерство",
-            dates: [dayjsExtended("03 2022", defaultDayjsFormat)],
+            dates: ["03 2022"],
             content: (
               <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
