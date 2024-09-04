@@ -8,7 +8,6 @@ import DogRunningPicture from "@/components/pictures/DogRunningPicture";
 import RunningPersonPicture from "@/components/pictures/RunningPersonPicture";
 import SeagullsPicture from "@/components/pictures/SeagullsPicture";
 import { YOUTUBE_VIDEO_URL } from "@/lib/constants";
-import dayjsExtended, { defaultDayjsFormat } from "@/lib/dayjsExtended";
 
 const Content33: React.FC = () => {
   return (
@@ -103,10 +102,7 @@ const Content33: React.FC = () => {
         title="Життя в Карпатах"
         contentBlocks={[
           {
-            dates: [
-              dayjsExtended("08 2023", defaultDayjsFormat),
-              dayjsExtended("03 2024", defaultDayjsFormat),
-            ],
+            dates: ["08 2023", "03 2024"],
             content: (
               <>
                 <p>
@@ -162,7 +158,7 @@ const Content33: React.FC = () => {
         contentBlocks={[
           {
             title: `Подорож до Одеси`,
-            dates: [dayjsExtended("06 2021", defaultDayjsFormat)],
+            dates: ["06 2021"],
             content: (
               <>
                 <SeagullsPicture />
