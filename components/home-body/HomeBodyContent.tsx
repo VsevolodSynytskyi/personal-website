@@ -55,13 +55,13 @@ const HomeBodyContent: React.FC = () => {
 
   return (
     <motion.div
-      className="relative text-content"
+      className="relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
       <AnimatePresence>
         <motion.div
-          className="top-0 left-0"
+          className="top-0 left-0 text-content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, position: "absolute" }}

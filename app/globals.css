@@ -99,6 +99,7 @@
 
 .text-content h2 {
   @apply pb-2 text-2xl font-semibold tracking-tight transition-colors border-b scroll-m-20;
+  @apply sticky top-0 z-10 bg-background;
 }
 .text-content h2:not(:first-child) {
   @apply mt-10;

@@ -12,7 +12,8 @@
   },
   "errorPage": {
     "title": "Something went wrong!",
-    "tryAgain": "Try Again"
+    "tryAgain": "Try Again",
+    "home": "Back to Home"
   },
   "contacts": {
     "title": "Contacts",

@@ -6,7 +6,7 @@ import CoworkingPicture from "@/components/pictures/CoworkingPicture";
 import CranePicture from "@/components/pictures/CranePicture";
 import DogRunningPicture from "@/components/pictures/DogRunningPicture";
 import RunningPersonPicture from "@/components/pictures/RunningPersonPicture";
-import SeagullsPicture from "@/components/pictures/SeagullsPic";
+import SeagullsPicture from "@/components/pictures/SeagullsPicture";
 import PictureTrainStation from "@/components/pictures/TrainStationPicture";
 import WorkersPicture from "@/components/pictures/WorkersPicture";
 import ContentSection from "../../ContentSection";
