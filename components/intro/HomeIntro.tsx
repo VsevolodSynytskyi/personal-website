@@ -1,7 +1,6 @@
 import revealAnimation from "@/lib/animations/blurRevealAnimation";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Suspense } from "react";
 import ContactsModalButton from "../contacts/ContactsModalButton";
 import LanguageSwitcher from "./LanguageSwitcher";
 import PageContentConstructor from "./PageContentConstructor";
@@ -28,10 +27,7 @@ const HomeIntro = () => {
           >
             {t("intro")}
           </motion.div>
-
-          <Suspense>
-            <PageContentConstructor />
-          </Suspense>
+          <PageContentConstructor />
         </div>
       </div>
     </div>

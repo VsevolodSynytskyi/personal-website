@@ -67,7 +67,7 @@ const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
   );
 };
 
-export const generateStaticParams: () => Promise<PageParams[]> = async () => {
+export const generateStaticParams = () => {
   const localeParams = locales.map((locale) => ({
     locale,
   }));
