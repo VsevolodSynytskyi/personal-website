@@ -1,4 +1,4 @@
-import { ContentMatrix } from "@/lib/ContentMatrixType";
+import { ContentMatrix } from "@/lib/customTypes";
 import useContentTypeParam from "@/lib/useContentTypeParam";
 import useReadTimeParam from "@/lib/useReadTimeParam";
 import { AnimatePresence, motion } from "framer-motion";
