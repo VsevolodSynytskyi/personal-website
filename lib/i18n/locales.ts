@@ -1,7 +1,9 @@
 // Locales
 
+export type Locale = "en" | "uk";
+
 export const languages: {
-  locale: string;
+  locale: Locale;
   shortName: string;
   fullName: string;
 }[] = [

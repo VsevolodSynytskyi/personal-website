@@ -1,8 +1,11 @@
 import { ContentMatrix } from "@/lib/customTypes";
+import { Locale, locales } from "@/lib/i18n/locales";
 import useContentTypeParam from "@/lib/useContentTypeParam";
 import useReadTimeParam from "@/lib/useReadTimeParam";
 import { AnimatePresence, motion } from "framer-motion";
-import Content00 from "./content/00/Content00";
+import { useLocale } from "next-intl";
+import Content00en from "./content/00/Content00en";
+import Content00uk from "./content/00/Content00uk";
 import Content01 from "./content/01/Content01";
 import Content02 from "./content/02/Content02";
 import Content03 from "./content/03/Content03";
@@ -17,41 +20,77 @@ import Content23 from "./content/23/Content23";
 import Content30 from "./content/30/Content30";
 import Content31 from "./content/31/Content31";
 import Content32 from "./content/32/Content32";
-import Content33 from "./content/33/Content33";
+import Content33en from "./content/33/Content33en";
+import Content33uk from "./content/33/Content33uk";
 import CvButtonSection from "./CvButtonSection";
 
 const contentMatrix: ContentMatrix = [
   [
-    <Content00 key={"00"} />,
-    <Content01 key={"01"} />,
-    <Content02 key={"02"} />,
-    <Content03 key={"03"} />,
+    {
+      en: <Content00en key={"00"} />,
+      uk: <Content00uk key={"00"} />,
+    },
+    {
+      en: <Content01 key={"01"} />,
+      uk: <Content01 key={"01"} />,
+    },
+    {
+      en: <Content02 key={"02"} />,
+      uk: <Content02 key={"02"} />,
+    },
+    {
+      en: <Content03 key={"03"} />,
+      uk: <Content03 key={"03"} />,
+    },
   ],
   [
-    <Content10 key={"10"} />,
-    <Content11 key={"11"} />,
-    <Content12 key={"12"} />,
-    <Content13 key={"13"} />,
+    {
+      en: <Content10 key={"10"} />,
+      uk: <Content10 key={"10"} />,
+    },
+    {
+      en: <Content11 key={"11"} />,
+      uk: <Content11 key={"11"} />,
+    },
+    {
+      en: <Content12 key={"12"} />,
+      uk: <Content12 key={"12"} />,
+    },
+    {
+      en: <Content13 key={"13"} />,
+      uk: <Content13 key={"13"} />,
+    },
   ],
   [
-    <Content20 key={"20"} />,
-    <Content21 key={"21"} />,
-    <Content22 key={"22"} />,
-    <Content23 key={"23"} />,
+    {
+      en: <Content20 key={"20"} />,
+      uk: <Content20 key={"20"} />,
+    },
+    {
+      en: <Content21 key={"21"} />,
+      uk: <Content21 key={"21"} />,
+    },
+    { en: <Content22 key={"22"} />, uk: <Content22 key={"22"} /> },
+    { en: <Content23 key={"23"} />, uk: <Content23 key={"23"} /> },
   ],
   [
-    <Content30 key={"30"} />,
-    <Content31 key={"31"} />,
-    <Content32 key={"32"} />,
-    <Content33 key={"33"} />,
+    { en: <Content30 key={"30"} />, uk: <Content30 key={"30"} /> },
+    { en: <Content31 key={"31"} />, uk: <Content31 key={"31"} /> },
+    { en: <Content32 key={"32"} />, uk: <Content32 key={"32"} /> },
+    { en: <Content33en key={"33"} />, uk: <Content33uk key={"33"} /> },
   ],
 ];
 
 const HomeBodyContent: React.FC = () => {
   const [contentTypeIndex] = useContentTypeParam();
   const [readTimeIndex] = useReadTimeParam();
-
-  const content = contentMatrix[contentTypeIndex][readTimeIndex];
+  const locale = useLocale();
+  let content = null;
+  if (locales.includes(locale)) {
+    content = locale
+      ? contentMatrix[contentTypeIndex][readTimeIndex][locale as Locale]
+      : null;
+  }
 
   return (
     <motion.div
