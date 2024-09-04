@@ -24,19 +24,19 @@ const Content32en: React.FC = () => {
         title="Hobbies"
         contentBlocks={[
           {
-            title: "Hiking",
+            title: "Backpacking",
             content: (
               <>
                 <p>
-                  While living in the Carpathians, hiking became a regular part
-                  of my life. I could head to the mountains at any moment,
+                  While living in the Carpathians, backpacking became a regular
+                  part of my life. I could head to the mountains at any moment,
                   without much planning or preparation.
                 </p>
                 <p>
                   At first, I thought that after the Carpathians, I wouldn’t
                   want to return to the mountains for a long time—they’d become
-                  tiresome. But I was wrong. It seems that hiking will become an
-                  even bigger part of my life.
+                  tiresome. But I was wrong. It seems that backpacking will
+                  become an even bigger part of my life.
                 </p>
               </>
             ),
@@ -73,15 +73,14 @@ const Content32en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Nora"
+        title="Nora the Dog"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  Nora came into my life in the winter of 2022-2023. People
-                  often ask how I got her accustomed to traveling. It's just her
-                  breed—Frankivsk Tourist.
+                  Nora came into my life in the winter of 2022-2023. I bring her
+                  with me when I do backpacking or trail running.
                 </p>
               </>
             ),
@@ -96,20 +95,20 @@ const Content32en: React.FC = () => {
               <>
                 <p>
                   I move often. I enjoy adapting to the lifestyle of a new city,
-                  discovering its unique charm. Every new place has its own
+                  discovering its uniqueness. Every new place has its own
                   characteristics that you can only understand by partially
                   letting go of previous habits and norms. This is how I learn
-                  to love and adapt to the new.
+                  to enjoy and adapt to the new.
                 </p>
-                <p>
+                {/* <p>
                   Odesa taught an anxious Kyivan to take leisurely walks on
                   weekday mornings.
                   <br /> Frankivsk taught me to plan with phrases like “We’ll
                   see” and “It’ll be clear later.”
                   <br /> And a Carpathian winter hardened a city kid so that a
-                  long-haired boy with a tote bag grew to love old jeeps and
+                  long-haired boy with a tote bag grew to enjoy old jeeps and
                   Americano from a machine.
-                </p>
+                </p> */}
               </>
             ),
           },

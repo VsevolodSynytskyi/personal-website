@@ -24,11 +24,11 @@ const Content21en: React.FC = () => {
         title="Hobbies"
         contentBlocks={[
           {
-            title: "Hiking",
+            title: "Backpacking",
             content: (
               <>
                 <p>
-                  During my time in the Carpathians, hiking became a routine
+                  During my time in the mountains, backpacking became a routine
                   activity for me. I could head to the mountains at any moment,
                   without any special plans or preparations.
                 </p>
@@ -74,16 +74,15 @@ const Content21en: React.FC = () => {
           {
             content: (
               <>
-                <p>I work at the intersection of design and development.</p>
                 <p>
-                  I am passionate about designing interfaces that give the
-                  feeling of "sitting down and going," and development is a tool
-                  to bring creative ideas to life.
+                  I'm a product designer, specializing in creating intuitive,
+                  user-friendly interfaces and bringing them to life with my
+                  frontend development skills.
                 </p>
                 <p>
                   For the past 2+ years, I have been improving the UX of a
-                  construction project management service in the USA. (SaaS,
-                  B2B, construction, USA)
+                  construction management product. (SaaS, B2B, construction,
+                  USA)
                 </p>
               </>
             ),

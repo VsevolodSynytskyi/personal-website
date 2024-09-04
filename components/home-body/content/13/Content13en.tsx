@@ -19,24 +19,10 @@ const Content13en: React.FC = () => {
             dates: ["01 2022", "03 2024"],
             content: (
               <>
-                <p>
-                  I worked on product design and frontend development for a web
-                  application for a construction service in the US. I also
-                  worked on the design and development of a landing page on
-                  Webflow.
-                </p>
-                <ul>
-                  <li>
-                    Design and development of a landing page on Webflow -{" "}
-                    <CustomLink
-                      withPreview
-                      href="https://www.siteform.io/"
-                      className="font-medium underline text-primary underline-offset-4"
-                    >
-                      https://www.siteform.io/
-                    </CustomLink>
-                  </li>
-                </ul>
+                I was responsile for managing a web app. My achievements include
+                reducing onboarding from 2 hours to 20 minutes, tripling leads
+                with a redesigned landing page, and optimizing user flows and
+                issue tracking with Hotjar and Sentry.
               </>
             ),
           },
@@ -54,11 +40,10 @@ const Content13en: React.FC = () => {
               <>
                 <p>
                   Together with a team of developers, we created corporate
-                  websites for the agency's clients. I communicated with foreign
-                  designers and managers.
+                  websites for the agency's clients.
                 </p>
                 <ul>
-                  <li>Development of landing pages on WordPress</li>
+                  <li>WordPress landing pages development</li>
                 </ul>
               </>
             ),
@@ -86,7 +71,7 @@ const Content13en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -101,7 +86,7 @@ const Content13en: React.FC = () => {
             content: (
               <>
                 <p>
-                  When the winter power outages of 2022 began, I and three other
+                  When the winter power cuts of 2022 began, I and three other
                   like-minded people opened a coworking space. We rented 44
                   spaces, of which one company took 25 for its employees. We
                   closed in the summer of 2023 due to low profitability.
@@ -140,14 +125,14 @@ const Content13en: React.FC = () => {
             content: (
               <>
                 <p>
-                  I enjoy working in a team and love the garage-startup
-                  atmosphere. It’s important for me to see people using the
-                  product I'm working on. My work is a platform for creativity,
-                  and creativity is meaningless without an audience.
+                  I thrive in a team environment and am energized by the startup
+                  atmosphere. Seeing people use the product I’ve worked on is
+                  crucial to me; my work is a platform for creativity, and that
+                  creativity needs an audience to have meaning.
                 </p>
                 <p>
-                  I need an intellectual challenge. If I don't feel like I'm
-                  growing, I gradually burn out.
+                  I also need intellectual challenges to stay engaged. If I
+                  don’t feel like I’m growing, I start to burn out.
                 </p>
               </>
             ),
@@ -158,20 +143,20 @@ const Content13en: React.FC = () => {
         title="Hobbies"
         contentBlocks={[
           {
-            title: "Hiking",
+            title: "Backpacking",
 
             content: (
               <>
                 <p>
-                  Living in the Carpathians, hiking became a routine activity
+                  Living in the mountains, backpacking became a routine activity
                   for me. I could head to the mountains at any moment, without
                   much planning or preparation.
                 </p>
                 <p>
                   At first, I thought that after the Carpathians, I wouldn't
                   want to return to the mountains for a long time—I would get
-                  bored. But I was wrong. It seems that hiking will become even
-                  more frequent in my life.
+                  bored. But I was wrong. It seems that backpacking will become
+                  even more frequent in my life.
                 </p>
               </>
             ),
@@ -288,7 +273,7 @@ const Content13en: React.FC = () => {
                   withPreview
                   href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld"
                 >
-                  "Leading a UI design team as a developer"
+                  «Leading a UI design team as a developer»
                 </CustomLink>
               </div>
             ),
@@ -302,8 +287,8 @@ const Content13en: React.FC = () => {
                   withPreview
                   href="https://telegraf.design/designer-keruye-rozrobnykamy/"
                 >
-                  "When a Developer Leads Designers.
-                  <br /> How to Streamline Team Interaction"
+                  «Коли розробник керує дизайнерами.
+                  <br /> Як налагодити взаємодію в команді»
                 </CustomLink>
               </div>
             ),
@@ -317,8 +302,8 @@ const Content13en: React.FC = () => {
                   withPreview
                   href="https://dou.ua/forums/topic/38459/"
                 >
-                  "Sharing the First Experience of Developing a Volunteer
-                  Product During the War"
+                  «Розповідаю про перший досвід розвитку волонтерського продукту
+                  під час війни»
                 </CustomLink>
               </div>
             ),

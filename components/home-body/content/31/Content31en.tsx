@@ -24,19 +24,19 @@ const Content31en: React.FC = () => {
         title="Hobbies"
         contentBlocks={[
           {
-            title: "Hiking",
+            title: "Backpacking",
             content: (
               <>
                 <p>
-                  During my time in the Carpathians, hiking became a routine
+                  During my time in the mountains, backpacking became a routine
                   activity for me. I could set off into the mountains at any
                   moment, without much planning or preparation.
                 </p>
                 <p>
                   Initially, I thought that after the Carpathians, I wouldn't
                   want to return to the mountains for a long time — that I would
-                  get bored of them. But I was wrong. It seems that hiking will
-                  become more and more frequent in my life.
+                  get bored of them. But I was wrong. It seems that backpacking
+                  will become more and more frequent in my life.
                 </p>
               </>
             ),
@@ -70,11 +70,13 @@ const Content31en: React.FC = () => {
       />
 
       <ContentSection
-        title="Nora"
+        title="Nora the Dog"
         contentBlocks={[
           {
             content: (
-              <p>I have a dog who shares my passion for running and hiking.</p>
+              <p>
+                I have a dog who shares my passion for running and backpacking.
+              </p>
             ),
           },
         ]}

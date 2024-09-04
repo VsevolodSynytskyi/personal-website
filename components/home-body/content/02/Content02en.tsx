@@ -20,17 +20,31 @@ const Content02en: React.FC = () => {
             dates: ["01 2022", "03 2024"],
             content: (
               <>
-                <li>
-                  Design and development of a landing page on Webflow -{" "}
-                  <CustomLink withPreview href="https://www.siteform.io/">
-                    https://www.siteform.io/
-                  </CustomLink>
-                </li>
-                <li>
-                  Interface design and development of a web application (React,
-                  Typescript, Tailwind, Graphql, Framer Motion)
-                </li>
-                <li>User behavior analysis with Hotjar</li>
+                <ul>
+                  <li>
+                    Web app UX/UI design & development (React JS, Typescript,
+                    TailwindCSS, GraphQL).
+                  </li>
+                  <li>Streamlined onboarding from 2 hours to 20 minutes.</li>
+                  <li>
+                    Improved UX with Hotjar and reduced JTBD completion time.
+                  </li>
+                  <li>
+                    Redesigned landing page with Webflow, tripling monthly
+                    leads.
+                  </li>
+                  <li>
+                    Conducted customer research, created VPCs, and optimized
+                    user flows.
+                  </li>
+                  <li>
+                    Led feature prototyping, implementation, and optimization.
+                  </li>
+                  <li>
+                    Implemented user issue tracking with Hotjar, Sentry, and
+                    Slack.
+                  </li>
+                </ul>
               </>
             ),
           },
@@ -46,8 +60,8 @@ const Content02en: React.FC = () => {
             dates: ["07 2021", "12 2021"],
             content: (
               <p>
-                Worked with a team of developers to create corporate websites on
-                Wordpress for agency clients.
+                Worked with a team of developers to create WordPress websites
+                for agency clients.
               </p>
             ),
           },
@@ -62,16 +76,13 @@ const Content02en: React.FC = () => {
             ),
             dates: ["04 2021", "05 2021"],
             content: (
-              <p>
-                Designed the corporate website for the company and client
-                projects.
-              </p>
+              <p>UX/UI design of the corporate website and client projects.</p>
             ),
           },
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -86,7 +97,7 @@ const Content02en: React.FC = () => {
             content: (
               <p>
                 Entrepreneurial experience in opening a coworking space during
-                the winter power outages of 2022.
+                the winter power cuts of 2022.
               </p>
             ),
           },
@@ -98,12 +109,12 @@ const Content02en: React.FC = () => {
                 <p>
                   After the invasion in 2022, many people arrived at Lviv
                   station during curfew hours, so we created a Telegram bot to
-                  coordinate drivers and passengers. I was involved in
-                  coordinating drivers and assisting users.
+                  coordinate drivers and passengers. I was responsible for
+                  coordinating drivers and user support.
                 </p>
                 <p>
                   Thanks to this initiative, about 1,500 people were transported
-                  to their accommodation.
+                  to their places.
                 </p>
               </>
             ),
@@ -201,8 +212,8 @@ const Content02en: React.FC = () => {
                   withPreview
                   href="https://telegraf.design/designer-keruye-rozrobnykamy/"
                 >
-                  «When a developer leads designers.
-                  <br /> How to improve team interaction»
+                  «Коли розробник керує дизайнерами.
+                  <br /> Як налагодити взаємодію в команді»
                 </CustomLink>
               </div>
             ),
@@ -216,8 +227,8 @@ const Content02en: React.FC = () => {
                   withPreview
                   href="https://dou.ua/forums/topic/38459/"
                 >
-                  «Sharing my first experience in developing a volunteer product
-                  during the war»
+                  «Розповідаю про перший досвід розвитку волонтерського продукту
+                  під час війни»
                 </CustomLink>
               </div>
             ),

@@ -67,7 +67,7 @@ const Content11en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -75,13 +75,13 @@ const Content11en: React.FC = () => {
                 withPreview
                 href="https://www.instagram.com/inflow.coworking/"
               >
-                Coworking Space
+                Coworking
               </CustomLink>
             ),
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Opened a coworking space during the winter power outages of
+                Co-founded a coworking space during the winter power cuts of
                 2022.
               </p>
             ),
@@ -91,8 +91,8 @@ const Content11en: React.FC = () => {
             dates: ["03 2022"],
             content: (
               <p>
-                Uber service for volunteers and internally displaced persons
-                during curfew in Lviv.
+                Uber-like service for volunteers and internally displaced
+                persons for night drives during the curfew in Lviv, Ukraine.
               </p>
             ),
           },

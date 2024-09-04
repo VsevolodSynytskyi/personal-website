@@ -20,7 +20,7 @@ const Content12en: React.FC = () => {
             content: <p>Currently, I live in Lviv.</p>,
           },
           {
-            content: <p>I enjoy running, hiking, and I have a dog.</p>,
+            content: <p>I enjoy running, backpacking, and I have a dog.</p>,
           },
         ]}
       />
@@ -39,17 +39,31 @@ const Content12en: React.FC = () => {
             dates: ["01 2022", "03 2024"],
             content: (
               <>
-                <li>
-                  Design and development of a landing page on Webflow -{" "}
-                  <CustomLink withPreview href="https://www.siteform.io/">
-                    https://www.siteform.io/
-                  </CustomLink>
-                </li>
-                <li>
-                  UI design and development of a web application (React,
-                  Typescript, Tailwind, Graphql, Framer Motion)
-                </li>
-                <li>Behavior analysis of users using Hotjar</li>
+                <ul>
+                  <li>
+                    Web app UX/UI design & development (React JS, Typescript,
+                    TailwindCSS, GraphQL).
+                  </li>
+                  <li>Streamlined onboarding from 2 hours to 20 minutes.</li>
+                  <li>
+                    Improved UX with Hotjar and reduced JTBD completion time.
+                  </li>
+                  <li>
+                    Redesigned landing page with Webflow, tripling monthly
+                    leads.
+                  </li>
+                  <li>
+                    Conducted customer research, created VPCs, and optimized
+                    user flows.
+                  </li>
+                  <li>
+                    Led feature prototyping, implementation, and optimization.
+                  </li>
+                  <li>
+                    Implemented user issue tracking with Hotjar, Sentry, and
+                    Slack.
+                  </li>
+                </ul>
               </>
             ),
           },
@@ -65,8 +79,8 @@ const Content12en: React.FC = () => {
             dates: ["07 2021", "12 2021"],
             content: (
               <p>
-                Worked with a team of developers to create corporate websites on
-                Wordpress for agency clients.
+                Worked with a team of developers to create WordPress websites
+                for agency clients.
               </p>
             ),
           },
@@ -81,16 +95,13 @@ const Content12en: React.FC = () => {
             ),
             dates: ["04 2021", "05 2021"],
             content: (
-              <p>
-                Designed the corporate website for the company and client
-                projects.
-              </p>
+              <p>UX/UI design of the corporate website and client projects.</p>
             ),
           },
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -105,7 +116,7 @@ const Content12en: React.FC = () => {
             content: (
               <p>
                 Entrepreneurial experience in opening a coworking space during
-                the winter outages of 2022.
+                the winter power cuts of 2022.
               </p>
             ),
           },
@@ -117,8 +128,8 @@ const Content12en: React.FC = () => {
                 <p>
                   After the 2022 invasion, many people arrived at Lviv station
                   during curfew, so we created a Telegram bot for coordinating
-                  drivers and passengers. I managed driver coordination and
-                  assisted users.
+                  drivers and passengers. I was responsible for coordinating
+                  drivers and user support.
                 </p>
                 <p>
                   Thanks to the initiative, about 1,500 people were transported

@@ -17,7 +17,7 @@ const Content30en: React.FC = () => {
             content: <p>Currently, I live in Lviv.</p>,
           },
           {
-            content: <p>I’m into running, hiking, and I have a dog.</p>,
+            content: <p>I’m into running, backpacking, and I have a dog.</p>,
           },
         ]}
       />

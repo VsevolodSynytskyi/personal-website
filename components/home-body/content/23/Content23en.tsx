@@ -15,21 +15,21 @@ const Content23en: React.FC = () => {
   return (
     <>
       <ContentSection
-        title="Hiking"
+        title="Backpacking"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  During my time living in the Carpathians, hiking became a
+                  During my time living in the mountains, backpacking became a
                   daily routine for me. I could head into the mountains at any
                   moment, without much planning or preparation.
                 </p>
                 <BackpackingPicture />
                 <p>
-                  At first, I thought that after the Carpathians, I wouldn’t
-                  want to return to the mountains for a long time — I thought
-                  they would bore me. But I was wrong. It seems that hikes will
+                  At first, I thought that after the mountains, I wouldn’t want
+                  to return to the mountains for a long time — I thought they
+                  would bore me. But I was wrong. It seems that hikes will
                   become more frequent in my life.
                 </p>
               </>
@@ -72,15 +72,14 @@ const Content23en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Nora"
+        title="Nora the Dog"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  Nora came into my life in the winter of 2022-2023. People
-                  often ask how I got her used to traveling. It’s just her breed
-                  - the Ivano-Frankivsk Tourist.
+                  Nora came into my life in the winter of 2022-2023. I bring her
+                  with me when I do backpacking or trail running.
                 </p>
                 <DogRunningPicture />
               </>
@@ -90,7 +89,7 @@ const Content23en: React.FC = () => {
       />
 
       <ContentSection
-        title="Life in the Carpathians"
+        title="Life in the Mountains"
         contentBlocks={[
           {
             dates: ["08 2023", "03 2024"],
@@ -102,7 +101,7 @@ const Content23en: React.FC = () => {
                   the Carpathians. I spent eight months in a lonely house on the
                   mountain. My nearest neighbor was across a mountain ridge, and
                   the next one was a half-hour walk away. That’s how I grew to
-                  love hiking.
+                  love backpacking.
                 </p>
                 <p>
                   People often think that I escaped from society. But I didn’t
@@ -153,7 +152,7 @@ const Content23en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -188,8 +187,8 @@ const Content23en: React.FC = () => {
                 <p>
                   After the invasion in 2022, many people arrived at the Lviv
                   train station during curfew, so we created a Telegram bot to
-                  coordinate drivers and passengers. I was involved in
-                  coordinating drivers and helping users.
+                  coordinate drivers and passengers. I was responsible for
+                  coordinating drivers and user support.
                 </p>
                 <PictureTrainStation />
                 <p>
@@ -202,24 +201,23 @@ const Content23en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Odessan Experiences"
+        title="Odesa"
         contentBlocks={[
           {
-            title: "Rize Digital",
+            title: "Ryze Digital",
             dates: ["07 2021", "12 2021"],
             content: (
               <>
                 <p>
-                  In the summer of 2021, I joined a German agency’s Odessa
-                  office as a frontend developer. I worked in a team of
-                  developers on landing pages for six months before moving to
-                  SiteForm.
+                  In the summer of 2021, I joined a German agency’s Odesa office
+                  as a frontend developer. I worked in a team of developers on
+                  landing pages for six months before moving to SiteForm.
                 </p>
               </>
             ),
           },
           {
-            title: `Trip to Odessa`,
+            title: `Trip to Odesa`,
             dates: ["06 2021"],
             content: (
               <>
@@ -227,24 +225,24 @@ const Content23en: React.FC = () => {
 
                 <p>
                   I had a month gap between moving out of my rented apartment in
-                  Kyiv and arriving in Odessa. So, I decided to dedicate it to
-                  traveling. By staying in hostels for 150 UAH and traveling by
-                  BlaBlaCar, I, at 19, visited 8 regional centers in June 2021,
-                  eventually settling in Odessa.
+                  Kyiv and arriving in Odesa. So, I decided to dedicate it to
+                  traveling. By staying in the cheapest hostels and traveling by
+                  BlaBlaCar, I, at 19yo, visited 8 cities in June 2021,
+                  eventually settling in Odesa.
                 </p>
                 <ClothesPicture />
               </>
             ),
           },
           {
-            title: "Idea of Mastering Localities",
+            title: "Idea of Adaptaion",
             content: (
               <>
                 <p>
                   I often move. I enjoy adapting to the lifestyle of a new city,
-                  discovering its unique romance. Each new place has its own
+                  discovering its uniqueness. Each new place has its own
                   features that can be learned by partly letting go of previous
-                  habits and norms. That’s how I learn to love and adapt to the
+                  habits and norms. That’s how I learn to enjoy and adapt to the
                   new.
                 </p>
               </>

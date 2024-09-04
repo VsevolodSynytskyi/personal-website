@@ -34,7 +34,7 @@ const Content01en: React.FC = () => {
               </>
             ),
             dates: ["07 2021", "12 2021"],
-            content: <p>Development of landing pages on WordPress.</p>,
+            content: <p>WordPress landing pages development.</p>,
           },
           {
             title: (
@@ -51,7 +51,7 @@ const Content01en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -65,7 +65,8 @@ const Content01en: React.FC = () => {
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Opening a coworking space during the winter outages of 2022.
+                Co-founded a coworking space during the winter power cuts of
+                2022.
               </p>
             ),
           },
@@ -74,8 +75,8 @@ const Content01en: React.FC = () => {
             dates: ["03 2022"],
             content: (
               <p>
-                Uber for volunteers and internally displaced persons during the
-                curfew in Lviv.
+                Uber-like service for volunteers and internally displaced
+                persons for night drives during the curfew in Lviv, Ukraine.
               </p>
             ),
           },
@@ -142,7 +143,7 @@ const Content01en: React.FC = () => {
                   withPreview
                   href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld"
                 >
-                  “Leading a UI design team as a developer”
+                  «Leading a UI design team as a developer»
                 </CustomLink>
               </div>
             ),
@@ -156,8 +157,8 @@ const Content01en: React.FC = () => {
                   withPreview
                   href="https://telegraf.design/designer-keruye-rozrobnykamy/"
                 >
-                  “When a developer manages designers. <br /> How to establish
-                  team interaction”
+                  «Коли розробник керує дизайнерами.
+                  <br /> Як налагодити взаємодію в команді»
                 </CustomLink>
               </div>
             ),
@@ -171,8 +172,8 @@ const Content01en: React.FC = () => {
                   withPreview
                   href="https://dou.ua/forums/topic/38459/"
                 >
-                  “Sharing my first experience of developing a volunteer product
-                  during the war”
+                  «Розповідаю про перший досвід розвитку волонтерського продукту
+                  під час війни»
                 </CustomLink>
               </div>
             ),

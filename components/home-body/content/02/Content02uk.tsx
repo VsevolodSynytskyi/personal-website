@@ -19,17 +19,28 @@ const Content02uk: React.FC = () => {
             dates: ["01 2022", "03 2024"],
             content: (
               <>
-                <li>
-                  Дизайн і розробка лендігу на Webflow -{" "}
-                  <CustomLink withPreview href="https://www.siteform.io/">
-                    https://www.siteform.io/
-                  </CustomLink>
-                </li>
-                <li>
-                  Дизайн інтерфейсу і розробка веб-застосунку (React,
-                  Typescript, Tailwind, Graphql, Framer Motion)
-                </li>
-                <li>Аналіз поведінки юзерів через Hotjar</li>
+                <ul>
+                  <li>
+                    UX/UI дизайн та розробка веб-додатку (React JS, Typescript,
+                    TailwindCSS, GraphQL).
+                  </li>
+                  <li>Прискорив онбоардінг з 2 годин до 20 хвилин.</li>
+                  <li>
+                    Зробив редизайн лендінга на Webflow, що втричі збільшило
+                    кількість щомісячних лідів.
+                  </li>
+                  <li>
+                    Досліджував цільових користувачів, підтримував VPC та User
+                    Flow.
+                  </li>
+                  <li>
+                    Керував прототипуванням, розробкою та оптимізацією фіч.
+                  </li>
+                  <li>
+                    Впровадив трекінг проблем користувачів за допомогою Hotjar,
+                    Sentry + Slack.
+                  </li>
+                </ul>
               </>
             ),
           },

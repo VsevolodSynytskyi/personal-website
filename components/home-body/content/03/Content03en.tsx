@@ -27,20 +27,28 @@ const Content03en: React.FC = () => {
                 </p>
                 <ul>
                   <li>
-                    Design and development of a landing page on Webflow -{" "}
-                    <CustomLink
-                      withPreview
-                      href="https://www.siteform.io/"
-                      className="font-medium underline text-primary underline-offset-4"
-                    >
-                      https://www.siteform.io/
-                    </CustomLink>
+                    Web app UX/UI design & development (React JS, Typescript,
+                    TailwindCSS, GraphQL).
+                  </li>
+                  <li>Streamlined onboarding from 2 hours to 20 minutes.</li>
+                  <li>
+                    Improved UX with Hotjar and reduced JTBD completion time.
                   </li>
                   <li>
-                    Interface design and development of the web application
-                    (React, Typescript, Tailwind, Graphql, Framer Motion)
+                    Redesigned landing page with Webflow, tripling monthly
+                    leads.
                   </li>
-                  <li>User behavior analysis through Hotjar</li>
+                  <li>
+                    Conducted customer research, created VPCs, and optimized
+                    user flows.
+                  </li>
+                  <li>
+                    Led feature prototyping, implementation, and optimization.
+                  </li>
+                  <li>
+                    Implemented user issue tracking with Hotjar, Sentry, and
+                    Slack.
+                  </li>
                 </ul>
               </>
             ),
@@ -91,7 +99,7 @@ const Content03en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -114,9 +122,12 @@ const Content03en: React.FC = () => {
                   closed in the summer of 2022 due to low profitability.
                 </p>
                 <p>
-                  Later, reflecting on this experience, I took courses at
-                  Projector on product design and marketing, as well as an
-                  asynchronous startup school from YC.
+                  Later, reflecting on this experience, I took courses at{" "}
+                  <CustomLink href={`https://prjctr.com/`}>
+                    Projector
+                  </CustomLink>{" "}
+                  on product design and marketing, as well as an asynchronous
+                  startup school from YC.
                 </p>
                 <ul>
                   <li>Operational management of the coworking space</li>
@@ -162,14 +173,14 @@ const Content03en: React.FC = () => {
             content: (
               <>
                 <p>
-                  I enjoy working in a team and love the startup atmosphere. It
-                  is important for me to see people using the product I’m
-                  working on. My work is a platform for creativity, and
-                  creativity has no meaning without an audience.
+                  I thrive in a team environment and am energized by the startup
+                  atmosphere. Seeing people use the product I’ve worked on is
+                  crucial to me; my work is a platform for creativity, and that
+                  creativity needs an audience to have meaning.
                 </p>
                 <p>
-                  I need an intellectual challenge. If I don’t feel like I’m
-                  growing, I gradually burn out.
+                  I also need intellectual challenges to stay engaged. If I
+                  don’t feel like I’m growing, I start to burn out.
                 </p>
               </>
             ),
@@ -264,7 +275,7 @@ const Content03en: React.FC = () => {
                   withPreview
                   href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld"
                 >
-                  “Leading a UI design team as a developer”
+                  «Leading a UI design team as a developer»
                 </CustomLink>
               </div>
             ),
@@ -278,8 +289,8 @@ const Content03en: React.FC = () => {
                   withPreview
                   href="https://telegraf.design/designer-keruye-rozrobnykamy/"
                 >
-                  “When a Developer Manages Designers.
-                  <br /> How to Establish Interaction in the Team”
+                  «Коли розробник керує дизайнерами.
+                  <br /> Як налагодити взаємодію в команді»
                 </CustomLink>
               </div>
             ),
@@ -293,8 +304,8 @@ const Content03en: React.FC = () => {
                   withPreview
                   href="https://dou.ua/forums/topic/38459/"
                 >
-                  “Sharing My First Experience Developing a Volunteer Product
-                  During the War”
+                  «Розповідаю про перший досвід розвитку волонтерського продукту
+                  під час війни»
                 </CustomLink>
               </div>
             ),

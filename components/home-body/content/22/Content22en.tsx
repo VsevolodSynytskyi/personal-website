@@ -21,20 +21,20 @@ const Content22en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Hiking"
+        title="Backpacking"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  During my time in the Carpathians, hiking became a routine
+                  During my time in the mountains, backpacking became a routine
                   part of my life. I could head to the mountains at any moment,
                   without much planning or preparation.
                 </p>
                 <p>
                   Initially, I thought I wouldn't want to return to the
                   mountains after the Carpathians—thinking they would become
-                  tiresome. But I was wrong. It seems that hiking will only
+                  tiresome. But I was wrong. It seems that backpacking will only
                   become a bigger part of my life.
                 </p>
               </>
@@ -76,15 +76,14 @@ const Content22en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Nora"
+        title="Nora the Dog"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  Nora came into my life in the winter of 2022-2023. People
-                  often ask how I got her used to traveling. It's just her
-                  breed—Frankivsk Tourist.
+                  Nora came into my life in the winter of 2022-2023. I bring her
+                  with me when I do backpacking or trail running.
                 </p>
               </>
             ),
@@ -120,7 +119,7 @@ const Content22en: React.FC = () => {
               </>
             ),
             dates: ["07 2021", "12 2021"],
-            content: <p>Development of landing pages on Wordpress.</p>,
+            content: <p>WordPress landing pages development.</p>,
           },
           {
             title: (
@@ -137,7 +136,7 @@ const Content22en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Personal Initiatives"
+        title="Initiatives"
         contentBlocks={[
           {
             title: (
@@ -151,7 +150,8 @@ const Content22en: React.FC = () => {
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Opening a coworking space during the winter outages of 2022.
+                Co-founded a coworking space during the winter power cuts of
+                2022.
               </p>
             ),
           },
@@ -160,8 +160,8 @@ const Content22en: React.FC = () => {
             dates: ["03 2022"],
             content: (
               <p>
-                Uber service for volunteers and internally displaced persons
-                during curfew in Lviv.
+                Uber-like service for volunteers and internally displaced
+                persons for night drives during the curfew in Lviv, Ukraine.
               </p>
             ),
           },

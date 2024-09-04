@@ -5,8 +5,8 @@ import { Button } from "../aceternity-ui/button";
 
 const CvButtonSection: React.FC = () => {
   return (
-    <div className="mt-12">
-      <Button className="w-full" asChild>
+    <div className="">
+      <Button className="w-full mt-6" asChild>
         <Link href={CV_URL}>
           <ExternalLink className="w-4 h-4 mr-2" /> CV
         </Link>

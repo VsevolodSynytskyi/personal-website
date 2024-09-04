@@ -196,7 +196,7 @@ const Content23uk: React.FC = () => {
         title="Одеситство"
         contentBlocks={[
           {
-            title: "Rize Digital",
+            title: "Ryze Digital",
             dates: ["07 2021", "12 2021"],
             content: (
               <>

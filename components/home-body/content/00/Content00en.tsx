@@ -10,11 +10,10 @@ const Content00en: React.FC = () => {
           {
             content: (
               <>
-                <p>I work at the intersection of design and development.</p>
                 <p>
-                  I’m passionate about designing interfaces that give a feeling
-                  of "just hop in and go," while development is the tool to
-                  bring creative ideas to life.
+                  I'm a product designer, specializing in creating intuitive,
+                  user-friendly interfaces and bringing them to life with my
+                  frontend development skills.
                 </p>
                 <p>
                   Main tech stack: React JS, TypeScript, TailwindCSS, Framer
@@ -31,17 +30,16 @@ const Content00en: React.FC = () => {
           {
             content: (
               <p>
-                For the past 2+ years, I have been improving the UX of a service
-                for managing construction projects in the USA. (SaaS, B2B,
-                construction, USA)
+                For the past 2+ years, I have been improving the UX of a
+                construction management product. (SaaS, B2B, construction, USA)
               </p>
             ),
           },
           {
             content: (
               <p>
-                I’m always eager to create my own projects: I had a coworking
-                space, a volunteer service, and a few pet projects.
+                I’m always proactive in solving problems I encounter: I had a
+                coworking space, a volunteer service, and a few pet projects.
               </p>
             ),
           },
