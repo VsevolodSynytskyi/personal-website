@@ -1,14 +1,80 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "intro": {
+    "intro": "Hi!\n I'm Seva (or Vsevolod)\n Here you can get to know me better."
   },
-  "Metadata": {
+  "metadata": {
     "title": "Seva",
-    "description": "Seva's personal website"
+    "description": "Vsevolod Synytsky - Personal Website"
   },
-  "NotFoundPage": {
-    "title": "No Page Here ¯\\_(ツ)_/¯",
-    "home": "Home"
+  "notFoundPage": {
+    "title": "This page doesn't exist ¯\\_(ツ)_/¯",
+    "home": "Back to Home"
+  },
+  "errorPage": {
+    "title": "Something went wrong!",
+    "tryAgain": "Try Again"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "messageBox": {
+      "labelText": "Say hello",
+      "placeholder": "Message.",
+      "send": "Send",
+      "mailSubject": "Greetings from whoisseva.com",
+      "feedback": {
+        "sent": "Message sent",
+        "errorSending": "Error sending the message",
+        "error": "An error occurred"
+      },
+      "validation": {
+        "tooShort": "Don't be shy with words.",
+        "tooLong": "Let's start it brief."
+      }
+    }
+  },
+  "timeToReadSlider": {
+    "title": "Time to Read",
+    "minText": "10 sec",
+    "maxText": "2 min",
+    "values": ["10 seconds", "30 seconds", "1 minute", "2-3 minutes"]
+  },
+  "contentTypeSlider": {
+    "title": "Where should we start?",
+    "minText": "Professional",
+    "maxText": "Personal",
+    "values": [
+      "Only professional",
+      "More professional",
+      "More personal",
+      "Only personal"
+    ]
+  },
+  "mainContent": {
+    "titles": [
+      [
+        "Shorter than a CV",
+        "Almost a CV",
+        "CV",
+        "About My Career, Projects, and Education"
+      ],
+      [
+        "My Background and What I Do",
+        "Career",
+        "Career",
+        "My Journey and Hobbies"
+      ],
+      [
+        "My Background and What I Do",
+        "Hobbies and Work",
+        "Hobbies and Career",
+        "Hobbies and Career"
+      ],
+      [
+        "A Bit About Me",
+        "What I'm Into",
+        "My Background, Hobbies, and Ideas",
+        "What Drives Me"
+      ]
+    ]
   }
 }

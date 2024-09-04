@@ -4,12 +4,8 @@ import ContactsModalButton from "../contacts/ContactsModalButton";
 import LanguageSwitcher from "./LanguageSwitcher";
 import PageContentConstructor from "./PageContentConstructor";
 
-const introText = `Привіт!
-Я Сєва (або Всеволод)
-Тут ви можете ближче познайомитись зі мною.`;
-
 const HomeIntro = () => {
-  const t = useTranslations(`HomePage`);
+  const t = useTranslations(`intro`);
 
   return (
     <div className="flex flex-col justify-between min-h-[calc(100vh-18rem)] md:min-h-[calc(100vh-12rem)]">
@@ -20,7 +16,7 @@ const HomeIntro = () => {
       </div>
       <div className="flex flex-col justify-center flex-1">
         <div className="flex flex-col gap-16">
-          <div className="whitespace-pre-line">{introText}</div>
+          <div className="whitespace-pre-line">{t("intro")}</div>
           <Suspense>
             <PageContentConstructor />
           </Suspense>

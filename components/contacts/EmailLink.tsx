@@ -1,26 +1,28 @@
+import { EMAIL_ADDRESS } from "@/lib/constants";
 import { CopyIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import { useCopyToClipboard } from "usehooks-ts";
 import { Button } from "../aceternity-ui/button";
 import CustomLink from "../CustomLink";
 
-const subject = `Вітання з whoisseva.com`;
-const email = `vsevolod.synytskyi@gmail.com`;
-
 const EmailLink: React.FC = () => {
   const [copiedValue, copyFn] = useCopyToClipboard();
+  const t = useTranslations("contacts");
 
   const onCopyClick = () => {
-    copyFn(email);
+    copyFn(EMAIL_ADDRESS);
     toast.success("Скопійовано");
   };
 
   return (
     <div className="flex flex-row items-baseline gap-2">
       <CustomLink
-        href={`mailto:${email}?subject=${encodeURIComponent(subject)}`}
+        href={`mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(
+          t("messageBox.mailSubject")
+        )}`}
       >
-        {email}
+        {EMAIL_ADDRESS}
       </CustomLink>
       <Button onClick={onCopyClick} variant={"ghost"} size={"icon"}>
         <CopyIcon className="w-4 h-4" />

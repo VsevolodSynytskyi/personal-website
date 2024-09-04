@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "./aceternity-ui/button";
 
 const NotFoundPage: React.FC = () => {
-  const t = useTranslations("NotFoundPage");
+  const t = useTranslations("notFoundPage");
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-content">
       <h1>404</h1>

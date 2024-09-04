@@ -31,7 +31,7 @@ type PageParams = {
 export const generateMetadata: (props: {
   params: PageParams;
 }) => Promise<Metadata> = async ({ params: { locale } }) => {
-  const t = await getTranslations({ locale, namespace: "Metadata" });
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
   const metadata: Metadata = {
     title: t("title"),

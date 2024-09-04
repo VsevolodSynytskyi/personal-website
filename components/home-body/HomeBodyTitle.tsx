@@ -1,32 +1,17 @@
 "use client";
-import { ContentMatrix } from "@/lib/ContentMatrixType";
 import useContentTypeParam from "@/lib/useContentTypeParam";
 import useReadTimeParam from "@/lib/useReadTimeParam";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { TextGenerateEffect } from "../aceternity-ui/text-generate-effect";
-
-const titleMatrix: ContentMatrix<string> = [
-  ["Менше ніж CV", "Майже CV", "CV", "Про Кар'єру, Власні Проекти та Навчання"],
-  ["Звідки Я і Чим Займаюсь", "Карʼєра", "Карʼєра", "Професійний Шлях та Хобі"],
-  [
-    "Звідки Я і Чим Займаюсь",
-    "Хобі та Робота",
-    "Хобі та Кар'єра",
-    "Хобі та Кар'єра",
-  ],
-  [
-    "Коротко Про Мене",
-    "Мої Захоплення",
-    "Звідки Я, Хобі та Ідеї",
-    "Чим Я Живу",
-  ],
-];
 
 const HomeBodyTitle: React.FC = () => {
   const [contentType] = useContentTypeParam();
   const [readTime] = useReadTimeParam();
 
-  let titleText = titleMatrix[contentType][readTime];
+  const t = useTranslations("mainContent");
+
+  let titleText = t(`titles.${[contentType]}.${[readTime]}`);
 
   return (
     <div className="relative w-full h-28">

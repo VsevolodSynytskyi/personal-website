@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/aceternity-ui/button";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
 export default function Error({
@@ -10,6 +11,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useTranslations("errorPage");
+
   useEffect(() => {
     // Log the error to an error reporting service
     console.error(error);
@@ -17,7 +20,7 @@ export default function Error({
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-content">
-      <p>Something went wrong!</p>
+      <p>{t("title")}</p>
       <Button
         onClick={
           // Attempt to recover by trying to re-render the segment
@@ -26,7 +29,7 @@ export default function Error({
         className="mt-6"
         asChild
       >
-        Try again
+        {t("tryAgain")}
       </Button>
     </div>
   );

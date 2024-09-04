@@ -13,23 +13,25 @@ import {
   FormMessage,
 } from "@/components/aceternity-ui/form";
 import { Send } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Button } from "../aceternity-ui/button";
 import { Textarea } from "../aceternity-ui/textarea";
 
-const labelText = `Поле, щоб привітатись.`;
-const messagePlaceholder = `Повідомлення.`;
-
-const formSchema = z.object({
-  message: z
-    .string()
-    .min(1, { message: "Не скупіться на слова." })
-    .max(2000, { message: "Давайте почнем діалог лаконічніше." }),
-});
-
 const MessageBox: React.FC = () => {
   const [loading, setLoading] = useState(false);
+  const t = useTranslations("contacts.messageBox");
+  const labelText = t("labelText");
+  const messagePlaceholderText = t("placeholder");
+  const sendText = t("send");
+
+  const formSchema = z.object({
+    message: z
+      .string()
+      .min(1, { message: t("validation.tooShort") })
+      .max(2000, { message: t("validation.tooLong") }),
+  });
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -51,15 +53,15 @@ const MessageBox: React.FC = () => {
       });
 
       if (response.ok) {
-        toast.success("Повідомлення відправлено", {
+        toast.success(t("feedback.sent"), {
           description: values.message,
         });
         form.reset();
       } else {
-        toast.error("Помилка при відправленні повідомлення");
+        toast.error(t("feedback.errorSending"));
       }
     } catch (error) {
-      toast.error("Сталася помилка");
+      toast.error(t("feedback.error"));
     } finally {
       setLoading(false);
     }
@@ -77,7 +79,7 @@ const MessageBox: React.FC = () => {
                 <FormItem>
                   <FormLabel>{labelText}</FormLabel>
                   <FormControl>
-                    <Textarea placeholder={messagePlaceholder} {...field} />
+                    <Textarea placeholder={messagePlaceholderText} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -89,7 +91,7 @@ const MessageBox: React.FC = () => {
             disabled={!form.formState.isValid || loading}
             className="w-full"
           >
-            <Send className="w-4 h-4 mr-2" /> Відправити
+            <Send className="w-4 h-4 mr-2" /> {sendText}
           </Button>
         </form>
       </Form>

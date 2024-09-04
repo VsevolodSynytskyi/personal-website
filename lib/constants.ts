@@ -9,3 +9,5 @@ export const YOUTUBE_VIDEO_URL =
 
 export const GITHUB_REPO_URL =
   "https://github.com/VsevolodSynytskyi/personal-website";
+
+export const EMAIL_ADDRESS = `vsevolod.synytskyi@gmail.com`;
