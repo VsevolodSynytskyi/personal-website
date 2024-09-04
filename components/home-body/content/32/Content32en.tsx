@@ -88,7 +88,7 @@ const Content32en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="The Idea of Taming Locality"
+        title="Idea of Adaptation"
         contentBlocks={[
           {
             content: (

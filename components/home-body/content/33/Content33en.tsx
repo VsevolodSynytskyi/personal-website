@@ -105,7 +105,7 @@ const Content33en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Life in the Carpathians"
+        title="Life in the Mountains"
         contentBlocks={[
           {
             dates: ["08 2023", "03 2024"],
@@ -190,7 +190,7 @@ const Content33en: React.FC = () => {
             ),
           },
           {
-            title: "Idea of Conquering New Places",
+            title: "Idea of Adaptation",
             content: (
               <>
                 <p>

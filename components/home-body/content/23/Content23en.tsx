@@ -235,7 +235,7 @@ const Content23en: React.FC = () => {
             ),
           },
           {
-            title: "Idea of Adaptaion",
+            title: "Idea of Adaptation",
             content: (
               <>
                 <p>

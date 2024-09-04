@@ -58,12 +58,7 @@
         "CV",
         "About My Career, Projects, and Education"
       ],
-      [
-        "My Background and What I Do",
-        "Career",
-        "Career",
-        "My Journey and Hobbies"
-      ],
+      ["My Background", "Career", "Career", "My Journey and Hobbies"],
       [
         "My Background and What I Do",
         "Hobbies and Work",
@@ -74,7 +69,7 @@
         "A Bit About Me",
         "What I'm Into",
         "My Background, Hobbies, and Ideas",
-        "What Drives Me"
+        "About My Life"
       ]
     ]
   }

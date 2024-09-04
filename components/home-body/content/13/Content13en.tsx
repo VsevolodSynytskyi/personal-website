@@ -119,7 +119,7 @@ const Content13en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Professional Values"
+        title="Work Values"
         contentBlocks={[
           {
             content: (
