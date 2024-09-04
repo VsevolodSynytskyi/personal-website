@@ -1,3 +1,5 @@
+import revealAnimation from "@/lib/animations/blurRevealAnimation";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Suspense } from "react";
 import ContactsModalButton from "../contacts/ContactsModalButton";
@@ -9,14 +11,24 @@ const HomeIntro = () => {
 
   return (
     <div className="flex flex-col justify-between min-h-[calc(100vh-18rem)] md:min-h-[calc(100vh-12rem)]">
-      <div className="flex flex-row justify-between">
+      <motion.div
+        initial={revealAnimation.initial}
+        animate={revealAnimation.animate}
+        className="flex flex-row justify-between"
+      >
         <ContactsModalButton />
-
         <LanguageSwitcher />
-      </div>
+      </motion.div>
       <div className="flex flex-col justify-center flex-1">
         <div className="flex flex-col gap-16">
-          <div className="whitespace-pre-line">{t("intro")}</div>
+          <motion.div
+            initial={revealAnimation.initial}
+            animate={revealAnimation.animate}
+            className="whitespace-pre-line"
+          >
+            {t("intro")}
+          </motion.div>
+
           <Suspense>
             <PageContentConstructor />
           </Suspense>

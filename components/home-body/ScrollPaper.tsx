@@ -24,15 +24,15 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div ref={containerRef} className="relative z-20 w-[calc(100%+4rem)] -ml-8">
-      <div
+      <motion.div
+        initial={{ opacity: 0, rotate: 15, y: "50%" }}
+        animate={{ opacity: 1, rotate: 0, y: "0" }}
         className="relative w-full"
         style={{
           perspective: "1000px",
         }}
       >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
           style={{
             rotateX: rotate,
             scale,
@@ -59,7 +59,7 @@ const ScrollPaper: React.FC<PropsWithChildren> = ({ children }) => {
 
           <div className="top-0 left-0 w-full p-8">{children}</div>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
