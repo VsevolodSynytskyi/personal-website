@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/aceternity-ui/button";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Error({
@@ -12,6 +13,7 @@ export default function Error({
   reset: () => void;
 }) {
   const t = useTranslations("errorPage");
+  const router = useRouter();
 
   useEffect(() => {
     // Log the error to an error reporting service
@@ -21,16 +23,25 @@ export default function Error({
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-content">
       <p>{t("title")}</p>
-      <Button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-        className="mt-6"
-        asChild
-      >
-        {t("tryAgain")}
-      </Button>
+      <div className="flex flex-col items-center gap-4 mt-4">
+        <Button
+          onClick={
+            // Attempt to recover by trying to re-render the segment
+            () => reset()
+          }
+        >
+          {t("tryAgain")}
+        </Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => {
+            router.push("/");
+            reset();
+          }}
+        >
+          {t("home")}
+        </Button>
+      </div>
     </div>
   );
 }
