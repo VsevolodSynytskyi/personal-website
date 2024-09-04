@@ -16,15 +16,18 @@ const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
     "underline text-primary underline-offset-4",
     props.className
   );
-  if (props?.withPreview) {
+
+  const { withPreview, ...linkProps } = props;
+
+  if (withPreview) {
     return (
       <LinkPreview
         {...{
-          ...props,
+          ...linkProps,
           className,
         }}
       >
-        <LinkLocalized {...{ ...props, className }}>
+        <LinkLocalized {...{ ...linkProps, className }}>
           {props.children}
         </LinkLocalized>
       </LinkPreview>

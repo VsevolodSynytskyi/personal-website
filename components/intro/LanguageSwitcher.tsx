@@ -18,7 +18,6 @@ const LanguageSwitcher: React.FC = () => {
   const searchParams = useSearchParams();
 
   const switchLanguage = (locale: string) => {
-    console.log(locale);
     // Extract current path segments
     const pathSegments = pathname.split("/");
 
