@@ -5,20 +5,20 @@ const Content00en: React.FC = () => {
   return (
     <>
       <ContentSection
-        title="Дизайн і Розробка"
+        title="Design and Development"
         contentBlocks={[
           {
             content: (
               <>
-                <p>Я працюю на стику дизайну і розробки.</p>
+                <p>I work at the intersection of design and development.</p>
                 <p>
-                  Мене захоплює проектування інтерфейсів, які викликають
-                  відчуття "сів і поїхав", а розробка - інструмент втілення
-                  творчих задумів.
+                  I’m passionate about designing interfaces that give a feeling
+                  of "just hop in and go," while development is the tool to
+                  bring creative ideas to life.
                 </p>
                 <p>
-                  Основний технічний стек: React JS, Typescript, TailwindCSS,
-                  Framer Motion...
+                  Main tech stack: React JS, TypeScript, TailwindCSS, Framer
+                  Motion...
                 </p>
               </>
             ),
@@ -26,21 +26,22 @@ const Content00en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Останній Досвід"
+        title="Recent Experience"
         contentBlocks={[
           {
             content: (
               <p>
-                Останні 2+ роки покращував UX сервісу для управління
-                будівельними проектами в Штатах. (SaaS, B2B, construction, USA){" "}
+                For the past 2+ years, I have been improving the UX of a service
+                for managing construction projects in the USA. (SaaS, B2B,
+                construction, USA)
               </p>
             ),
           },
           {
             content: (
               <p>
-                Завжди кортить створювати власні проекти: мав коворкінг,
-                волонтерський сервіс і пару пет-проектів.
+                I’m always eager to create my own projects: I had a coworking
+                space, a volunteer service, and a few pet projects.
               </p>
             ),
           },

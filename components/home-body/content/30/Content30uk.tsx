@@ -1,6 +1,6 @@
 import ContentSection from "../../ContentSection";
 
-const Content30: React.FC = () => {
+const Content30uk: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -25,4 +25,4 @@ const Content30: React.FC = () => {
   );
 };
 
-export default Content30;
+export default Content30uk;

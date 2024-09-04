@@ -1,30 +1,31 @@
 import CustomLink from "@/components/CustomLink";
 import React from "react";
 import ContentSection from "../../ContentSection";
-const Content12: React.FC = () => {
+
+const Content12en: React.FC = () => {
   return (
     <>
       <ContentSection
-        title={`Про Мене`}
+        title="About Me"
         contentBlocks={[
           {
             content: (
               <p>
-                Я виріс у Києві, але поїхав звідти у 2021. Відтоді пожив в
-                Одесі, Львові, Івано-Франківську і в Карпатах.
+                I grew up in Kyiv but left in 2021. Since then, I've lived in
+                Odesa, Lviv, Ivano-Frankivsk, and the Carpathians.
               </p>
             ),
           },
           {
-            content: <p>Наразі мешкаю у Львові.</p>,
+            content: <p>Currently, I live in Lviv.</p>,
           },
           {
-            content: <p>Я займаюсь бігом, ходжу в гори та маю собаку.</p>,
+            content: <p>I enjoy running, hiking, and I have a dog.</p>,
           },
         ]}
       />
       <ContentSection
-        title="Кар’єра"
+        title="Career"
         contentBlocks={[
           {
             title: (
@@ -39,16 +40,16 @@ const Content12: React.FC = () => {
             content: (
               <>
                 <li>
-                  Дизайн і розробка лендігу на Webflow -{" "}
+                  Design and development of a landing page on Webflow -{" "}
                   <CustomLink withPreview href="https://www.siteform.io/">
                     https://www.siteform.io/
                   </CustomLink>
                 </li>
                 <li>
-                  Дизайн інтерфейсу і розробка веб-застосунку (React,
+                  UI design and development of a web application (React,
                   Typescript, Tailwind, Graphql, Framer Motion)
                 </li>
-                <li>Аналіз поведінки юзерів через Hotjar</li>
+                <li>Behavior analysis of users using Hotjar</li>
               </>
             ),
           },
@@ -64,8 +65,8 @@ const Content12: React.FC = () => {
             dates: ["07 2021", "12 2021"],
             content: (
               <p>
-                З командою розробників, створювали корпоративні сайти на
-                Wordpress для замовників агенції.
+                Worked with a team of developers to create corporate websites on
+                Wordpress for agency clients.
               </p>
             ),
           },
@@ -81,14 +82,15 @@ const Content12: React.FC = () => {
             dates: ["04 2021", "05 2021"],
             content: (
               <p>
-                Дизайн корпоративного сайту компанії та проектів замовників.
+                Designed the corporate website for the company and client
+                projects.
               </p>
             ),
           },
         ]}
       />
       <ContentSection
-        title="Власні ініціативи"
+        title="Personal Initiatives"
         contentBlocks={[
           {
             title: (
@@ -96,31 +98,31 @@ const Content12: React.FC = () => {
                 withPreview
                 href="https://www.instagram.com/inflow.coworking/"
               >
-                Коворкінг
+                Coworking
               </CustomLink>
             ),
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Підприємницький досвід відкриття коворкінгу під час зимових
-                відключень 2022-го року.
+                Entrepreneurial experience in opening a coworking space during
+                the winter outages of 2022.
               </p>
             ),
           },
           {
-            title: "Волонтерство",
+            title: "Volunteering",
             dates: ["03 2022"],
             content: (
               <>
                 <p>
-                  Після вторгнення 2022 багато людей прибувало на Львівський
-                  вокзал у комендантську годину, тому ми створили телеграм-бот
-                  для координації водіїв і пасажирів. Я займався координацією
-                  водіїв та допомагав юзерам.
+                  After the 2022 invasion, many people arrived at Lviv station
+                  during curfew, so we created a Telegram bot for coordinating
+                  drivers and passengers. I managed driver coordination and
+                  assisted users.
                 </p>
                 <p>
-                  Завдяки ініціативі близько 1,500 людей було розвезено до місця
-                  ночівлі.
+                  Thanks to the initiative, about 1,500 people were transported
+                  to their accommodation.
                 </p>
               </>
             ),
@@ -128,7 +130,7 @@ const Content12: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Навчання"
+        title="Education"
         contentBlocks={[
           {
             title: (
@@ -142,8 +144,8 @@ const Content12: React.FC = () => {
             dates: ["12 2023", "03 2024"],
             content: (
               <p>
-                Працюючи на стартапі, я брав на себе маркетингові обов`язки і
-                вирішив поглибити свої знання в цій сфері.
+                Working at a startup, I took on marketing responsibilities and
+                decided to deepen my knowledge in this field.
               </p>
             ),
           },
@@ -159,7 +161,7 @@ const Content12: React.FC = () => {
             dates: ["06 2023", "10 2023"],
             content: (
               <p>
-                На курсі я усунув теоретичні прогалини в продуктовому дизайні.
+                The course helped me fill theoretical gaps in product design.
               </p>
             ),
           },
@@ -173,9 +175,7 @@ const Content12: React.FC = () => {
               </CustomLink>
             ),
             dates: ["07 2023", "09 2023"],
-            content: (
-              <p>Практикував навички прототипування і бізнес-аналізу.</p>
-            ),
+            content: <p>Practiced prototyping and business analysis skills.</p>,
           },
           {
             title: (
@@ -187,12 +187,12 @@ const Content12: React.FC = () => {
               </CustomLink>
             ),
             dates: ["07 2020"],
-            content: <p>Поглиблений курс для розробки на React JS.</p>,
+            content: <p>Advanced course for React JS development.</p>,
           },
         ]}
       />
       <ContentSection
-        title="Статті"
+        title="Articles"
         contentBlocks={[
           {
             title: <>DEV.TO</>,
@@ -217,8 +217,8 @@ const Content12: React.FC = () => {
                   withPreview
                   href="https://telegraf.design/designer-keruye-rozrobnykamy/"
                 >
-                  «Коли розробник керує дизайнерами.
-                  <br /> Як налагодити взаємодію в команді»
+                  «When a developer manages designers.
+                  <br /> How to establish team interaction»
                 </CustomLink>
               </div>
             ),
@@ -232,8 +232,8 @@ const Content12: React.FC = () => {
                   withPreview
                   href="https://dou.ua/forums/topic/38459/"
                 >
-                  «Розповідаю про перший досвід розвитку волонтерського продукту
-                  під час війни»
+                  «Talking about my first experience developing a volunteer
+                  product during the war»
                 </CustomLink>
               </div>
             ),
@@ -244,4 +244,4 @@ const Content12: React.FC = () => {
   );
 };
 
-export default Content12;
+export default Content12en;

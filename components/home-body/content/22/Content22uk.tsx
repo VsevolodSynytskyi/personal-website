@@ -1,7 +1,7 @@
 import CustomLink from "@/components/CustomLink";
 import ContentSection from "../../ContentSection";
 
-const Content32: React.FC = () => {
+const Content22uk: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -21,10 +21,9 @@ const Content32: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Хобі"
+        title="Походи"
         contentBlocks={[
           {
-            title: "Походи",
             content: (
               <>
                 <p>
@@ -40,9 +39,12 @@ const Content32: React.FC = () => {
               </>
             ),
           },
-
+        ]}
+      />
+      <ContentSection
+        title="Біг"
+        contentBlocks={[
           {
-            title: "Біг",
             content: (
               <>
                 <p>
@@ -82,30 +84,75 @@ const Content32: React.FC = () => {
           },
         ]}
       />
-
       <ContentSection
-        title="Ідея Приборкання Місцевості"
+        title="Кар’єра"
         contentBlocks={[
           {
-            content: (
+            title: (
               <>
-                <p>
-                  Я часто переїжджаю. Мені подобається адаптуватися до стилю
-                  життя нового міста, знаходити його унікальну романтику. Кожне
-                  нове місце має свої особливості, які можна пізнати, частково
-                  відмовившись від попередніх звичок і норм. Так я вчуся любити
-                  нове й адаптовуватися до нього.
-                </p>
-                <p>
-                  Тривожного киянина Одеса навчила неспішно прогулюватись
-                  будніми ранками.
-                  <br /> Франківськ плануванню фразами “Не будем загадувать”,
-                  “Буде видно” і “Ну то побачим”.
-                  <br />А Карпатська зима загартувала дитину асфальту, щоб
-                  патлатий хлопчик з шопером полюбив старі джипи та американо з
-                  автомата.
-                </p>
+                Product Designer & Frontend Developer at{" "}
+                <CustomLink withPreview href="https://www.siteform.io/">
+                  SiteForm
+                </CustomLink>
               </>
+            ),
+            dates: ["01 2022", "03 2024"],
+            content: (
+              <p>
+                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
+              </p>
+            ),
+          },
+          {
+            title: (
+              <>
+                Frontend Developer at{" "}
+                <CustomLink withPreview href="https://www.ryze-digital.de/">
+                  Ryze Digital
+                </CustomLink>
+              </>
+            ),
+            dates: ["07 2021", "12 2021"],
+            content: <p>Розробка Лендінгів на Wordpress.</p>,
+          },
+          {
+            title: (
+              <>
+                Graphic Designer at{" "}
+                <CustomLink withPreview href="https://it-artel.ua/">
+                  iT Artel
+                </CustomLink>
+              </>
+            ),
+            dates: ["04 2021", "05 2021"],
+            content: <p>Сайти та презентації.</p>,
+          },
+        ]}
+      />
+      <ContentSection
+        title="Власні ініціативи"
+        contentBlocks={[
+          {
+            title: (
+              <CustomLink
+                withPreview
+                href="https://www.instagram.com/inflow.coworking/"
+              >
+                Коворкінг
+              </CustomLink>
+            ),
+            dates: ["01 2023", "08 2023"],
+            content: (
+              <p>
+                Відкриття коворкінгу під час зимових відключень 2022-го року.
+              </p>
+            ),
+          },
+          {
+            title: "Волонтерство",
+            dates: ["03 2022"],
+            content: (
+              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
           },
         ]}
@@ -114,4 +161,4 @@ const Content32: React.FC = () => {
   );
 };
 
-export default Content32;
+export default Content22uk;

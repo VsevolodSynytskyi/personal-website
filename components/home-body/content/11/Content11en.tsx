@@ -2,11 +2,27 @@ import CustomLink from "@/components/CustomLink";
 import React from "react";
 import ContentSection from "../../ContentSection";
 
-const Content01: React.FC = () => {
+const Content11en: React.FC = () => {
   return (
     <>
       <ContentSection
-        title="Кар’єра"
+        title="Where I’m From"
+        contentBlocks={[
+          {
+            content: (
+              <p>
+                I grew up in Kyiv but left in 2021. Since then, I’ve lived in
+                Odesa, Lviv, Ivano-Frankivsk, and the Carpathians.
+              </p>
+            ),
+          },
+          {
+            content: <p>Currently, I live in Lviv.</p>,
+          },
+        ]}
+      />
+      <ContentSection
+        title="Career"
         contentBlocks={[
           {
             title: (
@@ -20,7 +36,7 @@ const Content01: React.FC = () => {
             dates: ["01 2022", "03 2024"],
             content: (
               <p>
-                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
+                React, TypeScript, Tailwind, GraphQL, Framer Motion, Hotjar.
               </p>
             ),
           },
@@ -34,7 +50,7 @@ const Content01: React.FC = () => {
               </>
             ),
             dates: ["07 2021", "12 2021"],
-            content: <p>Розробка Лендінгів на Wordpress.</p>,
+            content: <p>Landing page development on WordPress.</p>,
           },
           {
             title: (
@@ -46,12 +62,12 @@ const Content01: React.FC = () => {
               </>
             ),
             dates: ["04 2021", "05 2021"],
-            content: <p>Сайти та презентації.</p>,
+            content: <p>Websites and presentations.</p>,
           },
         ]}
       />
       <ContentSection
-        title="Власні ініціативи"
+        title="Personal Initiatives"
         contentBlocks={[
           {
             title: (
@@ -59,27 +75,31 @@ const Content01: React.FC = () => {
                 withPreview
                 href="https://www.instagram.com/inflow.coworking/"
               >
-                Коворкінг
+                Coworking Space
               </CustomLink>
             ),
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Відкриття коворкінгу під час зимових відключень 2022-го року.
+                Opened a coworking space during the winter power outages of
+                2022.
               </p>
             ),
           },
           {
-            title: "Волонтерство",
+            title: "Volunteering",
             dates: ["03 2022"],
             content: (
-              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
+              <p>
+                Uber service for volunteers and internally displaced persons
+                during curfew in Lviv.
+              </p>
             ),
           },
         ]}
       />
       <ContentSection
-        title="Навчання"
+        title="Education"
         contentBlocks={[
           {
             title: (
@@ -127,57 +147,8 @@ const Content01: React.FC = () => {
           },
         ]}
       />
-      <ContentSection
-        title="Статті"
-        contentBlocks={[
-          {
-            title: <>DEV.TO</>,
-            dates: ["10 2022"],
-            content: (
-              <div>
-                <CustomLink
-                  withPreview
-                  href="https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld"
-                >
-                  «Leading a UI design team as a developer»
-                </CustomLink>
-              </div>
-            ),
-          },
-          {
-            title: <>Telegraph</>,
-            dates: ["10 2022"],
-            content: (
-              <div>
-                <CustomLink
-                  withPreview
-                  href="https://telegraf.design/designer-keruye-rozrobnykamy/"
-                >
-                  «Коли розробник керує дизайнерами.
-                  <br /> Як налагодити взаємодію в команді»
-                </CustomLink>
-              </div>
-            ),
-          },
-          {
-            title: <>DOU</>,
-            dates: ["06 2022"],
-            content: (
-              <div>
-                <CustomLink
-                  withPreview
-                  href="https://dou.ua/forums/topic/38459/"
-                >
-                  «Розповідаю про перший досвід розвитку волонтерського продукту
-                  під час війни»
-                </CustomLink>
-              </div>
-            ),
-          },
-        ]}
-      />
     </>
   );
 };
 
-export default Content01;
+export default Content11en;

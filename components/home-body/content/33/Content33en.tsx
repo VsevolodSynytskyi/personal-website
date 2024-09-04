@@ -13,7 +13,7 @@ const Content33en: React.FC = () => {
   return (
     <>
       <ContentSection
-        title={"Where I'm From"}
+        title={"Background"}
         contentBlocks={[
           {
             content: <p>I grew up in Kyiv but left in 2021.</p>,
@@ -29,7 +29,7 @@ const Content33en: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Hiking"
+        title="Backpacking"
         contentBlocks={[
           {
             content: (

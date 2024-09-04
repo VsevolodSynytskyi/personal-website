@@ -1,40 +1,41 @@
 import CustomLink from "@/components/CustomLink";
 import ContentSection from "../../ContentSection";
 
-const Content22: React.FC = () => {
+const Content22en: React.FC = () => {
   return (
     <>
       <ContentSection
-        title={"Звідки Я"}
+        title="Where I'm From"
         contentBlocks={[
           {
-            content: <p>Я виріс в Києві, але поїхав звідти у 2021 році.</p>,
+            content: <p>I grew up in Kyiv but left in 2021.</p>,
           },
           {
             content: (
               <p>
-                Відтоді жив у різних містах України: Одеса, Львів,
-                Івано-Франківськ, а також в Карпатах.
+                Since then, I’ve lived in various cities across Ukraine: Odesa,
+                Lviv, Ivano-Frankivsk, and also in the Carpathians.
               </p>
             ),
           },
         ]}
       />
       <ContentSection
-        title="Походи"
+        title="Hiking"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  За час проживання в Карпатах, походи стали для мене буденною
-                  справою. Я міг будь-якої миті вирушити у гори, без особливих
-                  планів чи підготовки.
+                  During my time in the Carpathians, hiking became a routine
+                  part of my life. I could head to the mountains at any moment,
+                  without much planning or preparation.
                 </p>
                 <p>
-                  Спочатку думав, що після Карпат довго не захочу повертатись у
-                  гори — так вони мені набриднуть. Але я помилився. Здається, що
-                  походів у моєму житті ставатиме дедалі більше.
+                  Initially, I thought I wouldn't want to return to the
+                  mountains after the Carpathians—thinking they would become
+                  tiresome. But I was wrong. It seems that hiking will only
+                  become a bigger part of my life.
                 </p>
               </>
             ),
@@ -42,18 +43,21 @@ const Content22: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Біг"
+        title="Running"
         contentBlocks={[
           {
             content: (
               <>
                 <p>
-                  Біг став важливою частиною мого життя. Не так я кайфую від
-                  бігу, як від спільноти навколо нього.{" "}
+                  Running has become an important part of my life. It’s not so
+                  much the running itself that I enjoy, but the community around
+                  it.
                 </p>
                 <div>
-                  <blockquote className="">Біг - хуйня, бігуни - ні</blockquote>
-                  — Бігова спільнота{" "}
+                  <blockquote className="">
+                    Running is tough, but runners aren’t.
+                  </blockquote>
+                  — Running community{" "}
                   <CustomLink
                     withPreview
                     href="https://www.instagram.com/chumaky.way/"
@@ -62,22 +66,9 @@ const Content22: React.FC = () => {
                   </CustomLink>
                   .
                 </div>
-                <p>Сподіваюсь, що колись тут буде абзац про тріатлон.</p>
-              </>
-            ),
-          },
-        ]}
-      />
-      <ContentSection
-        title="Нора"
-        contentBlocks={[
-          {
-            content: (
-              <>
                 <p>
-                  Нора з'явилась у моєму житті взимку 2022-2023. Часто питають,
-                  як я привчив її до мандрівок. Така в неї порода - Франківська
-                  Туристична.
+                  I hope that one day this will also include a paragraph about
+                  triathlons.
                 </p>
               </>
             ),
@@ -85,7 +76,23 @@ const Content22: React.FC = () => {
         ]}
       />
       <ContentSection
-        title="Кар’єра"
+        title="Nora"
+        contentBlocks={[
+          {
+            content: (
+              <>
+                <p>
+                  Nora came into my life in the winter of 2022-2023. People
+                  often ask how I got her used to traveling. It's just her
+                  breed—Frankivsk Tourist.
+                </p>
+              </>
+            ),
+          },
+        ]}
+      />
+      <ContentSection
+        title="Career"
         contentBlocks={[
           {
             title: (
@@ -113,7 +120,7 @@ const Content22: React.FC = () => {
               </>
             ),
             dates: ["07 2021", "12 2021"],
-            content: <p>Розробка Лендінгів на Wordpress.</p>,
+            content: <p>Development of landing pages on Wordpress.</p>,
           },
           {
             title: (
@@ -125,12 +132,12 @@ const Content22: React.FC = () => {
               </>
             ),
             dates: ["04 2021", "05 2021"],
-            content: <p>Сайти та презентації.</p>,
+            content: <p>Websites and presentations.</p>,
           },
         ]}
       />
       <ContentSection
-        title="Власні ініціативи"
+        title="Personal Initiatives"
         contentBlocks={[
           {
             title: (
@@ -138,21 +145,24 @@ const Content22: React.FC = () => {
                 withPreview
                 href="https://www.instagram.com/inflow.coworking/"
               >
-                Коворкінг
+                Coworking
               </CustomLink>
             ),
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Відкриття коворкінгу під час зимових відключень 2022-го року.
+                Opening a coworking space during the winter outages of 2022.
               </p>
             ),
           },
           {
-            title: "Волонтерство",
+            title: "Volunteering",
             dates: ["03 2022"],
             content: (
-              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
+              <p>
+                Uber service for volunteers and internally displaced persons
+                during curfew in Lviv.
+              </p>
             ),
           },
         ]}
@@ -161,4 +171,4 @@ const Content22: React.FC = () => {
   );
 };
 
-export default Content22;
+export default Content22en;

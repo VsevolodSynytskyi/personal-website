@@ -1,7 +1,7 @@
 import CustomLink from "@/components/CustomLink";
 import ContentSection from "../../ContentSection";
 
-const Content21: React.FC = () => {
+const Content31uk: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -64,24 +64,13 @@ const Content21: React.FC = () => {
           },
         ]}
       />
+
       <ContentSection
-        title="Робота"
+        title={"Нора"}
         contentBlocks={[
           {
             content: (
-              <>
-                <p>Я працюю на стику дизайну і розробки.</p>
-                <p>
-                  Мене захоплює проектування інтерфейсів, які викликають
-                  відчуття "сів і поїхав", а розробка - інструмент втілення
-                  творчих задумів.
-                </p>
-                <p>
-                  Останні 2+ роки покращував UX сервісу для управління
-                  будівельними проектами в Штатах. (SaaS, B2B, construction,
-                  USA)
-                </p>
-              </>
+              <p>Я маю собаку, яка розділяє мої захоплення бігом і походами.</p>
             ),
           },
         ]}
@@ -90,4 +79,4 @@ const Content21: React.FC = () => {
   );
 };
 
-export default Content21;
+export default Content31uk;

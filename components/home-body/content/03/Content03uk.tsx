@@ -1,7 +1,7 @@
 import CustomLink from "@/components/CustomLink";
 import ContentSection from "../../ContentSection";
 
-const Content03: React.FC = () => {
+const Content03uk: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -307,4 +307,4 @@ const Content03: React.FC = () => {
   );
 };
 
-export default Content03;
+export default Content03uk;

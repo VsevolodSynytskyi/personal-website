@@ -1,7 +1,8 @@
 import CustomLink from "@/components/CustomLink";
 import React from "react";
 import ContentSection from "../../ContentSection";
-const Content02: React.FC = () => {
+
+const Content01uk: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -18,19 +19,9 @@ const Content02: React.FC = () => {
             ),
             dates: ["01 2022", "03 2024"],
             content: (
-              <>
-                <li>
-                  Дизайн і розробка лендігу на Webflow -{" "}
-                  <CustomLink withPreview href="https://www.siteform.io/">
-                    https://www.siteform.io/
-                  </CustomLink>
-                </li>
-                <li>
-                  Дизайн інтерфейсу і розробка веб-застосунку (React,
-                  Typescript, Tailwind, Graphql, Framer Motion)
-                </li>
-                <li>Аналіз поведінки юзерів через Hotjar</li>
-              </>
+              <p>
+                React, Typescript, Tailwind, Graphql, Framer Motion, Hotjar.
+              </p>
             ),
           },
           {
@@ -43,12 +34,7 @@ const Content02: React.FC = () => {
               </>
             ),
             dates: ["07 2021", "12 2021"],
-            content: (
-              <p>
-                З командою розробників, створювали корпоративні сайти на
-                Wordpress для замовників агенції.
-              </p>
-            ),
+            content: <p>Розробка Лендінгів на Wordpress.</p>,
           },
           {
             title: (
@@ -60,11 +46,7 @@ const Content02: React.FC = () => {
               </>
             ),
             dates: ["04 2021", "05 2021"],
-            content: (
-              <p>
-                Дизайн корпоративного сайту компанії та проектів замовників.
-              </p>
-            ),
+            content: <p>Сайти та презентації.</p>,
           },
         ]}
       />
@@ -83,8 +65,7 @@ const Content02: React.FC = () => {
             dates: ["01 2023", "08 2023"],
             content: (
               <p>
-                Підприємницький досвід відкриття коворкінгу під час зимових
-                відключень 2022-го року.
+                Відкриття коворкінгу під час зимових відключень 2022-го року.
               </p>
             ),
           },
@@ -92,18 +73,7 @@ const Content02: React.FC = () => {
             title: "Волонтерство",
             dates: ["03 2022"],
             content: (
-              <>
-                <p>
-                  Після вторгнення 2022 багато людей прибувало на Львівський
-                  вокзал у комендантську годину, тому ми створили телеграм-бот
-                  для координації водіїв і пасажирів. Я займався координацією
-                  водіїв та допомагав юзерам.
-                </p>
-                <p>
-                  Завдяки ініціативі близько 1,500 людей було розвезено до місця
-                  ночівлі.
-                </p>
-              </>
+              <p>Убер для волонтерів і ВПО в комендантську годину у Львові.</p>
             ),
           },
         ]}
@@ -121,12 +91,6 @@ const Content02: React.FC = () => {
               </CustomLink>
             ),
             dates: ["12 2023", "03 2024"],
-            content: (
-              <p>
-                Працюючи на стартапі, я брав на себе маркетингові обов`язки і
-                вирішив поглибити свої знання в цій сфері.
-              </p>
-            ),
           },
           {
             title: (
@@ -138,11 +102,6 @@ const Content02: React.FC = () => {
               </CustomLink>
             ),
             dates: ["06 2023", "10 2023"],
-            content: (
-              <p>
-                На курсі я усунув теоретичні прогалини в продуктовому дизайні.
-              </p>
-            ),
           },
           {
             title: (
@@ -154,9 +113,6 @@ const Content02: React.FC = () => {
               </CustomLink>
             ),
             dates: ["07 2023", "09 2023"],
-            content: (
-              <p>Практикував навички прототипування і бізнес-аналізу.</p>
-            ),
           },
           {
             title: (
@@ -168,7 +124,6 @@ const Content02: React.FC = () => {
               </CustomLink>
             ),
             dates: ["07 2020"],
-            content: <p>Поглиблений курс для розробки на React JS.</p>,
           },
         ]}
       />
@@ -225,4 +180,4 @@ const Content02: React.FC = () => {
   );
 };
 
-export default Content02;
+export default Content01uk;

@@ -11,7 +11,7 @@ import PictureTrainStation from "@/components/pictures/TrainStationPicture";
 import WorkersPicture from "@/components/pictures/WorkersPicture";
 import ContentSection from "../../ContentSection";
 
-const Content33: React.FC = () => {
+const Content23uk: React.FC = () => {
   return (
     <>
       <ContentSection
@@ -117,7 +117,7 @@ const Content33: React.FC = () => {
                   <div className="absolute top-0 right-0 w-48 -mt-8">
                     <CranePicture />
                   </div>
-                  <p className="w-[17rem]">
+                  <p className="w-[calc(100%-8rem)]">
                     В кінці 2021 року я виконав фріланс-замовлення для компанії
                     Ендрю і згодом він запросив мене в штат.
                   </p>
@@ -246,4 +246,4 @@ const Content33: React.FC = () => {
   );
 };
 
-export default Content33;
+export default Content23uk;
