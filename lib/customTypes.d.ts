@@ -9,3 +9,8 @@ import { Locale } from "./i18n/locales";
 export type ContentMatrix<T = React.ReactNode> = {
   [locale in Locale]: T;
 }[][];
+
+// Page Params
+export type PageParamLocale = {
+  locale: string;
+};

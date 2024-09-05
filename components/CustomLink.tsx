@@ -1,3 +1,4 @@
+import { Locale } from "@/lib/i18n/locales";
 import clsx from "clsx";
 import { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
@@ -8,7 +9,7 @@ interface CustomLinkProps extends LinkProps {
   href: string;
   withPreview?: boolean;
   className?: string;
-  locale?: string;
+  locale?: Locale;
 }
 
 const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {

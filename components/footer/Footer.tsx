@@ -1,3 +1,5 @@
+"use client";
+
 import { CV_URL, GITHUB_REPO_URL } from "@/lib/constants";
 import CustomLink from "../CustomLink";
 

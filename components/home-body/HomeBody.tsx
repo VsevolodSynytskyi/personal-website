@@ -1,3 +1,5 @@
+"use client";
+
 import { Suspense } from "react";
 import HomeBodyContent from "./HomeBodyContent";
 import HomeBodyTitle from "./HomeBodyTitle";

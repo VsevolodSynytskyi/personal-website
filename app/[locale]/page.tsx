@@ -1,18 +1,17 @@
-"use client";
-
 import { Separator } from "@/components/aceternity-ui/separator";
 import ContactSection from "@/components/contacts/ContactsSection";
 import Footer from "@/components/footer/Footer";
 import HomeBody from "@/components/home-body/HomeBody";
 import HomeIntro from "@/components/intro/HomeIntro";
+import { PageParamLocale } from "@/lib/customTypes";
 import { NextPage } from "next";
+import { unstable_setRequestLocale } from "next-intl/server";
 import { Suspense } from "react";
 
 const Home: NextPage<{
-  params: {
-    lang: string;
-  };
-}> = () => {
+  params: PageParamLocale;
+}> = (props) => {
+  unstable_setRequestLocale(props.params.locale);
   return (
     <Suspense>
       <div className="flex flex-col items-center p-8 sm:pb-24">

@@ -1,7 +1,6 @@
 import { Toaster } from "@/components/aceternity-ui/sonner";
 import environment from "@/lib/environment";
 import Hotjar from "@/lib/hotjar/Hotjar";
-import { locales } from "@/lib/i18n/locales";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
@@ -12,6 +11,8 @@ import {
   unstable_setRequestLocale,
 } from "next-intl/server";
 
+import { PageParamLocale } from "@/lib/customTypes";
+import { routing } from "@/lib/i18n/routing";
 import { PropsWithChildren } from "react";
 import "../globals.css";
 
@@ -21,12 +22,8 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-type PageParams = {
-  locale: string;
-};
-
 export const generateMetadata: (props: {
-  params: PageParams;
+  params: PageParamLocale;
 }) => Promise<Metadata> = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: "metadata" });
 
@@ -41,10 +38,10 @@ export const generateMetadata: (props: {
 };
 
 interface RootLayoutProps {
-  params: PageParams;
+  params: PageParamLocale;
 }
 
-const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
+const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
   children,
   params,
 }) => {
@@ -53,26 +50,25 @@ const RootLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <Toaster closeButton position="top-center" />
-      {children}
-      {environment === "production" && (
-        <>
-          <SpeedInsights />
-          <Analytics />
-          <Hotjar />
-        </>
-      )}
-    </NextIntlClientProvider>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <Toaster closeButton position="top-center" />
+          {children}
+          {environment === "production" && (
+            <>
+              <SpeedInsights />
+              <Analytics />
+              <Hotjar />
+            </>
+          )}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 };
-
 export const generateStaticParams = () => {
-  const localeParams = locales.map((locale) => ({
-    locale,
-  }));
-
-  return localeParams;
+  return routing.locales.map((locale) => ({ locale }));
 };
 
-export default RootLayout;
+export default LangLayout;
