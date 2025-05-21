@@ -10,6 +10,8 @@ export const YOUTUBE_VIDEO_URL =
 export const GITHUB_REPO_URL =
   "https://github.com/VsevolodSynytskyi/personal-website";
 
+export const INSTAGRAM_URL = `https://www.instagram.com/c.e.8.a/`
+
 export const EMAIL_ADDRESS = `vsevolod.synytskyi@gmail.com`;
 
 export const WEBSITE_URL = `https://www.whoisseva.com`;
