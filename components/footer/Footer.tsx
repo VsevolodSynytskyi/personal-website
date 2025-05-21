@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
 
   return <div>
     {links.map((link, index)=>(
-      <React.Fragment key={index}>
+      <React.Fragment key={link.href}>
         { !!index && ", " }
         <CustomLink href={link.href} >{link.label}</CustomLink>
       </React.Fragment>
