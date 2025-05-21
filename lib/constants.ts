@@ -16,4 +16,6 @@ export const INSTAGRAM_URL = `https://www.instagram.com/c.e.8.a/`
 
 export const EMAIL_ADDRESS = `vsevolod.synytskyi@gmail.com`;
 
-export const WEBSITE_URL = `https://www.whoisseva.com`;
+export const DOMAIN_NAME = "whoisseva.com";
+export const BASE_URL = `https://www.${DOMAIN_NAME}`;
+

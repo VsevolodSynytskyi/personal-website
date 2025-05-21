@@ -22,7 +22,7 @@
       "labelText": "Поле, щоб привітатись.",
       "placeholder": "Повідомлення.",
       "send": "Відправити",
-      "mailSubject": "Вітання з whoisseva.com",
+      "mailSubject": "Вітання з {domainName}",
       "feedback": {
         "sent": "Повідомлення відправлено",
         "errorSending": "Помилка при відправленні повідомлення",

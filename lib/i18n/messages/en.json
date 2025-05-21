@@ -22,7 +22,7 @@
       "labelText": "Say hello",
       "placeholder": "Message.",
       "send": "Send",
-      "mailSubject": "Greetings from whoisseva.com",
+      "mailSubject": "Greetings from {domainName}",
       "feedback": {
         "sent": "Message sent",
         "errorSending": "Error sending the message",

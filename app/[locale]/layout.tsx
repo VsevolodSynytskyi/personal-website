@@ -16,7 +16,7 @@ import { PageParamLocale } from "@/lib/customTypes";
 import { routing } from "@/lib/i18n/routing";
 import { PropsWithChildren } from "react";
 import "../globals.css";
-import {WEBSITE_URL} from "@/lib/constants";
+import {BASE_URL, DOMAIN_NAME} from "@/lib/constants";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -33,10 +33,18 @@ export const generateMetadata: (props: {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: WEBSITE_URL,
+      canonical: BASE_URL,
       languages: Object.fromEntries(
-        locales.map((locale) => [locale, `${WEBSITE_URL}/${locale}`])
+        locales.map((locale) => [locale, `${BASE_URL}/${locale}`])
       ),
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: BASE_URL,
+      siteName: DOMAIN_NAME,
+      type: "website",
+      locale,
     },
     icons: {
       icon: "./favicon.png",
