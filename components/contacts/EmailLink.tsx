@@ -13,9 +13,9 @@ const EmailLink: React.FC = () => {
   const onCopyClick = async() => {
     try{
     await copyFn(EMAIL_ADDRESS);
-      toast.success("Скопійовано");
+      toast.success(t("copyFunction.success"));
     } catch (e){
-      toast.error("Не вдалося скопіювати");
+      toast.error(t("copyFunction.error"));
     }
   };
 

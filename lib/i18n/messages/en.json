@@ -36,6 +36,10 @@
         "tooShort": "Don't be shy with words.",
         "tooLong": "Let's start it brief."
       }
+    },
+    "copyFunction": {
+      "success": "Copied",
+      "error": "Failed to copy"
     }
   },
   "timeToReadSlider": {
