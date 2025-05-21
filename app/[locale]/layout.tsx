@@ -10,11 +10,13 @@ import {
   getTranslations,
   unstable_setRequestLocale,
 } from "next-intl/server";
+import {locales} from "@/lib/i18n/locales";
 
 import { PageParamLocale } from "@/lib/customTypes";
 import { routing } from "@/lib/i18n/routing";
 import { PropsWithChildren } from "react";
 import "../globals.css";
+import {WEBSITE_URL} from "@/lib/constants";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -30,6 +32,12 @@ export const generateMetadata: (props: {
   const metadata: Metadata = {
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical: WEBSITE_URL,
+      languages: Object.fromEntries(
+        locales.map((locale) => [locale, `${WEBSITE_URL}/${locale}`])
+      ),
+    },
     icons: {
       icon: "./favicon.png",
     },
