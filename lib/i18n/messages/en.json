@@ -5,7 +5,11 @@
   },
   "metadata": {
     "title": "Vsevolod Synytskyi (Seva)",
-    "description": "Product Designer & Frontend Developer based in Lviv, Ukraine"
+    "description": "Product Designer & Frontend Developer based in Lviv, Ukraine",
+    "fullName": "Vsevolod Synytskyi",
+    "jobTitle": "Product Designer & Frontend Developer",
+    "city": "Lviv",
+    "country": "Ukraine"
   },
   "notFoundPage": {
     "title": "This page doesn't exist ¯\\_(ツ)_/¯",

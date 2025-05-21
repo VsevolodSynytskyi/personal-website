@@ -9,6 +9,8 @@ export const YOUTUBE_VIDEO_URL =
 
 export const YOUTUBE_CHANNEL_URL =  `https://www.youtube.com/@synytskyi`
 
+export const GITHUB_PROFILE_URL =  `https://github.com/VsevolodSynytskyi`
+
 export const GITHUB_REPO_URL =
   "https://github.com/VsevolodSynytskyi/personal-website";
 
