@@ -7,6 +7,8 @@ export const TELEGRAM_URL = "https://t.me/vsevolod_synytskyi";
 export const YOUTUBE_VIDEO_URL =
   "https://www.youtube.com/watch?v=GXLpryb9n3Q&t=366s";
 
+export const YOUTUBE_CHANNEL_URL =  `https://www.youtube.com/@synytskyi`
+
 export const GITHUB_REPO_URL =
   "https://github.com/VsevolodSynytskyi/personal-website";
 

@@ -21,13 +21,14 @@ const HomeIntro = () => {
       </motion.div>
       <div className="flex flex-col justify-center flex-1">
         <div className="flex flex-col gap-16">
-          <motion.div
+          <h1 className={`sr-only`}>{t("fullName")}</h1>
+          <motion.p
             initial={revealAnimation.initial}
             animate={revealAnimation.animate}
             className="whitespace-pre-line"
           >
             {t("intro")}
-          </motion.div>
+          </motion.p>
           <PageContentConstructor />
         </div>
       </div>
