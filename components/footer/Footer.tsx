@@ -1,15 +1,27 @@
 "use client";
 
-import { CV_URL, GITHUB_REPO_URL } from "@/lib/constants";
+import {CV_URL, GITHUB_REPO_URL, INSTAGRAM_URL} from "@/lib/constants";
 import CustomLink from "../CustomLink";
+import React from "react";
 
 const Footer: React.FC = () => {
-  return (
-    <div className="">
-      <CustomLink href={CV_URL}>CV</CustomLink>,{" "}
-      <CustomLink href={GITHUB_REPO_URL}>GitHub Repo</CustomLink>
-    </div>
-  );
+  const links:{
+    href: string;
+    label: React.ReactNode;
+  }[] = [
+    { href: CV_URL, label: "CV" },
+    { href: GITHUB_REPO_URL, label: "GitHub Repo" },
+    { href: INSTAGRAM_URL, label: "Instagram" },
+  ];
+
+  return <div>
+    {links.map((link, index)=>(
+      <React.Fragment key={link.href}>
+        { !!index && ", " }
+        <CustomLink href={link.href} >{link.label}</CustomLink>
+      </React.Fragment>
+    ))}
+  </div>
 };
 
 export default Footer;

@@ -1,10 +1,15 @@
 {
   "intro": {
-    "intro": "Hi!\n I'm Seva (or Vsevolod)\n Here you can get to know me better."
+    "intro": "Hi!\n I'm Seva\n Here you can get to know me better.",
+    "fullName": "Vsevolod Synytskyi"
   },
   "metadata": {
-    "title": "Seva",
-    "description": "Vsevolod Synytsky - Personal Website"
+    "title": "Vsevolod Synytskyi (Seva)",
+    "description": "Product Designer & Frontend Developer based in Lviv, Ukraine",
+    "fullName": "Vsevolod Synytskyi",
+    "jobTitle": "Product Designer & Frontend Developer",
+    "city": "Lviv",
+    "country": "Ukraine"
   },
   "notFoundPage": {
     "title": "This page doesn't exist ¯\\_(ツ)_/¯",
@@ -21,7 +26,7 @@
       "labelText": "Say hello",
       "placeholder": "Message.",
       "send": "Send",
-      "mailSubject": "Greetings from whoisseva.com",
+      "mailSubject": "Greetings from {domainName}",
       "feedback": {
         "sent": "Message sent",
         "errorSending": "Error sending the message",
@@ -31,6 +36,10 @@
         "tooShort": "Don't be shy with words.",
         "tooLong": "Let's start it brief."
       }
+    },
+    "copyFunction": {
+      "success": "Copied",
+      "error": "Failed to copy"
     }
   },
   "timeToReadSlider": {
