@@ -15,7 +15,9 @@ const Home: NextPage<{
   return (
     <Suspense>
       <div className="flex flex-col items-center p-8 sm:pb-24">
-        <div className="flex flex-col w-full max-w-sm gap-16">
+
+
+            <div className="flex flex-col w-full max-w-sm gap-16">
           <HomeIntro />
           <HomeBody />
           <div className="relative flex flex-col items-center">
