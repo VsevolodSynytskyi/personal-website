@@ -18,7 +18,9 @@ const HomeIntro = () => {
         className="flex flex-row justify-between"
       >
         <ContactsModalButton />
-        <LanguageSwitcher />
+        <Suspense>
+          <LanguageSwitcher />
+        </Suspense>
       </motion.div>
       <div className="flex flex-col justify-center flex-1">
         <div className="flex flex-col gap-16">
