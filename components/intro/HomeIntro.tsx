@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import ContactsModalButton from "../contacts/ContactsModalButton";
 import LanguageSwitcher from "./LanguageSwitcher";
 import PageContentConstructor from "./PageContentConstructor";
+import { Suspense } from "react";
 
 const HomeIntro = () => {
   const t = useTranslations(`intro`);
@@ -17,11 +18,12 @@ const HomeIntro = () => {
         className="flex flex-row justify-between"
       >
         <ContactsModalButton />
-        <LanguageSwitcher />
+        <Suspense>
+          <LanguageSwitcher />
+        </Suspense>
       </motion.div>
       <div className="flex flex-col justify-center flex-1">
         <div className="flex flex-col gap-16">
-          <h1 className={`sr-only`}>{t("fullName")}</h1>
           <motion.p
             initial={revealAnimation.initial}
             animate={revealAnimation.animate}
@@ -29,7 +31,9 @@ const HomeIntro = () => {
           >
             {t("intro")}
           </motion.p>
-          <PageContentConstructor />
+          <Suspense>
+            <PageContentConstructor />
+          </Suspense>
         </div>
       </div>
     </div>

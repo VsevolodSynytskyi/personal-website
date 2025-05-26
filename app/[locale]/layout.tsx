@@ -10,7 +10,7 @@ import {
   getTranslations,
   unstable_setRequestLocale,
 } from "next-intl/server";
-import {locales} from "@/lib/i18n/locales";
+import { locales } from "@/lib/i18n/locales";
 
 import { PageParamLocale } from "@/lib/customTypes";
 import { routing } from "@/lib/i18n/routing";
@@ -23,8 +23,12 @@ import {
   INSTAGRAM_URL,
   LINKEDIN_URL,
   TELEGRAM_URL,
-  YOUTUBE_CHANNEL_URL
+  YOUTUBE_CHANNEL_URL,
 } from "@/lib/constants";
+import clsx from "clsx";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -57,6 +61,9 @@ export const generateMetadata: (props: {
     icons: {
       icon: "./favicon.png",
     },
+    other: {
+      lang: locale,
+    },
   };
   return metadata;
 };
@@ -80,7 +87,12 @@ const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
 
   return (
     <html lang={locale}>
-      <body>
+      <body
+        className={clsx(
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable
+        )}
+      >
         <NextIntlClientProvider messages={messages}>
           <Toaster closeButton position="top-center" />
           {children}
@@ -95,34 +107,39 @@ const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
 
         <script
           /*
-          Google Search Structured Data
-          https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
-          */
+      Google Search Structured Data
+      https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+      */
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
               name: t("fullName"),
-              alternateName: ["Всеволод Синицький","Vsevolod Synytskyi", "Сєва", "Сева", "Seva"],
+              alternateName: [
+                "Всеволод Синицький",
+                "Vsevolod Synytskyi",
+                "Сєва",
+                "Сева",
+                "Seva",
+              ],
               url: BASE_URL,
               sameAs: [
                 LINKEDIN_URL,
                 GITHUB_PROFILE_URL,
                 TELEGRAM_URL,
                 INSTAGRAM_URL,
-                YOUTUBE_CHANNEL_URL
+                YOUTUBE_CHANNEL_URL,
               ],
               jobTitle: t("jobTitle"),
               address: {
                 "@type": "PostalAddress",
                 addressLocality: t("city"),
-                addressCountry: t("country")
-              }
-            })
+                addressCountry: t("country"),
+              },
+            }),
           }}
         />
-
       </body>
     </html>
   );

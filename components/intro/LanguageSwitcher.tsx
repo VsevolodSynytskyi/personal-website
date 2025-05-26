@@ -2,10 +2,10 @@
 
 import { languages, locales } from "@/lib/i18n/locales";
 import clsx from "clsx";
-import { useMotionValue, useTransform } from "framer-motion";
 import { useLocale } from "next-intl";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import React from "react";
+import Link from "next/link";
 
 const LanguageSwitcher: React.FC = () => {
   const currentLocale = useLocale();
@@ -13,11 +13,10 @@ const LanguageSwitcher: React.FC = () => {
     (locale) => locale === currentLocale
   );
 
-  const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const switchLanguage = (locale: string) => {
+  const getLanguageLinkHref: (locale: string) => string = (locale) => {
     // Extract current path segments
     const pathSegments = pathname.split("/");
 
@@ -27,26 +26,22 @@ const LanguageSwitcher: React.FC = () => {
     // Reconstruct the path with the new language
     const newPathname = pathSegments.join("/");
 
-    // Navigate to the new path while preserving query parameters
-    const pathNameToPush = `${newPathname}?${searchParams.toString()}`;
-
-    router.push(pathNameToPush);
+    // Construct the new path while preserving query parameters
+    return `${newPathname}?${searchParams.toString()}`;
   };
 
-  const x = useMotionValue(currentLocaleIndex);
-  const xTransformed = useTransform(x, [0, 1], [0, 50]);
-
   return (
-    <div
-      className="relative px-2 cursor-pointer select-none group"
-      onClick={() => {
+    <Link
+      href={(() => {
         const newLocale =
           currentLocaleIndex < locales.length - 1
             ? locales[currentLocaleIndex + 1]
             : locales[0];
 
-        switchLanguage(newLocale);
-      }}
+        return getLanguageLinkHref(newLocale);
+      })()}
+      className="relative px-2 cursor-pointer select-none group"
+      onClick={() => {}}
     >
       <div
         className={clsx(
@@ -107,7 +102,7 @@ const LanguageSwitcher: React.FC = () => {
           );
         })}
       </div>
-    </div>
+    </Link>
   );
 };
 
