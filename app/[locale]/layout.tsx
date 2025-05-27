@@ -39,7 +39,7 @@ export const viewport: Viewport = {
 export const generateMetadata: (props: {
   params: PageParamLocale;
 }) => Promise<Metadata> = async (props) => {
-  const params = props.params;
+  const params = await props.params;
 
   const { locale } = params;
 
