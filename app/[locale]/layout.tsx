@@ -44,20 +44,20 @@ export const generateMetadata: (props: {
   const metadata: Metadata = {
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: BASE_URL,
-      languages: Object.fromEntries(
-        locales.map((locale) => [locale, `${BASE_URL}/${locale}`])
-      ),
-    },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: BASE_URL,
-      siteName: DOMAIN_NAME,
-      type: "website",
-      locale,
-    },
+      alternates: {
+        canonical: `${BASE_URL}/${locale}`,
+        languages: Object.fromEntries(
+          locales.map((locale) => [locale, `${BASE_URL}/${locale}`])
+        ),
+      },
+      openGraph: {
+        title: t("title"),
+        description: t("description"),
+        url: `${BASE_URL}/${locale}`,
+        siteName: DOMAIN_NAME,
+        type: "website",
+        locale,
+      },
     icons: {
       icon: "./favicon.png",
     },
@@ -123,7 +123,7 @@ const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
                 "Сева",
                 "Seva",
               ],
-              url: BASE_URL,
+              url: `${BASE_URL}/${locale}`,
               sameAs: [
                 LINKEDIN_URL,
                 GITHUB_PROFILE_URL,
