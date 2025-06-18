@@ -22,10 +22,10 @@ const Home: NextPage<{
         <div className="relative flex flex-col items-center">
           <Separator className="w-[calc(100vw-1rem)] my-10" />
         </div>
-        <div>
+        <footer>
           <ContactSection />
           <Footer />
-        </div>
+        </footer>
       </div>
     </div>
   );
