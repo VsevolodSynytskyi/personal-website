@@ -46,7 +46,12 @@
     "title": "Час на прочитання",
     "minText": "10 сек",
     "maxText": "2 хв",
-    "values": ["10 секунд", "30 секунд", "1 хвилина", "2-3 хвилини"]
+    "values": [
+      "10 секунд",
+      "30 секунд",
+      "1 хвилина",
+      "2-3 хвилини"
+    ]
   },
   "contentTypeSlider": {
     "title": "Що вас цікавить?",
@@ -86,5 +91,19 @@
         "Чим Я Живу"
       ]
     ]
+  },
+  "imageAlternates": {
+    "seagulls": "Чайки",
+    "coworking": "Коворкінг",
+    "hiking": "Походи",
+    "carInMountains": "Джип в горах",
+    "crane": "Підйомний кран",
+    "natureBackground": "Фон природи",
+    "noraTheDogRunning": "Собака Нора біжить",
+    "sevaRunning": "Всеволод біжить",
+    "constructionWorkers": "Будівельники",
+    "family": "Сімʼя",
+    "trainStation": "Вокзал",
+    "hangingClothes": "Одяг на мотузці"
   }
 }

@@ -46,7 +46,12 @@
     "title": "Time to Read",
     "minText": "10 sec",
     "maxText": "2 min",
-    "values": ["10 seconds", "30 seconds", "1 minute", "2-3 minutes"]
+    "values": [
+      "10 seconds",
+      "30 seconds",
+      "1 minute",
+      "2-3 minutes"
+    ]
   },
   "contentTypeSlider": {
     "title": "Where should we start?",
@@ -67,7 +72,12 @@
         "CV",
         "About My Career, Projects, and Education"
       ],
-      ["My Background", "Career", "Career", "My Journey and Hobbies"],
+      [
+        "My Background",
+        "Career",
+        "Career",
+        "My Journey and Hobbies"
+      ],
       [
         "My Background and What I Do",
         "Hobbies and Work",
@@ -81,5 +91,19 @@
         "About My Life"
       ]
     ]
+  },
+  "imageAlternates": {
+    "seagulls": "Seagulls",
+    "coworking": "Coworking space",
+    "hiking": "Hiking",
+    "carInMountains": "Car in the mountains",
+    "crane": "Construction crane",
+    "natureBackground": "Nature background",
+    "noraTheDogRunning": "Nora the dog running",
+    "sevaRunning": "Seva running",
+    "constructionWorkers": "Construction workers",
+    "family": "Family",
+    "trainStation": "Train station",
+    "hangingClothes": "Hanging clothes"
   }
 }
