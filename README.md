@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Website
+
+This repository contains a multilingual personal website built with the Next.js **app router** and Tailwind CSS. The site supports English and Ukrainian locales and uses sliders to control the type and length of the presented content.
+
+## Project Structure
+
+```
+personal-website/
+├─ app/              # Next.js “app” directory with routing
+│  ├─ api/           # API routes (e.g. mail sending)
+│  ├─ [locale]/      # Locale-specific pages/layouts
+│  ├─ globals.css    # Global Tailwind styles
+│  └─ layout.tsx     # Root layout
+├─ components/       # UI components and page sections
+├─ images/           # Static images
+├─ lib/              # Helper utilities, hooks, i18n setup
+├─ middleware.ts     # Redirects root route to preferred locale
+├─ next.config.mjs   # Next.js configuration with next-intl plugin
+├─ tailwind.config.ts
+└─ package.json
+```
+
+### Key Concepts
+
+- **Internationalization** – translations live in `lib/i18n/messages` and locale definitions are in `lib/i18n/locales.ts`.
+- **Routing** – middleware redirects `/` to the user’s preferred locale and next-intl handles locale-aware URLs.
+- **Content Sliders** – the intro sliders keep their state in the URL via custom hooks located in `lib`.
+- **API Route** – `app/api/mail/route.ts` exposes a POST endpoint that sends email via the Resend service.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Open [http://localhost:3000](http://localhost:3000) to view the site. The page reloads as you edit source files.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn about the frameworks and libraries used in this project, visit:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [next-intl Documentation](https://next-intl-docs.vercel.app/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
