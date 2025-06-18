@@ -5,14 +5,14 @@ import HomeBody from "@/components/home-body/HomeBody";
 import HomeIntro from "@/components/intro/HomeIntro";
 import { PageParamLocale } from "@/lib/customTypes";
 import { NextPage } from "next";
-import { unstable_setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-const Home: NextPage<{
-  params: PageParamLocale;
-}> = (props) => {
-  unstable_setRequestLocale(props.params.locale);
-  const t = useTranslations(`intro`);
+const Home: NextPage<{ params: PageParamLocale }> = async ({ params }) => {
+  unstable_setRequestLocale(params.locale);
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: "intro",
+  });
   return (
     <div className="flex flex-col items-center p-8 sm:pb-24">
       <div className="flex flex-col w-full max-w-sm gap-16">
