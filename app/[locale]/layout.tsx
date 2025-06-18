@@ -38,7 +38,11 @@ export const viewport: Viewport = {
 
 export const generateMetadata: (props: {
   params: PageParamLocale;
-}) => Promise<Metadata> = async ({ params: { locale } }) => {
+}) => Promise<Metadata> = async (props) => {
+  const params = await props.params;
+
+  const { locale } = params;
+
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   const metadata: Metadata = {
@@ -72,10 +76,13 @@ interface RootLayoutProps {
   params: PageParamLocale;
 }
 
-const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
-  children,
-  params,
-}) => {
+const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async (
+  props
+) => {
+  const params = await props.params;
+
+  const { children } = props;
+
   const { locale } = params;
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
