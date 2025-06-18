@@ -13,7 +13,6 @@ import {
 import { locales } from "@/lib/i18n/locales";
 
 import { PageParamLocale } from "@/lib/customTypes";
-import { routing } from "@/lib/i18n/routing";
 import React, { PropsWithChildren } from "react";
 import "../globals.css";
 import {
@@ -44,20 +43,20 @@ export const generateMetadata: (props: {
   const metadata: Metadata = {
     title: t("title"),
     description: t("description"),
-      alternates: {
-        canonical: `${BASE_URL}/${locale}`,
-        languages: Object.fromEntries(
-          locales.map((locale) => [locale, `${BASE_URL}/${locale}`])
-        ),
-      },
-      openGraph: {
-        title: t("title"),
-        description: t("description"),
-        url: `${BASE_URL}/${locale}`,
-        siteName: DOMAIN_NAME,
-        type: "website",
-        locale,
-      },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}`,
+      languages: Object.fromEntries(
+        locales.map((locale) => [locale, `${BASE_URL}/${locale}`])
+      ),
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${BASE_URL}/${locale}`,
+      siteName: DOMAIN_NAME,
+      type: "website",
+      locale,
+    },
     icons: {
       icon: "./favicon.png",
     },
@@ -107,9 +106,9 @@ const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
 
         <script
           /*
-      Google Search Structured Data
-      https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
-      */
+  Google Search Structured Data
+  https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
+  */
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -145,7 +144,7 @@ const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
   );
 };
 export const generateStaticParams = () => {
-  return routing.locales.map((locale) => ({ locale }));
+  return locales.map((locale) => ({ locale }));
 };
 
 export default LangLayout;

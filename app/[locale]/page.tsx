@@ -6,6 +6,7 @@ import HomeIntro from "@/components/intro/HomeIntro";
 import { PageParamLocale } from "@/lib/customTypes";
 import { NextPage } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import ScreenReaderLanguageSwitcher from "@/components/intro/ScreenReaderLanguageSwitcher";
 
 const Home: NextPage<{ params: PageParamLocale }> = async ({ params }) => {
   unstable_setRequestLocale(params.locale);
@@ -20,6 +21,7 @@ const Home: NextPage<{ params: PageParamLocale }> = async ({ params }) => {
           <h1 className={`sr-only`}>{t("fullName")}</h1>
           <HomeIntro />
         </header>
+        <ScreenReaderLanguageSwitcher />
         <HomeBody />
         <div className="relative flex flex-col items-center">
           <Separator className="w-[calc(100vw-1rem)] my-10" />

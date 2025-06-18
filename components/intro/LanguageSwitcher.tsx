@@ -3,9 +3,9 @@
 import { languages, locales } from "@/lib/i18n/locales";
 import clsx from "clsx";
 import { useLocale } from "next-intl";
-import { usePathname, useSearchParams } from "next/navigation";
 import React from "react";
 import Link from "next/link";
+import useGetLocalizedHref from "@/lib/getLocalizedHref";
 
 const LanguageSwitcher: React.FC = () => {
   const currentLocale = useLocale();
@@ -13,22 +13,7 @@ const LanguageSwitcher: React.FC = () => {
     (locale) => locale === currentLocale
   );
 
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const getLanguageLinkHref: (locale: string) => string = (locale) => {
-    // Extract current path segments
-    const pathSegments = pathname.split("/");
-
-    // Replace the language segment with the new language
-    pathSegments[1] = locale;
-
-    // Reconstruct the path with the new language
-    const newPathname = pathSegments.join("/");
-
-    // Construct the new path while preserving query parameters
-    return `${newPathname}?${searchParams.toString()}`;
-  };
+  const getLocalizedHref = useGetLocalizedHref();
 
   return (
     <Link
@@ -38,10 +23,9 @@ const LanguageSwitcher: React.FC = () => {
             ? locales[currentLocaleIndex + 1]
             : locales[0];
 
-        return getLanguageLinkHref(newLocale);
+        return getLocalizedHref(newLocale);
       })()}
       className="relative px-2 cursor-pointer select-none group"
-      onClick={() => {}}
     >
       <div
         className={clsx(
