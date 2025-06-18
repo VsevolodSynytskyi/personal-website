@@ -16,8 +16,10 @@ const Home: NextPage<{
   return (
     <div className="flex flex-col items-center p-8 sm:pb-24">
       <div className="flex flex-col w-full max-w-sm gap-16">
-        <h1 className={`sr-only`}>{t("fullName")}</h1>
-        <HomeIntro />
+        <header>
+          <h1 className={`sr-only`}>{t("fullName")}</h1>
+          <HomeIntro />
+        </header>
         <HomeBody />
         <div className="relative flex flex-col items-center">
           <Separator className="w-[calc(100vw-1rem)] my-10" />

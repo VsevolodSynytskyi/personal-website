@@ -7,14 +7,14 @@ import ScrollPaper from "./ScrollPaper";
 
 export function HomeBody() {
   return (
-    <div>
+    <main>
       <Suspense>
         <ScrollPaper>
           <HomeBodyTitle />
         </ScrollPaper>
         <HomeBodyContent />
       </Suspense>
-    </div>
+    </main>
   );
 }
 
