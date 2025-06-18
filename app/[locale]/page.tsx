@@ -1,6 +1,6 @@
 import { Separator } from "@/components/aceternity-ui/separator";
 import ContactSection from "@/components/contacts/ContactsSection";
-import Footer from "@/components/footer/Footer";
+import AdditionalFooterLinks from "@/components/footer/AdditionalFooterLinks";
 import HomeBody from "@/components/home-body/HomeBody";
 import HomeIntro from "@/components/intro/HomeIntro";
 import { PageParamLocale } from "@/lib/customTypes";
@@ -26,7 +26,7 @@ const Home: NextPage<{
         </div>
         <footer>
           <ContactSection />
-          <Footer />
+          <AdditionalFooterLinks />
         </footer>
       </div>
     </div>
