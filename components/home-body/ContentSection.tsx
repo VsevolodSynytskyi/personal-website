@@ -8,7 +8,7 @@ interface ContentSectionProps {
 
 const ContentSection: React.FC<ContentSectionProps> = (props) => {
   return (
-    <>
+    <section>
       {props.title && (
         <motion.h2
           initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ const ContentSection: React.FC<ContentSectionProps> = (props) => {
       {(props.contentBlocks || []).map((contentBlockProps, i) => (
         <ContentBlock key={i} {...contentBlockProps} />
       ))}
-    </>
+    </section>
   );
 };
 

@@ -1,4 +1,5 @@
-import {DOMAIN_NAME, EMAIL_ADDRESS} from "@/lib/constants";
+"use client";
+import { DOMAIN_NAME, EMAIL_ADDRESS } from "@/lib/constants";
 import { CopyIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -10,11 +11,11 @@ const EmailLink: React.FC = () => {
   const [_, copyFn] = useCopyToClipboard();
   const t = useTranslations("contacts");
 
-  const onCopyClick = async() => {
-    try{
-    await copyFn(EMAIL_ADDRESS);
+  const onCopyClick = async () => {
+    try {
+      await copyFn(EMAIL_ADDRESS);
       toast.success(t("copyFunction.success"));
-    } catch (e){
+    } catch (e) {
       toast.error(t("copyFunction.error"));
     }
   };
@@ -23,7 +24,7 @@ const EmailLink: React.FC = () => {
     <div className="flex flex-row items-baseline gap-2">
       <CustomLink
         href={`mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(
-          t("messageBox.mailSubject", ({domainName:DOMAIN_NAME}))
+          t("messageBox.mailSubject", { domainName: DOMAIN_NAME })
         )}`}
       >
         {EMAIL_ADDRESS}

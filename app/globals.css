@@ -63,6 +63,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -71,6 +72,7 @@
 .text-content p {
   @apply leading-7;
 }
+
 .text-content p:not(:first-child) {
   @apply mt-6;
 }
@@ -78,6 +80,7 @@
 .text-content > div {
   @apply leading-7;
 }
+
 .text-content > div:not(:first-child) {
   @apply mt-6;
 }
@@ -93,6 +96,7 @@
 .text-content h1 {
   @apply text-4xl font-bold tracking-tight transition-colors scroll-m-20;
 }
+
 .text-content h1:not(:first-child) {
   @apply mt-10;
 }
@@ -101,7 +105,9 @@
   @apply pb-2 text-2xl font-semibold tracking-tight transition-colors border-b scroll-m-20;
   @apply sticky top-0 z-10 bg-background;
 }
-.text-content h2:not(:first-child) {
+
+.text-content h2:not(:first-child),
+.text-content section:not(:first-child) {
   @apply mt-10;
 }
 
