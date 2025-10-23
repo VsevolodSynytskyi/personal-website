@@ -1,9 +1,9 @@
-import useContentTypeParam from "@/lib/useContentTypeParam";
+import useContentPageParamState from "@/lib/content-page-params/useContentPageParamState";
 import { useTranslations } from "next-intl";
 import SliderBlock from "./SliderBlock";
 
 const ContentTypeSlider: React.FC = () => {
-  const [contentType, setContentType] = useContentTypeParam();
+  const [contentType, setContentType] = useContentPageParamState("contentType");
   const t = useTranslations("contentTypeSlider");
 
   const tooltipTextTransform = (n: number) => {

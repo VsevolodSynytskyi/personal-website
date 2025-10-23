@@ -1,15 +1,20 @@
 "use client";
-import useContentTypeParam from "@/lib/useContentTypeParam";
-import useReadTimeParam from "@/lib/useReadTimeParam";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { TextGenerateEffect } from "../aceternity-ui/text-generate-effect";
+import { useParams } from "next/navigation";
 
-const HomeBodyTitle: React.FC = () => {
-  const [contentType] = useContentTypeParam();
-  const [readTime] = useReadTimeParam();
-
+const ContentPageTitle: React.FC = () => {
   const t = useTranslations("mainContent");
+
+  const params = useParams();
+  const contentType = params.contentType;
+  const readTime = params.readTime;
+  if (!contentType || !readTime) {
+    // TODO handle this better
+    return null;
+  }
 
   let titleText = t(`titles.${[contentType]}.${[readTime]}`);
 
@@ -31,4 +36,4 @@ const HomeBodyTitle: React.FC = () => {
   );
 };
 
-export default HomeBodyTitle;
+export default ContentPageTitle;

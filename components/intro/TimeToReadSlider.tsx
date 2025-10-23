@@ -1,9 +1,9 @@
-import useReadTimeParam from "@/lib/useReadTimeParam";
 import { useTranslations } from "next-intl";
 import SliderBlock from "./SliderBlock";
+import useContentPageParamState from "@/lib/content-page-params/useContentPageParamState";
 
 const TimeToReadSlider: React.FC = () => {
-  const [sliderValue, setSliderValue] = useReadTimeParam();
+  const [sliderValue, setSliderValue] = useContentPageParamState("readTime");
   const t = useTranslations("timeToReadSlider");
 
   const tooltipTextTransform = (n: number) => {

@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
   const { message } = await request.json();
 
   const url = new URL(request.url).host;
@@ -12,7 +12,7 @@ export async function POST(request: Request, response: Response) {
     return Response.json({ message: "Sending email is not specified" });
   }
 
-  const { data, error } = await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: `${url} <${fromEmail}>`,
     to: "vsevolod.synytskyi@gmail.com",
     subject: `New Message`,

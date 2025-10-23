@@ -25,6 +25,7 @@ const LanguageSwitcher: React.FC = () => {
 
         return getLocalizedHref(newLocale);
       })()}
+      scroll={false}
       className="relative px-2 cursor-pointer select-none group"
     >
       <div

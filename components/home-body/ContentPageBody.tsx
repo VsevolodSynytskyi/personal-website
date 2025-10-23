@@ -1,7 +1,7 @@
-import { ContentMatrix } from "@/lib/customTypes";
+"use client";
+
+import { ContentMatrix, ContentParamValues } from "@/lib/customTypes";
 import { Locale, locales } from "@/lib/i18n/locales";
-import useContentTypeParam from "@/lib/useContentTypeParam";
-import useReadTimeParam from "@/lib/useReadTimeParam";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale } from "next-intl";
 import Content00en from "./content/00/Content00en";
@@ -81,14 +81,17 @@ const contentMatrix: ContentMatrix = [
   ],
 ];
 
-const HomeBodyContent: React.FC = () => {
-  const [contentTypeIndex] = useContentTypeParam();
-  const [readTimeIndex] = useReadTimeParam();
+interface ContentPageBodyProps extends ContentParamValues {}
+
+const ContentPageBody: React.FC<ContentPageBodyProps> = ({
+  contentType,
+  readTime,
+}) => {
   const locale = useLocale();
   let content = null;
   if (locales.includes(locale)) {
     content = locale
-      ? contentMatrix[contentTypeIndex][readTimeIndex][locale as Locale]
+      ? contentMatrix[contentType][readTime][locale as Locale]
       : null;
   }
 
@@ -104,14 +107,14 @@ const HomeBodyContent: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, position: "absolute" }}
-          key={`${contentTypeIndex}${readTimeIndex}`}
+          key={`${contentType}${readTime}`}
         >
           {content}
-          {contentTypeIndex === 0 && <CvButtonSection />}
+          {contentType === 0 && <CvButtonSection />}
         </motion.div>
       </AnimatePresence>
     </motion.div>
   );
 };
 
-export default HomeBodyContent;
+export default ContentPageBody;

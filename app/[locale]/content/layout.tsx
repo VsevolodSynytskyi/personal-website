@@ -1,19 +1,27 @@
 import { Separator } from "@/components/aceternity-ui/separator";
 import ContactSection from "@/components/contacts/ContactsSection";
 import AdditionalFooterLinks from "@/components/footer/AdditionalFooterLinks";
-import HomeBody from "@/components/home-body/HomeBody";
 import HomeIntro from "@/components/intro/HomeIntro";
-import { PageParamLocale } from "@/lib/customTypes";
-import { NextPage } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import ScreenReaderLanguageSwitcher from "@/components/intro/ScreenReaderLanguageSwitcher";
+import React from "react";
+import ContentPagePaperSection from "@/components/home-body/ContentPagePaperSection";
+import { PageParamLocale } from "@/lib/customTypes";
 
-const Home: NextPage<{ params: PageParamLocale }> = async ({ params }) => {
-  unstable_setRequestLocale(params.locale);
+export default async function ContentLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<PageParamLocale>;
+}) {
+  const { locale } = await params;
+  unstable_setRequestLocale(locale);
   const t = await getTranslations({
-    locale: params.locale,
+    locale: locale,
     namespace: "intro",
   });
+
   return (
     <div className="flex flex-col items-center p-8 sm:pb-24">
       <div className="flex flex-col w-full max-w-sm gap-16">
@@ -22,7 +30,7 @@ const Home: NextPage<{ params: PageParamLocale }> = async ({ params }) => {
           <HomeIntro />
         </header>
         <ScreenReaderLanguageSwitcher />
-        <HomeBody />
+        <ContentPagePaperSection>{children}</ContentPagePaperSection>
         <div className="relative flex flex-col items-center">
           <Separator className="w-[calc(100vw-1rem)] my-10" />
         </div>
@@ -33,6 +41,4 @@ const Home: NextPage<{ params: PageParamLocale }> = async ({ params }) => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}
