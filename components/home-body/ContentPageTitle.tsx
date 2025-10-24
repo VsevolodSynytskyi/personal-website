@@ -3,18 +3,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { TextGenerateEffect } from "../aceternity-ui/text-generate-effect";
-import { useParams } from "next/navigation";
+import useContentPageParamState from "@/lib/content-slider/useContentPageParamState";
 
 const ContentPageTitle: React.FC = () => {
   const t = useTranslations("mainContent");
 
-  const params = useParams();
-  const contentType = params.contentType;
-  const readTime = params.readTime;
-  if (!contentType || !readTime) {
-    // TODO handle this better
-    return null;
-  }
+  const [contentType] = useContentPageParamState("contentType");
+  const [readTime] = useContentPageParamState("readTime");
 
   let titleText = t(`titles.${[contentType]}.${[readTime]}`);
 

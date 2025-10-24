@@ -19,5 +19,7 @@ export const languages: {
   },
 ];
 
-export const locales: string[] = languages.map(({ locale }) => locale);
+export const locales: Locale[] = languages.map(({ locale }) => locale);
 export const defaultLocale = locales[0];
+export const isValidLocale = (locale: unknown): locale is Locale =>
+  typeof locale === "string" && locales.includes(locale as Locale);

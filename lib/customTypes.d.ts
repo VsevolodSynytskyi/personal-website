@@ -1,8 +1,5 @@
 import { Locale } from "./i18n/locales";
-import {
-  ContentPageParam,
-  contentPageParams,
-} from "@/lib/content-page-params/useContentPageParamState";
+import { ContentPageParam, contentPageParams, } from "@/lib/content-slider/useContentPageParamState";
 
 // Content Matrix:
 // [i][j] - each element represents entire component content

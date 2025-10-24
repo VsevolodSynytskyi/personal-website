@@ -1,4 +1,4 @@
-import useContentPageParamState from "@/lib/content-page-params/useContentPageParamState";
+import useContentPageParamState from "@/lib/content-slider/useContentPageParamState";
 import { useTranslations } from "next-intl";
 import SliderBlock from "./SliderBlock";
 

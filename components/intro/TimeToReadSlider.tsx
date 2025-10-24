@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import SliderBlock from "./SliderBlock";
-import useContentPageParamState from "@/lib/content-page-params/useContentPageParamState";
+import useContentPageParamState from "@/lib/content-slider/useContentPageParamState";
 
 const TimeToReadSlider: React.FC = () => {
   const [sliderValue, setSliderValue] = useContentPageParamState("readTime");

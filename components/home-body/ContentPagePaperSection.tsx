@@ -9,7 +9,6 @@ interface ContentPagePaperSectionProps extends PropsWithChildren {}
 export const ContentPagePaperSection: React.FC<ContentPagePaperSectionProps> = (
   props
 ) => {
-  console.log(`ContentPagePaperSection`, `children: ${!!props.children}`);
   return (
     <main>
       <Suspense>

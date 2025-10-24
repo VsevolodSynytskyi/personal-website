@@ -1,7 +1,7 @@
 "use client";
 
 import { ContentMatrix, ContentParamValues } from "@/lib/customTypes";
-import { Locale, locales } from "@/lib/i18n/locales";
+import { isValidLocale } from "@/lib/i18n/locales";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale } from "next-intl";
 import Content00en from "./content/00/Content00en";
@@ -49,8 +49,8 @@ import Content31uk from "./content/31/Content31uk";
 import Content32en from "./content/32/Content32en";
 import Content32uk from "./content/32/Content32uk";
 
-import Content33en from "./content/33/Content33en";
-import Content33uk from "./content/33/Content33uk";
+import Content33en from "./content/33/Content33en.mdx";
+import Content33uk from "./content/33/Content33uk.mdx";
 
 import CvButtonSection from "./CvButtonSection";
 
@@ -89,10 +89,8 @@ const ContentPageBody: React.FC<ContentPageBodyProps> = ({
 }) => {
   const locale = useLocale();
   let content = null;
-  if (locales.includes(locale)) {
-    content = locale
-      ? contentMatrix[contentType][readTime][locale as Locale]
-      : null;
+  if (isValidLocale(locale)) {
+    content = contentMatrix[contentType][readTime][locale];
   }
 
   return (
