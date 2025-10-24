@@ -25,8 +25,8 @@ export async function generateStaticParams() {
       for (let readTimeIndex = 0; readTimeIndex < 4; readTimeIndex++) {
         params.push({
           locale,
-          contentType: contentTypeIndex,
-          readTime: readTimeIndex,
+          contentType: String(contentTypeIndex),
+          readTime: String(readTimeIndex),
         });
       }
     }
