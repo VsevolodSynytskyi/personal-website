@@ -5,16 +5,16 @@ import { isValidLocale } from "@/lib/i18n/locales";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale } from "next-intl";
 import Content00en from "./content/00/Content00en";
-import Content00uk from "./content/00/Content00uk";
+import Content00uk from "./content/00/Content00uk.mdx";
 
 import Content01en from "./content/01/Content01en";
-import Content01uk from "./content/01/Content01uk";
+import Content01uk from "./content/01/Content01uk.mdx";
 
 import Content02en from "./content/02/Content02en";
-import Content02uk from "./content/02/Content02uk";
+import Content02uk from "./content/02/Content02uk.mdx";
 
 import Content03en from "./content/03/Content03en";
-import Content03uk from "./content/03/Content03uk";
+import Content03uk from "./content/03/Content03uk.mdx";
 
 import Content10en from "./content/10/Content10en";
 import Content10uk from "./content/10/Content10uk";
