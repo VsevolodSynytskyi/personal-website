@@ -41,13 +41,13 @@ import Content23en from "./content/23/Content23en";
 import Content23uk from "./content/23/Content23uk";
 
 import Content30en from "./content/30/Content30en";
-import Content30uk from "./content/30/Content30uk";
+import Content30uk from "./content/30/Content30uk.mdx";
 
 import Content31en from "./content/31/Content31en";
-import Content31uk from "./content/31/Content31uk";
+import Content31uk from "./content/31/Content31uk.mdx";
 
 import Content32en from "./content/32/Content32en";
-import Content32uk from "./content/32/Content32uk";
+import Content32uk from "./content/32/Content32uk.mdx";
 
 import Content33en from "./content/33/Content33en.mdx";
 import Content33uk from "./content/33/Content33uk.mdx";

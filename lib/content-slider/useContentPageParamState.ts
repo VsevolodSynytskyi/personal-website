@@ -49,7 +49,15 @@ const useContentPageParamState: (
   }
 
   const setParam = (newValue: number) => {
-    const pathSegments = [urlPrefix, newValue, newValue];
+    const newValues: [number, number] = (() => {
+      switch (paramName) {
+        case "contentType":
+          return [newValue, contentParams.readTime];
+        case "readTime":
+          return [contentParams.contentType, newValue];
+      }
+    })();
+    const pathSegments = [urlPrefix, ...newValues];
     const newPathName = pathSegments.join("/");
     router.replace(newPathName, { scroll: false });
   };
