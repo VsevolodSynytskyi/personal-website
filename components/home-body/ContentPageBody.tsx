@@ -53,8 +53,6 @@ import Personal3Uk from "./content/personal/3/Personal3Uk.mdx";
 import Personal4En from "./content/personal/4/Personal4Uk.mdx";
 import Personal4Uk from "./content/personal/4/Personal4Uk.mdx";
 
-import CvButtonSection from "./CvButtonSection";
-
 const contentMatrix: ContentMatrix = [
   [
     { en: <Professional1En key={"00"} />, uk: <Professional1Uk key={"00"} /> },
@@ -121,7 +119,6 @@ const ContentPageBody: React.FC<ContentPageBodyProps> = ({
           key={`${contentType}${readTime}`}
         >
           {content}
-          {contentType === 0 && <CvButtonSection />}
         </motion.div>
       </AnimatePresence>
     </motion.div>
