@@ -10,10 +10,7 @@ interface CustomLinkProps extends LinkProps {
 }
 
 const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
-  const className = clsx(
-    "underline text-primary underline-offset-4",
-    props.className
-  );
+  const className = clsx("link", props.className);
 
   return <Link {...{ ...props, className }} />;
 };
