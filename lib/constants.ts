@@ -22,3 +22,21 @@ export const DOMAIN_NAME = "whoisseva.com";
 export const BASE_URL = `https://www.${DOMAIN_NAME}`;
 
 export const SITEFORM_WEBSITE_URL = "https://www.siteform.io/";
+export const RYZE_DIGITAL_WEBSITE_URL = "https://www.ryze-digital.de";
+export const IT_ARTEL_WEBSITE_URL = "https://it-artel.ua/";
+export const COWORKING_INST_URL = "https://www.instagram.com/inflow.coworking/";
+export const PRODUCT_MARKETING_CERTIFICATE_URL =
+  "https://prjctr.com/certificate/01HGTS85E8SQGM65KTR6TA0RBB";
+export const PRODUCT_DESIGN_CERTIFICATE_URL =
+  "https://prjctr.com/certificate/01H7Z72TNCJ9E5R1ZTARNC37ZS";
+export const BERKELEY_SUMMER_URL =
+  "https://promprylad.ua/en/berkeley-summer-at-promprylad/";
+
+export const ADVANCED_REACT_CERTIFICATE_URL =
+  "https://v1.scrimba.com/certificate/ubRLwvfa/greact";
+
+export const DEVTO_ARTICLE_URL =
+  "https://dev.to/seva/leading-a-ui-design-team-as-a-developer-26ld";
+export const TELEGRAPH_ARTICLE_URL =
+  "https://telegraf.design/designer-keruye-rozrobnykamy/";
+export const DOU_ARTICLE_URL = "https://dou.ua/forums/topic/38459/";

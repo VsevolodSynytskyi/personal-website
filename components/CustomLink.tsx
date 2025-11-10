@@ -12,7 +12,13 @@ interface CustomLinkProps extends LinkProps {
 const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
   const className = clsx("link", props.className);
 
-  return <Link {...{ ...props, className }} />;
+  return (
+    <Link
+      {...{ ...props, className }}
+      target="_blank"
+      rel="noopener noreferrer"
+    />
+  );
 };
 
 export default CustomLink;
