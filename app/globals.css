@@ -83,6 +83,10 @@
   @apply mt-6;
 }
 
+.text-content hr:not(:first-child) {
+  @apply mt-6;
+}
+
 .text-content > div {
   @apply leading-7;
 }

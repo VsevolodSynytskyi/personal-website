@@ -1,31 +1,49 @@
-## Хто Я
+import CustomLink from "@/components/CustomLink";
+import CvButton from "@/components/home-body/CvButton";
+import {
+  SITEFORM_WEBSITE_URL,
+  RYZE_DIGITAL_WEBSITE_URL,
+  IT_ARTEL_WEBSITE_URL,
+  COWORKING_INST_URL,
+  PRODUCT_DESIGN_CERTIFICATE_URL,
+  PRODUCT_MARKETING_CERTIFICATE_URL,
+  ADVANCED_REACT_CERTIFICATE_URL,
+  BERKELEY_SUMMER_URL,
+  DOU_ARTICLE_URL,
+  DEVTO_ARTICLE_URL,
+  TELEGRAPH_ARTICLE_URL
+} from "@/lib/constants"
 
-Я продуктовий дизайнер, який пише код. Працюю в SiteForm над продуктом для управління будівництвом у США.
+## Чим Я Займаюсь
+
+Я продуктовий дизайнер, який пише код. Працюю в <CustomLink href={SITEFORM_WEBSITE_URL}>SiteForm</CustomLink> над продуктом для управління будівництвом у США.
 
 24 роки. Виріс у Києві. Живу у Львові. Займаюсь бігом і всяким аутдором. Маю собаку Нору.
 
 ## Кар’єра
 
-**Product Designer & Frontend Developer — SiteForm**
-*2022 – ...*
-Розробка веб-застосунку для будівельних компаній (React, TypeScript, Tailwind).
-Редизайн лендінгу (+3× лідів), онбординг (2 год → 20 хв).
+- **Product Designer & Frontend Developer — <CustomLink href={SITEFORM_WEBSITE_URL}>SiteForm</CustomLink>**<br/>
+*2022 → ...*<br/>
+Розробка веб-застосунку для управління будівництвом (React, TypeScript, GraphQL).<br/>Редизайн лендінгу (+3X лідів).<br/>UX онбордінгу (2 год → 20 хв).
 
-**Frontend Developer — Ryze Digital**
-*2021*
+- **Frontend Developer — <CustomLink href={RYZE_DIGITAL_WEBSITE_URL}>Ryze Digital</CustomLink>**<br/>
+*2021*<br/>
 Розробка лендінгів і корпоративних сайтів (WordPress).
 
-**Graphic Designer — iT Artel**
-*2021*
-UI/UX дизайн і презентації проєктів.
+- **Graphic Designer — <CustomLink href="IT_ARTEL_WEBSITE_URL">iT Artel</CustomLink>**<br/>
+*2021*<br/>
+UI/UX дизайн веб-продуктів.<br/>
 
 ## Ініціативи
 
-**Коворкінг (2023)** — відкрив простір під час блекаутів, 44 робочі місця.
-**Волонтерство (2022)** — створив телеграм-бот, допоміг розвезти 1,500 людей.
+- **<CustomLink href={COWORKING_INST_URL}>Коворкінг</CustomLink>** *(2023)* — відкрив простір під час блекаутів на 44 місця.
+- **Волонтерство** *2022* — створив телеграм-бот, допоміг розвезти 1,500 людей.
 
 ## Навчання
 
-Projector — Product Design, Product Marketing *(2023–2024)*
-Berkeley Summer *(2023)*
-Advanced React *(2020)*
+- <CustomLink href={PRODUCT_DESIGN_CERTIFICATE_URL}>Projector Product Design</CustomLink> *(2023)*
+- <CustomLink href={PRODUCT_MARKETING_CERTIFICATE_URL}>Projector Product Marketing</CustomLink> *(2023 → 2024)*
+- <CustomLink href={BERKELEY_SUMMER_URL}>Berkeley Summer</CustomLink> *(2023)*
+- <CustomLink href={ADVANCED_REACT_CERTIFICATE_URL}>Advanced React</CustomLink> *(2020)*
+
+<CvButton/>
