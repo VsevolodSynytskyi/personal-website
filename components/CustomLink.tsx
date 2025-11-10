@@ -2,11 +2,9 @@ import { Locale } from "@/lib/i18n/locales";
 import clsx from "clsx";
 import Link, { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
-import { LinkPreview } from "./aceternity-ui/link-preview";
 
 interface CustomLinkProps extends LinkProps {
   href: string;
-  withPreview?: boolean;
   className?: string;
   locale?: Locale;
 }
@@ -17,21 +15,7 @@ const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
     props.className
   );
 
-  const { withPreview, ...linkProps } = props;
-
-  if (withPreview) {
-    return (
-      <LinkPreview
-        {...{
-          ...linkProps,
-          className,
-        }}
-      >
-        <Link {...{ ...linkProps, className }}>{props.children}</Link>
-      </LinkPreview>
-    );
-  }
-  return <Link {...{ ...props, className }}>{props.children}</Link>;
+  return <Link {...{ ...props, className }} />;
 };
 
 export default CustomLink;
