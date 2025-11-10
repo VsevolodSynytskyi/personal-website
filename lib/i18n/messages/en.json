@@ -1,6 +1,6 @@
 {
   "intro": {
-    "intro": "Hi!\n I'm Seva\n Here you can get to know me better.",
+    "intro": "Hi!\n I'm Seva.\n Here you can get to know me better.",
     "fullName": "Vsevolod Synytskyi"
   },
   "metadata": {
@@ -46,12 +46,7 @@
     "title": "Time to Read",
     "minText": "10 sec",
     "maxText": "2 min",
-    "values": [
-      "10 seconds",
-      "30 seconds",
-      "1 minute",
-      "2-3 minutes"
-    ]
+    "values": ["10 seconds", "30 seconds", "1 minute", "2-3 minutes"]
   },
   "contentTypeSlider": {
     "title": "Where should we start?",
@@ -65,32 +60,7 @@
     ]
   },
   "mainContent": {
-    "titles": [
-      [
-        "Shorter than a CV",
-        "Almost a CV",
-        "CV",
-        "About My Career, Projects, and Education"
-      ],
-      [
-        "My Background",
-        "Career",
-        "Career",
-        "My Journey and Hobbies"
-      ],
-      [
-        "My Background and What I Do",
-        "Hobbies and Work",
-        "Hobbies and Career",
-        "Hobbies and Career"
-      ],
-      [
-        "A Bit About Me",
-        "What I'm Into",
-        "My Background, Hobbies, and Ideas",
-        "About My Life"
-      ]
-    ]
+    "titles": ["Almost CV", "What I Do", "My Background", "A Bit About Me"]
   },
   "imageAlternates": {
     "seagulls": "Seagulls",
