@@ -1,4 +1,9 @@
-import { AnimatePresence, motion, useMotionValue, useSpring, } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import useMeasure from "react-use-measure";
 
