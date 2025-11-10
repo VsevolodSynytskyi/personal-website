@@ -5,17 +5,17 @@ import { isValidLocale } from "@/lib/i18n/locales";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale } from "next-intl";
 
-import Professional1Uk from "./content/proffessional/1/Professional1Uk.mdx";
-import Professional1En from "./content/proffessional/1/Professional1Uk.mdx";
+import Professional1Uk from "@/components/home-body/content/professional/1/Professional1Uk.mdx";
+import Professional1En from "@/components/home-body/content/professional/1/Professional1Uk.mdx";
 
-import Professional2Uk from "./content/proffessional/2/Professional2Uk.mdx";
-import Professional2En from "./content/proffessional/2/Professional2Uk.mdx";
+import Professional2Uk from "@/components/home-body/content/professional/2/Professional2Uk.mdx";
+import Professional2En from "@/components/home-body/content/professional/2/Professional2Uk.mdx";
 
-import Professional3Uk from "./content/proffessional/3/Professional3Uk.mdx";
-import Professional3En from "./content/proffessional/3/Professional3Uk.mdx";
+import Professional3Uk from "@/components/home-body/content/professional/3/Professional3Uk.mdx";
+import Professional3En from "@/components/home-body/content/professional/3/Professional3Uk.mdx";
 
-import Professional4Uk from "./content/proffessional/4/Professional4Uk.mdx";
-import Professional4En from "./content/proffessional/4/Professional4Uk.mdx";
+import Professional4Uk from "@/components/home-body/content/professional/4/Professional4Uk.mdx";
+import Professional4En from "@/components/home-body/content/professional/4/Professional4Uk.mdx";
 
 import MoreProfessional1En from "./content/more-professional/1/MoreProfessional1Uk.mdx";
 import MoreProfessional1Uk from "./content/more-professional/1/MoreProfessional1Uk.mdx";
