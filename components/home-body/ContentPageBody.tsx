@@ -6,52 +6,52 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useLocale } from "next-intl";
 
 import Professional1Uk from "@/components/home-body/content/professional/1/Professional1Uk.mdx";
-import Professional1En from "@/components/home-body/content/professional/1/Professional1Uk.mdx";
+import Professional1En from "@/components/home-body/content/professional/1/Professional1En.mdx";
 
 import Professional2Uk from "@/components/home-body/content/professional/2/Professional2Uk.mdx";
-import Professional2En from "@/components/home-body/content/professional/2/Professional2Uk.mdx";
+import Professional2En from "@/components/home-body/content/professional/2/Professional2En.mdx";
 
 import Professional3Uk from "@/components/home-body/content/professional/3/Professional3Uk.mdx";
-import Professional3En from "@/components/home-body/content/professional/3/Professional3Uk.mdx";
+import Professional3En from "@/components/home-body/content/professional/3/Professional3En.mdx";
 
 import Professional4Uk from "@/components/home-body/content/professional/4/Professional4Uk.mdx";
-import Professional4En from "@/components/home-body/content/professional/4/Professional4Uk.mdx";
+import Professional4En from "@/components/home-body/content/professional/4/Professional4En.mdx";
 
-import MoreProfessional1En from "./content/more-professional/1/MoreProfessional1Uk.mdx";
 import MoreProfessional1Uk from "./content/more-professional/1/MoreProfessional1Uk.mdx";
+import MoreProfessional1En from "./content/more-professional/1/MoreProfessional1En.mdx";
 
-import MoreProfessional2En from "./content/more-professional/2/MoreProfessional2Uk.mdx";
 import MoreProfessional2Uk from "./content/more-professional/2/MoreProfessional2Uk.mdx";
+import MoreProfessional2En from "./content/more-professional/2/MoreProfessional2En.mdx";
 
-import MoreProfessional3En from "./content/more-professional/3/MoreProfessional3Uk.mdx";
 import MoreProfessional3Uk from "./content/more-professional/3/MoreProfessional3Uk.mdx";
+import MoreProfessional3En from "./content/more-professional/3/MoreProfessional3En.mdx";
 
-import MoreProfessional4En from "./content/more-professional/4/MoreProfessional4Uk.mdx";
 import MoreProfessional4Uk from "./content/more-professional/4/MoreProfessional4Uk.mdx";
+import MoreProfessional4En from "./content/more-professional/4/MoreProfessional4En.mdx";
 
-import MorePersonal1En from "./content/more-personal/1/MorePersonal1Uk.mdx";
 import MorePersonal1Uk from "./content/more-personal/1/MorePersonal1Uk.mdx";
+import MorePersonal1En from "./content/more-personal/1/MorePersonal1En.mdx";
 
-import MorePersonal2En from "./content/more-personal/2/MorePersonal2Uk.mdx";
 import MorePersonal2Uk from "./content/more-personal/2/MorePersonal2Uk.mdx";
+import MorePersonal2En from "./content/more-personal/2/MorePersonal2En.mdx";
 
-import MorePersonal3En from "./content/more-personal/3/MorePersonal3Uk.mdx";
 import MorePersonal3Uk from "./content/more-personal/3/MorePersonal3Uk.mdx";
+import MorePersonal3En from "./content/more-personal/3/MorePersonal3En.mdx";
 
-import MorePersonal4En from "./content/more-personal/4/MorePersonal4Uk.mdx";
 import MorePersonal4Uk from "./content/more-personal/4/MorePersonal4Uk.mdx";
+import MorePersonal4En from "./content/more-personal/4/MorePersonal4En.mdx";
 
-import Personal1En from "./content/personal/1/Personal1Uk.mdx";
 import Personal1Uk from "./content/personal/1/Personal1Uk.mdx";
+import Personal1En from "./content/personal/1/Personal1En.mdx";
 
-import Personal2En from "./content/personal/2/Personal2Uk.mdx";
 import Personal2Uk from "./content/personal/2/Personal2Uk.mdx";
+import Personal2En from "./content/personal/2/Personal2En.mdx";
 
-import Personal3En from "./content/personal/3/Personal3Uk.mdx";
 import Personal3Uk from "./content/personal/3/Personal3Uk.mdx";
+import Personal3En from "./content/personal/3/Personal3En.mdx";
 
-import Personal4En from "./content/personal/4/Personal4Uk.mdx";
 import Personal4Uk from "./content/personal/4/Personal4Uk.mdx";
+import Personal4En from "./content/personal/4/Personal4En.mdx";
 
 const contentMatrix: ContentMatrix = [
   [
