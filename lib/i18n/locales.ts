@@ -1,6 +1,7 @@
 // Locales
 
-export type Locale = "en" | "uk";
+export const locales = ["en", "uk"] as const;
+export type Locale = (typeof locales)[number];
 
 export const languages: {
   locale: Locale;
@@ -19,5 +20,6 @@ export const languages: {
   },
 ];
 
-export const locales: string[] = languages.map(({ locale }) => locale);
 export const defaultLocale = locales[0];
+export const isValidLocale = (locale: unknown): locale is Locale =>
+  typeof locale === "string" && locales.includes(locale as Locale);

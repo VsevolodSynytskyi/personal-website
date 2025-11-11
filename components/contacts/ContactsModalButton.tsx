@@ -27,7 +27,7 @@ const ContactsModalButtonTrigger: React.FC = forwardRef<HTMLButtonElement>(
     const t = useTranslations("contacts");
     return (
       <div>
-        <button {...props} ref={ref} className="w-auto underline">
+        <button {...props} ref={ref} className="w-auto link">
           {t("title")}
         </button>
       </div>

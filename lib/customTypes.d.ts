@@ -1,4 +1,5 @@
 import { Locale } from "./i18n/locales";
+import { ContentPageParam, contentPageParams, } from "@/lib/content-slider/useContentPageParamState";
 
 // Content Matrix:
 // [i][j] - each element represents entire component content
@@ -14,3 +15,7 @@ export type ContentMatrix<T = React.ReactNode> = {
 export type PageParamLocale = {
   locale: string;
 };
+
+export type PageParamContent = Record<ContentPageParam, string>;
+
+export type ContentParamValues = Record<ContentPageParam, number>;

@@ -59,6 +59,12 @@
   }
 }
 
+@layer components {
+  .link {
+    @apply transition-all text-primary underline-offset-4 underline hover:underline-offset-2 group-hover:underline-offset-2
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -74,6 +80,10 @@
 }
 
 .text-content p:not(:first-child) {
+  @apply mt-6;
+}
+
+.text-content hr:not(:first-child) {
   @apply mt-6;
 }
 

@@ -4,7 +4,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import useMeasure from "react-use-measure";
 
 export interface CustomSliderProps {
@@ -30,13 +30,13 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   const numberOfSteps = maxValue - minValue;
   const stepWidth = wrapperBounds.width / numberOfSteps;
 
-  const getMinMaxPosition = () => {
+  const getMinMaxPosition = useCallback(() => {
     const pointerSize = 32;
     return {
       minPosition: pointerSize / 2,
       maxPosition: wrapperBounds.width - pointerSize / 2,
     };
-  };
+  }, [wrapperBounds.width]);
 
   // Animation
   const x = useMotionValue(16);
@@ -48,16 +48,24 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
     return getConstrainedValue(clientX - wrapperBounds.left);
   };
 
-  const getConstrainedValue = (value: number) => {
-    const { minPosition, maxPosition } = getMinMaxPosition();
-    return Math.max(Math.min(value, maxPosition), minPosition);
-  };
+  const getConstrainedValue = useCallback(
+    (value: number) => {
+      const { minPosition, maxPosition } = getMinMaxPosition();
+      return Math.max(Math.min(value, maxPosition), minPosition);
+    },
+    [getMinMaxPosition]
+  );
 
-  const getSnappedPointerPosition = (originalPosition: number) => {
-    const stepIndex = stepWidth ? Math.round(originalPosition / stepWidth) : 1;
-    const snapedPosition = stepIndex * stepWidth;
-    return getConstrainedValue(snapedPosition);
-  };
+  const getSnappedPointerPosition = useCallback(
+    (originalPosition: number) => {
+      const stepIndex = stepWidth
+        ? Math.round(originalPosition / stepWidth)
+        : 1;
+      const snappedPosition = stepIndex * stepWidth;
+      return getConstrainedValue(snappedPosition);
+    },
+    [getConstrainedValue, stepWidth]
+  );
 
   const updateTooltipText = () => {
     if (props.tooltipTextTransform) {
@@ -84,7 +92,7 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
   };
 
   const handlePointerDown = (e: React.PointerEvent) => {
-    // Start cursour position tracking
+    // Start cursor position tracking
     x.set(getRelativePointerPosition(e.clientX));
     window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerup", handlePointerUp);
@@ -138,7 +146,14 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
         x.jump(getSnappedPointerPosition(props.defaultValue * stepWidth));
       }
     }
-  }, [wrapperBounds, draggableElBounds]);
+  }, [
+    wrapperBounds,
+    draggableElBounds,
+    props.defaultValue,
+    x,
+    getSnappedPointerPosition,
+    stepWidth,
+  ]);
 
   return (
     <div
@@ -149,7 +164,7 @@ const CustomSlider: React.FC<CustomSliderProps> = (props) => {
       {/* Horizontal lines */}
       <div className="absolute flex flex-row items-center w-full h-full gap-1 pointer-events-none">
         {Array.from({ length: numberOfSteps }, (_, index) => (
-          <div className="flex-1 h-px bg-primary" key={index}></div>
+          <div className="flex-1 h-px bg-primary" key={index} />
         ))}
       </div>
       {/* Tooltip */}

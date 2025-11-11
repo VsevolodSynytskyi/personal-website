@@ -2,36 +2,23 @@ import { Locale } from "@/lib/i18n/locales";
 import clsx from "clsx";
 import Link, { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
-import { LinkPreview } from "./aceternity-ui/link-preview";
 
 interface CustomLinkProps extends LinkProps {
   href: string;
-  withPreview?: boolean;
   className?: string;
   locale?: Locale;
 }
 
 const CustomLink: React.FC<PropsWithChildren<CustomLinkProps>> = (props) => {
-  const className = clsx(
-    "underline text-primary underline-offset-4",
-    props.className
+  const className = clsx("link", props.className);
+
+  return (
+    <Link
+      {...{ ...props, className }}
+      target="_blank"
+      rel="noopener noreferrer"
+    />
   );
-
-  const { withPreview, ...linkProps } = props;
-
-  if (withPreview) {
-    return (
-      <LinkPreview
-        {...{
-          ...linkProps,
-          className,
-        }}
-      >
-        <Link {...{ ...linkProps, className }}>{props.children}</Link>
-      </LinkPreview>
-    );
-  }
-  return <Link {...{ ...props, className }}>{props.children}</Link>;
 };
 
 export default CustomLink;

@@ -25,6 +25,7 @@ const LanguageSwitcher: React.FC = () => {
 
         return getLocalizedHref(newLocale);
       })()}
+      scroll={false}
       className="relative px-2 cursor-pointer select-none group"
     >
       <div
@@ -74,12 +75,7 @@ const LanguageSwitcher: React.FC = () => {
             <React.Fragment key={lang.locale}>
               {!!index && <div>/</div>}
 
-              <div
-                className={clsx(
-                  isCurrent ? "" : "underline",
-                  "transition-all "
-                )}
-              >
+              <div className={clsx(isCurrent ? "" : "link", "transition-all ")}>
                 {lang.shortName}
               </div>
             </React.Fragment>

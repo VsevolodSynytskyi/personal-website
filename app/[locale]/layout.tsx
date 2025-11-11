@@ -5,11 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { locales } from "@/lib/i18n/locales";
 
 import { PageParamLocale } from "@/lib/customTypes";
@@ -76,7 +72,6 @@ const LangLayout: React.FC<PropsWithChildren<RootLayoutProps>> = async ({
   params,
 }) => {
   const { locale } = params;
-  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   const t = await getTranslations({
