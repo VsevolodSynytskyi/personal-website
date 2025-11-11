@@ -2,7 +2,7 @@ import { Separator } from "@/components/aceternity-ui/separator";
 import ContactSection from "@/components/contacts/ContactsSection";
 import AdditionalFooterLinks from "@/components/footer/AdditionalFooterLinks";
 import HomeIntro from "@/components/intro/HomeIntro";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import ScreenReaderLanguageSwitcher from "@/components/intro/ScreenReaderLanguageSwitcher";
 import React from "react";
 import ContentPagePaperSection from "@/components/home-body/ContentPagePaperSection";
@@ -16,7 +16,6 @@ export default async function ContentLayout({
   params: Promise<PageParamLocale>;
 }) {
   const { locale } = await params;
-  unstable_setRequestLocale(locale);
   const t = await getTranslations({
     locale: locale,
     namespace: "intro",
