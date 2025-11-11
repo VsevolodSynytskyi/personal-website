@@ -18,7 +18,7 @@ const useContentPageParamState: (
   const pathName = usePathname();
   const params = useParams();
   const locale = params.locale;
-  const urlPrefix = `/${locale}/content/`;
+  const urlPrefix = `/${locale}/content`;
 
   // url validation
   if (!isValidLocale(locale)) {
@@ -31,7 +31,7 @@ const useContentPageParamState: (
   // 1. extract contentType and readTime from url
 
   const pathNameWithoutPrefix = pathName.replace(urlPrefix, "");
-  const contentParamsArray = pathNameWithoutPrefix.split("/");
+  const contentParamsArray = pathNameWithoutPrefix.split("/").filter(Boolean);
   if (contentParamsArray.length !== 2) {
     throw new Error(`Invalid url: ${pathName}`);
   }
