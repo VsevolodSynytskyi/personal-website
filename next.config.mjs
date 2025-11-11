@@ -2,6 +2,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 import createMDX from "@next/mdx";
 /** @type {import('next').NextConfig} */
 
+const locales = ["en", "uk"];
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -19,6 +21,16 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      ...locales.flatMap((locale) => ({
+        source: `/${locale}`,
+        destination: `/${locale}/content`,
+        permanent: true,
+      })),
+      ...locales.flatMap((locale) => ({
+        source: `/${locale}/content`,
+        destination: `/${locale}/content/0/0`,
+        permanent: true,
+      })),
     ];
   },
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
